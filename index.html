@@ -4,10 +4,15 @@ title: Hello, My Blog, Again
   
 {{ page.title }}
 
-
+<table>
+<tr>
+<td>
 {% for post in site.posts %}
 
-{{ post.date|date_to_string }} <a href='{{ post.url }}'>{{ post.title }}</a>  
+{{ post.date|date_to_string }} |  <a href='{{ post.url }}'>{{ post.title }}</a>  
 
 {% endfor %}
+</td>
+</tr>
 
+</p>
