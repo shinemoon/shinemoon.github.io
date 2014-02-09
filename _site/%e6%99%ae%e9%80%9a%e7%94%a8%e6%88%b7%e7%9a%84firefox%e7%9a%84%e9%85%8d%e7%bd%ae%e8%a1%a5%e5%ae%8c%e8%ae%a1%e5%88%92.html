@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>普通用户的FireFox的配置补完计划 </title>
+
+<style>
+	body { 
+		margin-left:auto;margin-right:auto;width:860px;
+		font-family:Georgia,"Times New Roman",Times,"Songti SC","SimSun",serif,"宋体";
+		font-size:18px;
+	}
+	img {
+		max-width:100%;
+		margin-left:auto;margin-right:auto;
+	}
+</style>
+</head>
+<body>
+
+<h1 style="margin-bottom:40px;"> 普通用户的FireFox的配置补完计划 </h1>
+
+
+<div><font size="5"><strong>作</strong></font>为曾经使用Maxthon多年的用户，终于在新版的不稳定之下换上了Firefox，但是很多浏览习惯又实在不想改变，自然只能求助于丰富多彩的插件了，姑且把这个配置过程记录一下，免得下次重装的时候，又要摸索回忆半天&mdash;&mdash;某帖曾提到，每次重装系统所用的时间要远小于重新配置一遍Firefox插件的时间，所以为了防止这种事件的发生，还是未雨绸缪的好。<br />列一下浏览的习惯，无非以下几个基本点：<br />1  &nbsp;&nbsp;                          同步的在线收藏夹；<br />2<br><br>
+                          鼠标手势；<br />3<br><br>
+                          超级拖曳；<br />4<br><br>
+                         地址栏搜索；<br />5<br><br>
+                   强大的多标签；<br />6 &nbsp;&nbsp;&nbsp;                         其他（这个，不要问我，我也一时列不清楚....... 形而上的东西...Maxthon可能干不到的）；<br />7 &nbsp;&nbsp;&nbsp;                        在Firefox上无非又要加上一条，对某些网站的兼容性问题的解决。<br /><br />那么我来一一记录一下这些问题的解决：<br /><br /><strong> 1&nbsp;&nbsp;                         同步收藏的功能：</strong><br />&nbsp;&nbsp;&nbsp;                        这一点在我昨天已经详细阐述过了，参见<a href="http://hi.baidu.com/shinemoon/blog/item/7be88d180dcf6c0434fa41d0.html">几个插件配合，Firefox完美书签解决方案.</a><br /><br /><strong>2&nbsp;&nbsp;                       鼠标手势：</strong><br />&nbsp;&nbsp;&nbsp;                        这个自然好说了，直接上号称Firefox最强手势插件的<a href="https://addons.mozilla.org/en-US/firefox/addon/12">All-in-one Gesture</a>(最强当然是我自认的...）。<br />&nbsp;&nbsp;&nbsp;                      装好以后，连配置都不怎么改，大家的缺省动作怎么都这么像啊，除了一点，我把（右键）下右从&lsquo;关闭&nbsp;&nbsp;                      当前窗口&rsquo;改成了&lsquo;关闭当前标签页&rsquo;而已。<br />&nbsp;&nbsp;&nbsp;                      常用手势：<br />&nbsp;&nbsp;&nbsp;                      &nbsp;&nbsp;                      下右：关闭当前标签页；<br /><br><br>
+&nbsp;&nbsp;                       上左：前一个标签页；<br />&nbsp;&nbsp;&nbsp;                      &nbsp;&nbsp;                       上右：下一个标签页；<br />&nbsp;&nbsp;&nbsp;                      &nbsp;&nbsp;                       上：<br><br>
+                       新建标签页。<br /><br /><strong> 3&nbsp;&nbsp;                      超级拖曳</strong><br /><br><br>
+                      稍微罗嗦一点了，一般的应用使用Super DragAndGo就OK了，但是官方版本在Firefox的当前版本下居然不支持拖曳搜索了，因此推荐改用<a href="https://addons.mozilla.org/en-US/firefox/addon/2918">Drag de Go</a>.，而Drag de Go确实很自由，它甚至可以指定让上下左右四个方向的拖曳都有不同的命令设置，我反而不喜欢太复杂的东西了，不过是改成了向左拖曳是google搜索，向右拖曳是baidu搜索而已&mdash;&mdash;这样的确很爽。直接导致我删除了就不更新的Super DragAndGo.<br /><br /><strong>4&nbsp;&nbsp;                  地址栏搜索</strong><br />&nbsp;&nbsp;&nbsp;                  我已经习惯了有什么问题，直接冲到地址栏敲入关键字的搜索习惯，这一点Firefox已经直接支持了&mdash;&mdash;缺省的搜索引擎是Google，不过我希望能够地址栏搜索使用Baidu（我承认我土，但是中文切词，百度的确要比Google舒服...)，这个时候就要修改Firefox本身的参数了。地址栏输入about:config,然后找到keyword.URL,将其修改成http://www.baidu.com/s?ie=UTF-8&amp;wd=，OK，百度搜索搞定，当然，也可以修改成你需要的任何引擎。<br /><br /><strong>5  强大的多标签<br />&nbsp;&nbsp;&nbsp;                  </strong>Firefox早已整合了多标签的功能，我需要的是更高的可配置性。<br />&nbsp;&nbsp;&nbsp;                  这个交给我认为必装的<a href="https://addons.mozilla.org/en-US/firefox/addon/1122">Tab Mix Plus</a>, 它能够满足你对标签页行为种种BT的要求，例如那些是需要新建标签页的，而哪些标签页是需要当时激活的，新建标签页的位置等等，和Maxthon的标签配置选项很像，但是更加灵活。<br />  &nbsp;&nbsp;&nbsp;   再次更新点后话，发现原来TabMix会出现标签栏跳动的情况，找来找去，原来是和我用的ifox的主题冲突&mdash;&mdash;想了想，还是换了个主题，忍痛抛弃了我喜欢的小三角下拉的ifox，不过现在在用的<a href="https://addons.mozilla.org/en-US/firefox/addon/364">Whiteharf</a>也是个很不错的主题，简洁但是框架的结合处却显得不失精致。<br /><br /><strong>6  其他</strong><br />&nbsp;&nbsp;&nbsp;                  这个，无非就指些乱七八糟的需求，当中有些也许已经超出了Maxthon的配置<br />&nbsp;&nbsp;&nbsp;                  首先，我装了被推荐无数次的加速插件<a href="https://addons.mozilla.org/en-US/firefox/addon/1269">Fasterfox</a>，看看选项，让它加速吧，我不知道具体效果如何，不过看来评价都好，想来还是有效的，安装之后，会在状态栏多出一个页面装载计时器。<br />&nbsp;&nbsp;&nbsp;                  然后，我装了个<a href="https://addons.mozilla.org/en-US/firefox/addon/4510">Edit Cookies</a>，我我个人觉得这是很好用的一个插件，它能够查看，并且很方便的修改你当前的Cookies，例如把一些本来是进程结束自动失效的改成永不过期之类的懒人举措&mdash;&mdash;这也是我安装它的目的所在。<br />&nbsp;&nbsp;&nbsp;                  接着是无害的<a href="https://addons.mozilla.org/en-US/firefox/addon/3336">ErrorZilla</a>和<a href="https://addons.mozilla.org/en-US/firefox/addon/1368">ColorfulTab</a>, 前者当你遇到404错误时，会给你一个华丽的，具备Google Cache、Ping、Trace等等选择的错误界面，后者可以根据你的标签所属的类型给标签打上各种颜色，让你一目了然，这个在你打开了无数的标签，觉得晕头转向时，很是实用。<br />&nbsp;&nbsp;                  还有下载管理，我装上了可以在状态栏显示进度条和下载管理器的<a href="https://addons.mozilla.org/en-US/firefox/addon/26">Download Statusbar</a> 和可以自由关联各种下载工具的<a href="https://addons.mozilla.org/en-US/firefox/addon/220">FlashGot</a>，基本上下载已经非常惬意了。<br />&nbsp;&nbsp;                  最后还有锦上添花的小东西，<a href="https://addons.mozilla.org/en-US/firefox/addon/1249">Restart Firefox</a>和<a href="https://addons.mozilla.org/en-US/firefox/addon/1146">Screen grab!</a>。前者可以一键让Firefox重新启动，后者可以直接把整个网页存成一张图片，相当方便，当然不要忘记把他们的按钮加到工具栏上来。<br />&nbsp;&nbsp;                  如果需要，不妨再加上一个<a href="http://addons.mozine.cn/firefox/608/">bosskey</a>, 这样可以配置最小化时的行为，最典型的就是最小化到系统托盘当中去，而且可以设置老板键，据说明，它比MinimizeToTray好的是，最小化时会自动释放内存&mdash;&mdash;而且好像是国人作品。<br /><br /><strong>7  兼容性 </strong><br />&nbsp;&nbsp;&nbsp;                  不可否认，还存在着某些对Firefox的内核支持不好的网页，如果实在绕不开这么办，只有用<a href="https://addons.mozilla.org/en-US/firefox/addon/1419">IE Tab</a>了，只需要一个按键，就能把当前标签页改成ie内核进行浏览，正如介绍里写的：&ldquo;让Firefox也能内嵌IE用双核心&quot;&mdash;&mdash;甚至听说有人在Firefox上专用IE Tab的，如果真是这样，那可太无敌了。安装后会在状态栏右侧多出一个切换快捷按钮，相当成熟的插件，个人认为值得一装。<br /><br /><br />&nbsp;&nbsp;&nbsp;                 &nbsp;&nbsp;                 至此，所有的改造全部OK，我曾经在Maxthon所希求的全部功能，在Firefox上已经更加完美的达成了，而且还有许多曾经不具备的功能已经添加&mdash;&mdash;最为重要的是，它比起新版的Maxthon实在是稳定多了。而一共安装了插件16个，但是感觉对内存和速度并没有明显影响，再配上一个简洁的主题，嗯&mdash;&mdash;完美。<br /><br /><div><img border="src=http://hiphotos.baidu.com/shinemoon/pic/item/262b10d108e274349a5027c1.jpg"><br /><br /><strong> 附录：<br /><br /></strong> 有些特殊的要求也可以通过插件满足-<br /><br />WAP访问：<a href="https://addons.mozilla.org/en-US/firefox/addon/62">wmlbrowser</a><br /><br />内存CPU监视：<a href="https://addons.mozilla.org/en-US/firefox/addon/3271">StatusbarEx </a>这个插件可以在状态栏加入Firefox消耗的内存和CPU的数据显示<br /><br />天气预报：<a href="https://addons.mozilla.org/en-US/firefox/addon/2024">ForecastFox l10n</a>, 同样简洁不占地方，难得的是放置的位置也相当自由。<br /><br />Gmail：虽然Google的工具欄已经提供了一揽子的插件，不过我不喜欢它安装这么多我不用的内容，所以我选了<a href="http://www.longfocus.com/firefox/gmanager/">Gmail manager</a>，非常强大，效果几乎像是outlook了，非常自然的弹出通知和详细的信箱信息。<br /><br /><a href="http://www.google.com/tools/firefox/browsersync/">Google Browser Sync</a>： 用来备份Firefox的Google的官方插件，备份包括设置、填表内容，书签、访问内容等等，但是我比较喜欢它的进程恢复，会弹出个对话泡泡让你确认&mdash;&mdash;比Firefox内建或是TabMix的感觉要舒服。<br /><br /><a href="https://addons.mozilla.org/en-US/firefox/addon/4482">Dog ears</a>: 可以在浏览页面的任何地方留下标记，并且保存下来，这就是真正的书签啊。<br /><br /><a href="https://addons.mozilla.org/en-US/firefox/addon/1931">Line Marker</a>: 很好用的标记笔，可以在页面上打标记，同样会保存本地，看长文或者技术性文章很好用。</div></div>
+
+
+
+<div style="float:right;margin-top:30px;margin-bottom:90px;font-size:12px;">22 Nov 2007 , 写毕。</div>
+
+<!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"mooninsky"};
+	(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = 'http://static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	|| document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- Duoshuo Comment END -->
+</body>
+</html>
