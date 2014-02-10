@@ -23,8 +23,18 @@
 
 {{ content }}
 
+{% if page.comment %}
+	<div style="margin-top:20px;margin-bottom:40px;font-size:12px;">{{ page.comment }} </div>
+{% endif %}
 
-<div style="float:right;margin-top:30px;margin-bottom:90px;font-size:12px;">{{ page.date|date_to_string }} , 写毕。</div>
+
+
+{% if page.info %}
+	<div style="float:right;margin-top:30px;margin-bottom:90px;font-size:12px;">{{ page.date|date_to_string }} , 写毕。</div>
+{% else %}
+	<div style="float:right;margin-top:30px;margin-bottom:90px;font-size:12px;">{{ page.date|date_to_string }} , 写于 {{ page.info }}。</div>
+{% endif %}
+
 
 <!-- Duoshuo Comment BEGIN -->
 <div class="ds-thread"></div>
