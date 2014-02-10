@@ -9,6 +9,7 @@
 		margin-left:auto;margin-right:auto;width:860px;
 		font-family:Georgia,"Times New Roman",Times,"Songti SC","SimSun",serif,"宋体";
 		font-size:18px;
+		color:#333;
 	}
 	img {
 		max-width:100%;
@@ -18,21 +19,21 @@
 </head>
 <body>
 
-<h1 style="margin-bottom:40px;"> {{ page.title }} </h1>
+<h1 style="margin-bottom:40px;"> {{ page.title }} <span style="margin-left:40px;font-size:16px;color:#ddd;">文：shinemoon</span></h1>
 
 
 {{ content }}
 
 {% if page.comment %}
-	<div style="margin-top:20px;margin-bottom:40px;font-size:12px;">{{ page.comment }} </div>
+	<div style="margin-top:20px;margin-bottom:40px;font-size: 14px;background: #eee;border: 1px dotted #ddd;padding-left: 20px;padding-top: 3px;padding-bottom: 3px;border-radius: 5px;color: #777;">{{ page.comment }} </div>
 {% endif %}
 
 
 
 {% if page.info %}
-	<div style="float:right;margin-top:30px;margin-bottom:90px;font-size:12px;">{{ page.date|date_to_string }} , 写毕。</div>
+	<div style="float:right;margin-top:30px;margin-bottom:90px;font-size:14px;color:#555;">{{ page.date|date_to_string }} , 写于 <span style="color:#333;">{{ page.info }} </span>。</div>
 {% else %}
-	<div style="float:right;margin-top:30px;margin-bottom:90px;font-size:12px;">{{ page.date|date_to_string }} , 写于 {{ page.info }}。</div>
+	<div style="float:right;margin-top:30px;margin-bottom:90px;font-size:14px;color:#555;">{{ page.date|date_to_string }} , 写毕。</div>
 {% endif %}
 
 
