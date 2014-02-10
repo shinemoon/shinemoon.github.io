@@ -56,10 +56,10 @@ GEM
     toml (0.1.0)
       parslet (~> 1.5.0)
     yajl-ruby (1.1.0)
-<br><br>
+
 PLATFORMS
   ruby
-<br><br>
+
 DEPENDENCIES
   github-pages
   hpricot

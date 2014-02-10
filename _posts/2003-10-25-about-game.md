@@ -2,7 +2,7 @@
 layout: post
 title: 关于游戏
 categories:
-- 杂谈
+- 闲话
 info: 大学宿舍
 tags: [blogcn]
 status: publish
