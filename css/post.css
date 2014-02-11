@@ -60,3 +60,6 @@
 	hr {
 		border:1px #e0e0e0 dotted;
 	}
+	p.ds-powered-by a{ display:none;}
+	#ds-reset .ds-gradient-bg {background:#fff;}
+	#ds-thread #ds-reset .ds-textarea-wrapper {background:#fff;}
