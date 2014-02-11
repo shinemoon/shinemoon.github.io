@@ -7,13 +7,21 @@ body {
 
 h4.des {
 	margin-top: -50px;
-	margin-right: 380px;
+	margin-right: 300px;
 	color: #bbb;
 	float: right;
 	font-weight: normal;
-	font-size: 15px;
+	font-size: 17px;
 }
 
 div.pagination {
 	text-align:center;
+}
+
+span.next {
+	border: 1px solid #aaa;
+	cursor: pointer;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: 50px;
 }
