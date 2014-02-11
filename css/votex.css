@@ -176,10 +176,6 @@ p img {
 */
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Vidaloka', serif;
-	color: #2f2f2f;
-	font-weight: normal;
-	clear: both;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
@@ -193,6 +189,7 @@ h1 {
 h2 { 
 	font-size: 28px;
 	line-height: 34px;
+	margin-top: 20px;
 	margin-bottom: 20px;
 }
 
@@ -292,8 +289,8 @@ sub {
 */
 
 blockquote {
-	font-size: 14px;
-	line-height: 22px;
+	font-size: 16px;
+	line-height: 18px;
 	padding-left: 30px;
 	margin-bottom: 20px;
 	margin-top: 20px;
