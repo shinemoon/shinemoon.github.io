@@ -19,7 +19,11 @@ description: 「一个为持续维持自己而持续写文章的常驻游客」
 <!-- Pagination links -->
 <div class="pagination">
 	{% if paginator.previous_page %}
-		<a href="/{{ paginator.previous_page }}" class="previous"> = </a>
+		{% if paginator.previous_page != 1 %}
+			<a href="/{{ paginator.previous_page }}" class="previous"> = </a>
+		{% else %}
+			<span class="previous"> - </span>
+		{% endif %}
 	{% else %}
 		<span class="previous"> - </span>
 	{% endif %}
