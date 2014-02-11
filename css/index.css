@@ -5,3 +5,15 @@ body {
 	color:#333;
 }
 
+h4.des {
+	margin-top: -50px;
+	margin-right: 380px;
+	color: #bbb;
+	float: right;
+	font-weight: normal;
+	font-size: 15px;
+}
+
+div.pagination {
+	text-align:center;
+}
