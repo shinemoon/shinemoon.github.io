@@ -57,9 +57,11 @@
 	img.home:hover {
 		opacity:0.8;
 	}
+
 	hr {
 		border:1px #e0e0e0 dotted;
 	}
+
 	p.ds-powered-by a{ display:none;}
-	#ds-reset .ds-gradient-bg {background:#fff;}
-	#ds-thread #ds-reset .ds-textarea-wrapper {background:#fff;}
+	#ds-reset .ds-gradient-bg {background:#fff!important;}
+	#ds-thread #ds-reset .ds-textarea-wrapper {background:#fff!important;}

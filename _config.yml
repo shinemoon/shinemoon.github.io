@@ -1,4 +1,4 @@
 baseurl: /
-paginate: 10 
+paginate: 6 
 paginate_path: "/:num"
 permalink: /:title.html

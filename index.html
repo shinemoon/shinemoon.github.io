@@ -4,16 +4,16 @@ layout: entry
 description: 「一个为持续维持自己而持续写文章的常驻游客」
 ---
 <br><br>
-<table>
+
+<ul class="rounded-list">
 {% for post in paginator.posts %}
-<tr>
-<td>
-{{ post.date|date_to_string }} |  <a href='{{ post.url }}'>{{ post.title }}</a>  
-</td>
-</tr>
+<li>{{ post.date|date_to_string }}	
+<ul>
+	<li><a href='{{ post.url }}' logo='' class='title'>{{ post.title }}</a></li>
+</ul>
+</li>
 {% endfor %}
-<br><br>
-</table>
+</ul>
 <br><br>
 
 <!-- Pagination links -->
@@ -34,3 +34,4 @@ description: 「一个为持续维持自己而持续写文章的常驻游客」
 		<span class="next "> - </span>
 	{% endif %}
 </div>
+

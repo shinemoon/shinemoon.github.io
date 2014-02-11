@@ -4,6 +4,9 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <title>{{ page.title }} </title>
 <link rel="stylesheet" href="/css/index.css" type="text/css" media="all">
+<script type="text/javascript" src="/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/jquery-cookies.js"></script>
+
 </head>
 
 <body>
@@ -13,5 +16,19 @@
 
 {{ content }}
 
+<script>
+	$(document).ready(function(){
+		$('.title').each(function(){
+			$(this).attr('logo',$(this).text().substr(0,1));
+			$(this).text($(this).text().substr(1));
+			if($(this).text().length==0) $(this).text(' ');
+		});
+
+		$('a.title').click(function(){
+			var url =  document.documentURI;
+			$.cookie('pageaddress', url,{expires: 7});				  
+		});
+	});
+</script>
 </body>
 </html>
