@@ -181,9 +181,11 @@ h1, h2, h3, h4, h5, h6 {
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
 
 h1 { 
+	font-weight:bold;
 	font-size: 30px; 
 	line-height: 36px; 
 	margin-bottom: 14px;
+	margin-top: 30px;
 }
 
 h2 { 
@@ -290,7 +292,7 @@ sub {
 
 blockquote {
 	font-size: 16px;
-	line-height: 18px;
+	line-height: 30px;
 	padding-left: 30px;
 	margin-bottom: 20px;
 	margin-top: 20px;
