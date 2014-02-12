@@ -43,10 +43,10 @@
 <img class='home' src="/home.png" onclick="window.location='{{ site.baseurl }}'" />
 <script>
 	$('.home').click(function(){
-		if($.cookie('homeaddress', {path:'/'}) == null) {
+		if($.cookie('homeaddress') == null) {
 			window.location = {{ site.baseurl }};
 		} else {
-			window.location = $.cookie('homeaddress', {path:'/'}) ;
+			window.location = $.cookie('homeaddress') ;
 		}
 	});
 </script>
