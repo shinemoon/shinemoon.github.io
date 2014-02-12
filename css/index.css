@@ -13,6 +13,7 @@ h4.des {
 	font-weight: bold;
 	font-size: 40px;
 	-webkit-transform: rotate(5deg);
+	filter:progid:DXImageTransform.Microsoft.Matrix( SizingMethod='auto expand',FilterType=bilinear,Dx=0.8,Dy=0, M11=0.5,M12=0.4,M21=0.1,M22=0.1);
 }
 
 div.pagination {
