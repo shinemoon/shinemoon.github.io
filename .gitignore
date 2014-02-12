@@ -1,3 +1,4 @@
 .*.*.swp
 *.swp
 /_site/*
+/_posts/_site/*
