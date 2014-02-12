@@ -41,6 +41,16 @@
 
 <img class='top' src="/top.png" onclick="scroll(0,0);" />
 <img class='home' src="/home.png" onclick="window.location='{{ site.baseurl }}'" />
+<script>
+	$('.home').click(function(){
+		if($.cookie('homeaddress', {path:'/'}) == null) {
+			window.location = {{ site.baseurl }};
+		} else {
+			window.location = $.cookie('homeaddress', {path:'/'}) ;
+		}
+	});
+</script>
+
 
 <!-- Duoshuo Comment BEGIN -->
 <div class="ds-thread"></div>
