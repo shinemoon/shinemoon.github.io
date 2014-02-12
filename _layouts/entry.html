@@ -26,9 +26,28 @@
 
 		$('a.title').click(function(){
 			var url =  document.documentURI;
-			$.cookie('pageaddress', url,{expires: 7});				  
+			$.cookie('pagenum', {{ paginator.page }} ,{expires: 7});				  
 		});
 	});
 </script>
+<!-- Pagination links -->
+<div class="pagination">
+	{% if paginator.previous_page %}
+		{% if paginator.previous_page != 1 %}
+			<span onclick="window.location='/{{ paginator.previous_page }}'" class="previous"> = </span>
+		{% else %}
+			<span onclick="window.location='{{ site.baseurl }}'" class="previous"> = </span>
+		{% endif %}
+	{% else %}
+		<span class="previous"> - </span>
+	{% endif %}
+		<span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+	{% if paginator.next_page %}
+		<span onclick="window.location='/{{ paginator.next_page }}'" class="next"> = </span>
+	{% else %}
+		<span class="next "> - </span>
+	{% endif %}
+</div>
+
 </body>
 </html>
