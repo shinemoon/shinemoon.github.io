@@ -25,7 +25,9 @@ span.next {
 	padding-left: 15px;
 	padding-right: 15px;
 	margin-left: 50px;
-	background:url("/css/images/arrow_right.png");
+	background:url("/css/images/arrow_right.png") no-repeat;
+	background-size:32px;
+	line-height:32px;
 }
 
 span.previous {
@@ -34,7 +36,9 @@ span.previous {
 	padding-left: 15px;
 	padding-right: 15px;
 	margin-right: 50px;
-	background:url("/css/images/arrow_left.png");
+	background:url("/css/images/arrow_left.png") no-repeat;
+	background-size:32px;
+	line-height:32px;
 }
 
 /* -------------------------------------- */

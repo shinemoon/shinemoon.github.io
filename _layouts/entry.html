@@ -32,18 +32,18 @@
 <div class="pagination">
 	{% if paginator.previous_page %}
 		{% if paginator.previous_page != 1 %}
-			<span onclick="window.location='/{{ paginator.previous_page }}'" class="previous"> = </span>
+			<span onclick="window.location='/{{ paginator.previous_page }}'" class="previous"></span>
 		{% else %}
-			<span onclick="window.location='{{ site.baseurl }}'" class="previous"> = </span>
+			<span onclick="window.location='{{ site.baseurl }}'" class="previous"></span>
 		{% endif %}
 	{% else %}
-		<span class="previous"> - </span>
+		<span class="previous"></span>
 	{% endif %}
-		<span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+		<span class="page_number "><span class='current_page'>{{ paginator.page }}</span> of <span class='total_page'>{{ paginator.total_pages }}</span></span>
 	{% if paginator.next_page %}
-		<span onclick="window.location='/{{ paginator.next_page }}'" class="next"> = </span>
+		<span onclick="window.location='/{{ paginator.next_page }}'" class="next"></span>
 	{% else %}
-		<span class="next "> - </span>
+		<span class="next"></span>
 	{% endif %}
 </div>
 
