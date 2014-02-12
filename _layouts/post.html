@@ -44,7 +44,7 @@
 <script>
 	$('.home').click(function(){
 		if($.cookie('homeaddress') == null) {
-			window.location = {{ site.baseurl }};
+			window.location = "{{ site.baseurl }}";
 		} else {
 			window.location = $.cookie('homeaddress') ;
 		}
