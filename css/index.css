@@ -8,10 +8,11 @@ body {
 h4.des {
 	margin-top: -50px;
 	margin-right: 200px;
-	color: #f9f9f9;
+	color: #f6f6f6;
 	float: right;
-	font-weight: normal;
+	font-weight: bold;
 	font-size: 40px;
+	-webkit-transform: rotate(5deg);
 }
 
 div.pagination {
