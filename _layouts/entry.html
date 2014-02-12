@@ -23,7 +23,7 @@
 			$(this).text($(this).text().substr(1));
 			if($(this).text().length==0) $(this).text(' ');
 		});
-		$.cookie('pageaddress', window.location.href ,{expires: 7});				  
+		$.cookie('pageaddress', window.location.href ,{expires: 7,path:'/'});				  
 	});
 </script>
 <!-- Pagination links -->
