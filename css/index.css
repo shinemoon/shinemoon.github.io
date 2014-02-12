@@ -7,7 +7,7 @@ body {
 
 h4.des {
 	margin-top: -50px;
-	margin-right: 200px;
+	margin-right: 100px;
 	color: #f6f6f6;
 	float: right;
 	font-weight: bold;
@@ -15,14 +15,27 @@ h4.des {
 	-webkit-transform: rotate(5deg);
 }
 
-div.pagination {
-	text-align:center;
+table.bottombar {
+	width:100%;
+}
+
+td.pagination {
+	text-align:right;
+}
+
+td.copyright {
+	color:#aaa;	
+	font-size: 12px;
+	padding-left: 20px;
+	font-family: serif;
+	padding-top: 40px;
 }
 
 span.next {
 	cursor: pointer;
 	padding-left: 15px;
 	padding-right: 15px;
+	padding-bottom:6px;
 	margin-left: 50px;
 	background:url("/css/images/arrow_right.png") no-repeat;
 	background-size:32px;
@@ -31,6 +44,7 @@ span.next {
 
 span.previous {
 	cursor: pointer;
+	padding-bottom:6px;
 	padding-left: 15px;
 	padding-right: 15px;
 	margin-right: 50px;
@@ -112,6 +126,10 @@ ol ol{
 	transition: all .3s ease-out;
 }
 
+.rounded-list li{
+	list-style-type:none;
+	color:#eee;
+}
 /* -------------------------------------- */
 
 .rectangle-list a{
@@ -225,3 +243,15 @@ a.title {
 	padding-top:8px;
 }
 
+span.current_page {
+	font-size:40px;
+	color:#87ceeb;
+}
+span.total_page {
+	font-size:50px;
+	color:#999;
+}
+
+span.copyrightdetails {
+	margin-right:40px;border-left: 4px solid #aaaaaa;padding-left:10px;padding-top:5px;
+}

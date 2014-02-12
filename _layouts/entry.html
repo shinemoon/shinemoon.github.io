@@ -1,51 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8">
-<title>{{ page.title }} </title>
-<link rel="stylesheet" href="/css/index.css" type="text/css" media="all">
-<script type="text/javascript" src="/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="/jquery-cookies.js"></script>
-
-</head>
-
-<body>
-
-<h1 style="cursor:pointer;" onclick="window.location='{{ site.baseurl }}'"> {{ page.title }} <span onclick="window.location='http://fanfou.com/shinemoon'" style="cursor:pointer;margin-left:20px;font-weight:normal;font-size:16px;color:#ddd;">> <span style="font-size: 18px;font-style: italic;margin-right: 2px;color: #aaa;">S</span>hinemoon </span>
- </h1> 
-<h4 class='des'> {{ page.description }} </h4>
+{% include header.html %}
 
 {{ content }}
 
-<script>
-	$(document).ready(function(){
-		$('.title').each(function(){
-			$(this).attr('logo',$(this).text().substr(0,1));
-			$(this).text($(this).text().substr(1));
-			if($(this).text().length==0) $(this).text(' ');
-		});
-
-		$.cookie('homeaddress', window.location.href, {expires:7, path:'/'});
-	});
-</script>
-<!-- Pagination links -->
-<div class="pagination">
-	{% if paginator.previous_page %}
-		{% if paginator.previous_page != 1 %}
-			<span onclick="window.location='/{{ paginator.previous_page }}'" class="previous"></span>
-		{% else %}
-			<span onclick="window.location='{{ site.baseurl }}'" class="previous"></span>
-		{% endif %}
-	{% else %}
-		<span class="previous"></span>
-	{% endif %}
-		<span class="page_number "><span class='current_page'>{{ paginator.page }}</span> of <span class='total_page'>{{ paginator.total_pages }}</span></span>
-	{% if paginator.next_page %}
-		<span onclick="window.location='/{{ paginator.next_page }}'" class="next"></span>
-	{% else %}
-		<span class="next"></span>
-	{% endif %}
-</div>
-
-</body>
-</html>
+{% include footer.html %}
