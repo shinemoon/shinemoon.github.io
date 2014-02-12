@@ -7,11 +7,11 @@ body {
 
 h4.des {
 	margin-top: -50px;
-	margin-right: 300px;
-	color: #bbb;
+	margin-right: 200px;
+	color: #f9f9f9;
 	float: right;
 	font-weight: normal;
-	font-size: 17px;
+	font-size: 40px;
 }
 
 div.pagination {
