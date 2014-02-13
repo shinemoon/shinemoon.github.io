@@ -71,6 +71,9 @@ ol ol{
 }
 
 /* -------------------------------------- */			
+.roudned-list {
+	margin-top:0px;
+}
 
 .rounded-list a{
 	position: relative;
