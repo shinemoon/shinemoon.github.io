@@ -30,13 +30,13 @@
 
 
 {% if page.info %}
-	<div style="float:right;margin-top:40px;margin-bottom:90px;font-size:15px;color:#555;">{{ page.date|date_to_string }} , 写于 <span style="color:#333;">{{ page.info }} </span>。</div>
+	<div style="margin-top:40px;margin-bottom:10px;text-align:right;font-size:16px;font-style:italic;color:#555;">{{ page.date|date_to_string }} , 写于 <span style="color:#333;">{{ page.info }} </span>。</div>
 {% else %}
-	<div style="float:right;margin-top:40px;margin-bottom:90px;font-size:15px;color:#555;">{{ page.date|date_to_string }} , 写毕。</div>
+	<div style="margin-top:40px;margin-bottom:10px;font-size:16px;font-style:italic;text-align:right;color:#555;">{{ page.date|date_to_string }} , 写毕。</div>
 {% endif %}
 
 {% if page.comment %}
-	<div style="margin-top:100px;margin-bottom:40px;font-size: 14px;background: #707070;border: 1px dotted #ddd;padding-left: 20px;padding-top: 5px;padding-bottom: 5px;border-radius: 0px;color: #eeeeee;">{{ page.comment }} </div>
+	<div style="margin-top:20px;margin-bottom:40px;font-size: 15px;line-height:20px; background: #707070;border: 1px dotted #ddd;padding-left: 20px;padding-top: 5px;padding-bottom: 5px;padding-right:20px;border-radius: 0px;color: #ffffff;">{{ page.comment }} </div>
 {% endif %}
 
 <img class='top' src="/top.png" onclick="scroll(0,0);" />

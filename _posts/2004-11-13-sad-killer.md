@@ -8,7 +8,7 @@ status: publish
 type: post
 published: true
 info: 大学宿舍
-comment: 当时心血来潮时写的小说，结果果然写不下去，现在读起来似乎还算通顺罢了。
+comment: 当时心血来潮时写的小说，本来还想写成一个小系列（和「寂寞一刺」）结果果然写不下去，现在读起来似乎还算通顺罢了。
 meta: {}
 ---
 
