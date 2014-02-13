@@ -17,6 +17,7 @@ h4.des {
 
 table.bottombar {
 	width:100%;
+	padding-bottom:40px;
 }
 
 td.pagination {
@@ -27,7 +28,7 @@ td.copyright {
 	color:#aaa;	
 	font-size: 12px;
 	padding-left: 20px;
-	font-family: serif;
+	font-family: calibri,serif;
 	padding-top: 40px;
 }
 
@@ -128,7 +129,7 @@ ol ol{
 
 .rounded-list li{
 	list-style-type:none;
-	color:#eee;
+	color:#aaa;
 }
 /* -------------------------------------- */
 
