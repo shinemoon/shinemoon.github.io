@@ -41,6 +41,8 @@ span.next {
 	background:url("/css/images/arrow_right.png") no-repeat;
 	background-size:32px;
 	line-height:32px;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/css/images/arrow_right.png",sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/css/images/arrow_right.png',sizingMethod='scale')";
 }
 
 span.previous {
@@ -52,6 +54,8 @@ span.previous {
 	background:url("/css/images/arrow_left.png") no-repeat;
 	background-size:32px;
 	line-height:32px;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/css/images/arrow_right.png",sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/css/images/arrow_right.png',sizingMethod='scale')";
 }
 
 /* -------------------------------------- */
