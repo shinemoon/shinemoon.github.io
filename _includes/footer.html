@@ -18,7 +18,7 @@
 <td class="pagination ">
 	{% if paginator.previous_page %}
 		{% if paginator.previous_page != 1 %}
-			<img src="/css/images/arrow_left.png" style="width:32px;margin-right: 50px;" onclick="window.location='/{{ paginator.previous_page }}'" class="previous"/>
+			<img src="/css/images/arrow_left.png" style="width:32px;margin-right: 50px;" onclick="window.location='/page/{{ paginator.previous_page }}'" class="previous"/>
 		{% else %}
 			<img src="/css/images/arrow_left.png" style="width:32px;margin-right: 50px;" onclick="window.location='{{ site.baseurl }}'" class="previous"/>
 		{% endif %}
@@ -28,7 +28,7 @@
 		<!--span class="page_number "><span class='current_page'>{{ paginator.page }}</span> of <span class='total_page'>{{ paginator.total_pages }}</span></span-->
 		<span class="page_number "><span class='current_page'>{{ paginator.page }}</span>/<span class='total_page'>{{ paginator.total_pages }}</span></span>
 	{% if paginator.next_page %}
-		<img src="/css/images/arrow_right.png" style="width:32px;margin-left: 50px;" onclick="window.location='/{{ paginator.next_page }}'" class="next"/>
+		<img src="/css/images/arrow_right.png" style="width:32px;margin-left: 50px;" onclick="window.location='/page/{{ paginator.next_page }}'" class="next"/>
 	{% else %}
 		<img src="/css/images/arrow_right.png" style="width:32px;margin-left: 50px;"/>
 	{% endif %}
