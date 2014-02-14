@@ -65,3 +65,16 @@
 	p.ds-powered-by a{ display:none;}
 	#ds-reset .ds-gradient-bg {background:#fff!important;}
 	#ds-thread #ds-reset .ds-textarea-wrapper {background:#fff!important;}
+
+	code {
+		font-size: 12px;
+		background: #E2E8EB;
+		color: black;
+		padding-left: 5px;
+		padding-right: 5px;
+		padding-top: 3px;
+		padding-bottom: 3px;
+		margin-left: 5px;
+		margin-right: 5px;
+		border-radius: 3px;
+	}
