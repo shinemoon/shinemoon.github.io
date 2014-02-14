@@ -4,8 +4,10 @@ layout: entry
 description: 非關病酒 不在酒後
 ---
 <br>
-
-<ul class="rounded-list">
+<table>
+<tr>
+<td>
+<ul class="rounded-list" style="width:500px;">
 {% for post in paginator.posts %}
 <li>{{ post.date|date_to_string }}	
 <ul>
@@ -14,6 +16,21 @@ description: 非關病酒 不在酒後
 </li>
 {% endfor %}
 </ul>
-<br>
+</td>
+<td style="vertical-align:top;">
+<div style="padding-top:35px;">
+<ul class="rectangle-list" style="font-size:14px; width:250px;">
+	{% include friends.html %}
+</ul>
+</div>
 
+<div style="">
+<ul class="rectangle-list" style="font-size:14px; width:250px;">
+	{% include friends.html %}
+</ul>
+</div>
+
+</tr>
+</table>
+<br>
 

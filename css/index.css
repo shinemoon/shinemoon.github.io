@@ -122,13 +122,16 @@ ul.roudned-list {
 }
 /* -------------------------------------- */
 
+.rectangle-list li{
+	list-style-type:none;
+}
 .rectangle-list a{
 	position: relative;
 	display: block;
-	padding: .4em .4em .4em .8em;
+	padding: .4em .4em .4em .1em;
 	*padding: .4em;
 	margin: .5em 0 .5em 2.5em;
-	background: #ddd;
+	background: #fff;
 	color: #444;
 	text-decoration: none;
 	-webkit-transition: all .3s ease-out;
@@ -143,13 +146,13 @@ ul.roudned-list {
 }	
 
 .rectangle-list a:before{
-	content: counter(li);
+	content: attr(logo);
 	counter-increment: li;
 	position: absolute;	
 	left: -2.5em;
 	top: 50%;
 	margin-top: -1em;
-	background: #fa8072;
+	background: #fad0c2;
 	height: 2em;
 	width: 2em;
 	line-height: 2em;
