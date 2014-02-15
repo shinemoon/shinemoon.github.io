@@ -1,4 +1,5 @@
 .*.*.swp
 *.swp
 /_site/*
-/_posts/_site/*
+!/_site/tags
+!/_site/categories
