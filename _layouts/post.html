@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>{{ site.name }} | {{ page.title }} </title>
+
+<link rel="stylesheet" href="/css/votex.css" type="text/css" media="all">
+<link rel="stylesheet" href="/css/post.css" type="text/css" media="all">
+<script type="text/javascript" src="/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/jquery-cookies.js"></script>
+
+</head>
+<body>
+
+<h1 style="margin-bottom:20px;"> {{ page.title }} <span onclick="window.location='http://fanfou.com/shinemoon'" style="cursor:pointer;margin-left:20px;font-weight:normal;font-size:16px;color:#ddd;">> <span style="font-size: 18px;font-style: italic;margin-right: 2px;color: #aaa;">S</span>hinemoon </span>
+
+</h1>
+
+<div style='height:80px;'>
+{% for cat in page.categories %}
+<span class='tags cat' onclick="window.location='{{ site.base_url }}/categories/{{ cat }}/'">{{ cat }}</span>
+{% endfor %} 
+
+{% for tag in page.tags %}
+<span class='tags' onclick="window.location='{{ site.base_url }}/tags/{{ tag }}/'">{{ tag }}</span>
+{% endfor %} 
+</div>
+
+{{ content }}
+
+
+{% if page.info %}
+	<div style="margin-top:40px;margin-bottom:10px;text-align:right;font-size:16px;font-style:italic;color:#555;">{{ page.date|date_to_string }} , 写于 <span style="color:#333;">{{ page.info }} </span>。</div>
+{% else %}
+	<div style="margin-top:40px;margin-bottom:10px;font-size:16px;font-style:italic;text-align:right;color:#555;">{{ page.date|date_to_string }} , 写毕。</div>
+{% endif %}
+
+{% if page.comment %}
+	<div style="margin-top:20px;margin-bottom:40px;font-size: 16px;line-height:30px; background: #505050;border: 1px dotted #ddd;padding-left: 20px;padding-top: 5px;padding-bottom: 5px;padding-right:20px;border-radius: 3px;color: #ffffff;">{{ page.comment }} </div>
+{% endif %}
+
+<img class='top' src="/top.png" onclick="scroll(0,0);" />
+<img class='home' src="/home.png" onclick="window.location='{{ site.baseurl }}'" />
+<script>
+	$('.home').click(function(){
+		if($.cookie('homeaddress') == null) {
+			window.location = "{{ site.baseurl }}";
+		} else {
+			window.location = $.cookie('homeaddress') ;
+		}
+	});
+</script>
+
+
+<!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"mooninsky"};
+	(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = 'http://static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	|| document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- Duoshuo Comment END -->
+
+</body>
+</html>

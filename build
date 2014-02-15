@@ -1,2 +1,5 @@
 #!/bin/sh
-jekyll build;mv -f _site/* ../shinemoon.github.io;
+jekyll build;
+cp -R -f _site/categories .;
+cp -R -f _site/tags .;
+
