@@ -60,6 +60,8 @@
 
 	hr {
 		border:1px #e0e0e0 dotted;
+		margin-top:40px;
+		margin-bottom:40px;
 	}
 
 	p.ds-powered-by a{ display:none;}

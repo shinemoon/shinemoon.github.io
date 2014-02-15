@@ -1,0 +1,2 @@
+#!/bin/sh
+cp -f _posts/2014-02-16-template.md ~/Nutstore/document/`date +%Y-%m-%d`-anewdraft.md;open -a Mou ~/Nutstore/document/`date +%Y-%m-%d`-anewdraft.md;
