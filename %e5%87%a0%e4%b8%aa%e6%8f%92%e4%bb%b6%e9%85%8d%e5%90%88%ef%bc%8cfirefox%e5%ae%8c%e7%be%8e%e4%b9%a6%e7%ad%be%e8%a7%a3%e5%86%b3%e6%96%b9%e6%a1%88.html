@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>月下闲话 | 几个插件配合，Firefox完美书签解决方案 </title>
+
+<link rel="stylesheet" href="/css/votex.css" type="text/css" media="all">
+<link rel="stylesheet" href="/css/post.css" type="text/css" media="all">
+<script type="text/javascript" src="/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/jquery-cookies.js"></script>
+
+</head>
+<body>
+
+<h1 style="margin-bottom:20px;"> 几个插件配合，Firefox完美书签解决方案 <span onclick="window.location='http://fanfou.com/shinemoon'" style="cursor:pointer;margin-left:20px;font-weight:normal;font-size:16px;color:#ddd;">> <span style="font-size: 18px;font-style: italic;margin-right: 2px;color: #aaa;">S</span>hinemoon </span>
+
+</h1>
+
+<div style='height:80px;'>
+
+<span class='tags cat' onclick="window.location='/categories/未分类/'">未分类</span>
+ 
+
+ 
+</div>
+
+<div><font size="5"><strong>上</strong></font>次说到转投Firefox的阵营了，但是始终还是感觉MX的在线收藏做的比较舒服&mdash;&mdash;最先选用的Google BookMark的add-on还是很不成熟的，刷新速度太慢，而且最致命的是对中文支持太差了。<br /><br />我理想中的Bookmark，需要有下面两点<br />第一、和浏览器能够无缝整合，进行自动同步；<br />第二、备份服务器能够保证稳定可靠，而且是一个开放的Bookmark。<br /><br />以前的Maxthon其实只是说第一点能够做的很好，然而对于后一点，我觉得就远远谈不上了。<br /><br />经过仔细的搜查，个人发现这样的组合可以完全达到我的目的：<br /><br /><a href="http://addons.mozine.cn/firefox/351/"> Gmarks</a> - 在Firefox当中建立起管理维护Google Bookmark的工具栏，并且可以同步管理Firefox的工具栏，而且无论响应速度和对中文支持都堪称完美；<br /><br /><br /><a href="https://addons.mozilla.org/en-US/firefox/addon/2410"> Foxmarks Bookmark Synchronizer </a>- 通过专门的服务器来负责Firefox书签的备份和恢复，和以前Maxthon的做法一模一样；<br /><br /><br /><a href="https://addons.mozilla.org/fr/firefox/addon/5525"> Box.net Bookmarks Synchronizer</a> - 将本地的firefox收藏夹文件自动备份到Box.net的网络硬盘上去。<br /><br /><br />我的使用是这样的，我使用Gmarks的同步添加书签来向本地和Google book mark进行添加；使用时则都是用Firefox自身的书签；然后设置Box为每次退出自动上传。<br /><br />这下可以说是万无一失了&mdash;&mdash;在临时使用的情况下，我只需要在另一台机器上装上其中任何一个插件就可以了，如果万一没有条件使用Firefox，大不了用Google bookmark。<br /><br />如果至于数据保存，我就不信Foxmarks，box和Google能够一起关门大吉....<br /><br />PS. 不过回头看看，我这样是不是有点太大题小作了....:)</div>
+
+
+
+
+	<div style="margin-top:40px;margin-bottom:10px;font-size:16px;font-style:italic;text-align:right;color:#555;">20 Nov 2007 , 写毕。</div>
+
+
+
+
+<img class='top' src="/top.png" onclick="scroll(0,0);" />
+<img class='home' src="/home.png" onclick="window.location='/'" />
+<script>
+	$('.home').click(function(){
+		if($.cookie('homeaddress') == null) {
+			window.location = "/";
+		} else {
+			window.location = $.cookie('homeaddress') ;
+		}
+	});
+</script>
+
+
+<!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"mooninsky"};
+	(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = 'http://static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	|| document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- Duoshuo Comment END -->
+
+</body>
+</html>

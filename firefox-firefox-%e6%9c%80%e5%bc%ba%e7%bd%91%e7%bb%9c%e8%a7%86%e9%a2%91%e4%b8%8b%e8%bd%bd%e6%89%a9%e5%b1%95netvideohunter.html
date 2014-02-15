@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>月下闲话 | [Firefox] Firefox 最强网络视频下载扩展NetVideoHunter </title>
+
+<link rel="stylesheet" href="/css/votex.css" type="text/css" media="all">
+<link rel="stylesheet" href="/css/post.css" type="text/css" media="all">
+<script type="text/javascript" src="/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/jquery-cookies.js"></script>
+
+</head>
+<body>
+
+<h1 style="margin-bottom:20px;"> [Firefox] Firefox 最强网络视频下载扩展NetVideoHunter <span onclick="window.location='http://fanfou.com/shinemoon'" style="cursor:pointer;margin-left:20px;font-weight:normal;font-size:16px;color:#ddd;">> <span style="font-size: 18px;font-style: italic;margin-right: 2px;color: #aaa;">S</span>hinemoon </span>
+
+</h1>
+
+<div style='height:80px;'>
+
+<span class='tags cat' onclick="window.location='/categories/未分类/'">未分类</span>
+ 
+
+ 
+</div>
+
+上次因为Downloaderhelper使用上不是很理想，于是采用了<a href="http://hi.baidu.com/shinemoon/blog/item/23f100977c90bd6854fb9634.html">百度视频+Flvcd+Redirector的方法</a>来下载视频，这个法子到目前，我还是觉得挺不错——唯一的缺陷是，如果Flvcd本身down了的话，怎么办？借着更新Firefox3的东风，顺便反思和搜寻了一下新的Add-on,无意间让我发现了<a href="https://addons.mozilla.org/en-US/firefox/addon/7447">NetVideoHunter</a>这个相当不错的嗅探-预览-下载扩展，实在是意外的惊喜。<br /><br />其实过程不是那么简单，我重新试过了Downloaderhelper、Firegrab（这个addon其实也很不错，有些想法颇有新意，不足在于显示视频标题的时候，似乎不支持中文，看到的是堆乱码）、Sothink web video downloader（这个是个商业软件，界面的确专业，可惜试用30天而已，而且对于一般网站，也没有抓取视频标题的能力；但是它的一个特点是，会同时显示出嗅探出的视频文件的大小，这个比较实用）之后，才终于选定了NetvideoHunter。<br /><br />原因无非是：<br />1. 嗅探能力强。我随便试了国内的几个大网站，例如tudou、youku、6.cn、新浪、等等，不但都探测成功，而且大部分的连标题都正确的显示了——甚至连YOBO的MP3，都照抓不误；<br /><br />2.有视频预览的部分。这个对于某些情况下判断内容也很有帮助；<br /><br />3.简单明了。没什么花头，就是在状态栏加了一个秀秀气气的蓝色小箭头和一个计数而已。<br /><br />这些理由，我觉得就足够了。至少在目前，这个是我能找到的最出色的网络视频下载器了，版本号标注0.2，看来有相当的潜力：）
+
+
+
+
+	<div style="margin-top:40px;margin-bottom:10px;font-size:16px;font-style:italic;text-align:right;color:#555;">19 Jun 2008 , 写毕。</div>
+
+
+
+
+<img class='top' src="/top.png" onclick="scroll(0,0);" />
+<img class='home' src="/home.png" onclick="window.location='/'" />
+<script>
+	$('.home').click(function(){
+		if($.cookie('homeaddress') == null) {
+			window.location = "/";
+		} else {
+			window.location = $.cookie('homeaddress') ;
+		}
+	});
+</script>
+
+
+<!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"mooninsky"};
+	(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = 'http://static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	|| document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- Duoshuo Comment END -->
+
+</body>
+</html>

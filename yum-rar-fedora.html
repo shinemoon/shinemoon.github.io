@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>月下闲话 | 关于Fedora16上如何安装rar （yum） </title>
+
+<link rel="stylesheet" href="/css/votex.css" type="text/css" media="all">
+<link rel="stylesheet" href="/css/post.css" type="text/css" media="all">
+<script type="text/javascript" src="/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/jquery-cookies.js"></script>
+
+</head>
+<body>
+
+<h1 style="margin-bottom:20px;"> 关于Fedora16上如何安装rar （yum） <span onclick="window.location='http://fanfou.com/shinemoon'" style="cursor:pointer;margin-left:20px;font-weight:normal;font-size:16px;color:#ddd;">> <span style="font-size: 18px;font-style: italic;margin-right: 2px;color: #aaa;">S</span>hinemoon </span>
+
+</h1>
+
+<div style='height:80px;'>
+
+<span class='tags cat' onclick="window.location='/categories/技术备忘/'">技术备忘</span>
+ 
+
+
+<span class='tags' onclick="window.location='/tags/fedora/'">fedora</span>
+ 
+</div>
+
+&nbsp;
+<br>
+<br><br>
+<br>
+首先参照网友帖子：http://www.oswave.org/p/28001
+<br>
+<br><br>
+<br>
+==================================
+<br>
+默认yum找不到unrar的安装文件？
+<br>
+<br><br>
+<br>
+vi /etc/yum.repos.d/dag.repo
+<br>
+添加如下内容：
+<br>
+<blockquote>
+<br>
+[dag]
+<br>
+<br><br>
+<br>
+name=Dag RPM Repository for Red Hat Enterprise Linux
+<br>
+<br><br>
+<br>
+baseurl=http://apt.sw.be/redhat/el$releasever/en/$basearch/dag
+<br>
+<br><br>
+<br>
+gpgcheck=1
+<br>
+<br><br>
+<br>
+enabled=1
+<br>
+<br><br>
+<br>
+gpgkey=http://dag.wieers.com/rpm/packages/RPM-GPG-KEY.dag.txt</blockquote>
+<br>
+然后
+<br>
+yum -y install rar unrar
+<br>
+<br><br>
+<br>
+==================================
+<br>
+<br><br>
+<br>
+但是实际上，这之后还是会出现http error，无法访问到有效的repo地址，人肉探索过去找到了一个正确的地址，所以文件如下：
+<br>
+<blockquote>[dag]
+<br>
+<br><br>
+<br>
+name=Dag RPM Repository for Red Hat Enterprise Linux
+<br>
+<br><br>
+<br>
+baseurl=http://apt.sw.be/redhat/el6/en/i386/dag/
+<br>
+<br><br>
+<br>
+gpgcheck=1
+<br>
+<br><br>
+<br>
+enabled=1
+<br>
+<br><br>
+<br>
+gpgkey=http://dag.wieers.com/rpm/packages/RPM-GPG-KEY.dag.txt</blockquote>
+<br>
+然后如上操作，就能够正确安装rar了。
+
+
+
+
+	<div style="margin-top:40px;margin-bottom:10px;font-size:16px;font-style:italic;text-align:right;color:#555;">15 Mar 2012 , 写毕。</div>
+
+
+
+
+<img class='top' src="/top.png" onclick="scroll(0,0);" />
+<img class='home' src="/home.png" onclick="window.location='/'" />
+<script>
+	$('.home').click(function(){
+		if($.cookie('homeaddress') == null) {
+			window.location = "/";
+		} else {
+			window.location = $.cookie('homeaddress') ;
+		}
+	});
+</script>
+
+
+<!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"mooninsky"};
+	(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = 'http://static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	|| document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- Duoshuo Comment END -->
+
+</body>
+</html>

@@ -1,0 +1,2 @@
+#!/bin/sh
+jekyll build;mv -f _site/* ../shinemoon.github.io;

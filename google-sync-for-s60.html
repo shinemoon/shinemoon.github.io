@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>月下闲话 | Google Sync For S60 </title>
+
+<link rel="stylesheet" href="/css/votex.css" type="text/css" media="all">
+<link rel="stylesheet" href="/css/post.css" type="text/css" media="all">
+<script type="text/javascript" src="/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/jquery-cookies.js"></script>
+
+</head>
+<body>
+
+<h1 style="margin-bottom:20px;"> Google Sync For S60 <span onclick="window.location='http://fanfou.com/shinemoon'" style="cursor:pointer;margin-left:20px;font-weight:normal;font-size:16px;color:#ddd;">> <span style="font-size: 18px;font-style: italic;margin-right: 2px;color: #aaa;">S</span>hinemoon </span>
+
+</h1>
+
+<div style='height:80px;'>
+
+<span class='tags cat' onclick="window.location='/categories/未分类/'">未分类</span>
+ 
+
+ 
+</div>
+
+<p>以前我在写关于goosync的文章时就提到，这只能算是一个临时性的替代措施，一旦Google Sync的服务完善，立马就会没有市场。很遗憾，这一天真的来到了。</p>  <p>也不知道具体什么时候，Google Sync终于放开了对S60系统的日历同步——而且更干脆，连实现方式也从最开始的使用S60手机的同步功能变成了借助Mail for Exchange，这样一来，不用说同步日历这个要求了，甚至也直接实现了近乎Push的实时性的同步。</p>  <p>具体步骤可以参见Google Sync的官网介绍[1. 但是不幸的是，最近以来，从国内访问很多Google服务都会自动重定向到g.cn，Google Sync也是其中之一，所以我当时是拼命点stop才停在了Google Sync的页面，大家可以尝试一下，如果不行，就参照本文也可]：</p>  <blockquote>   <h3>基本步骤</h3>    <p>&#160;</p>    <ol>1. 推荐备份手机数据 - Backup your data</ol>    <ol>     2. 从nokia的网站下载Mail For Exchange软件并安装至手机 - <a href="http://www.businesssoftware.nokia.com/mail_for_exchange_downloads.php">Download mail software</a></ol>    <ol>     3. 按照Google的指示来设置Mail for Exchange - <a href="http://www.google.com/support/mobile/bin/answer.py?hl=en&amp;answer=147951">Set up Google Sync</a> (可以参照下文）</ol>    <ol>     </ol> </blockquote>  <p>简单说就是：备份数据 - 下载Mail For Exchange -设置mail for exchange的同步信息。</p>  <p>下载安装都很简单，如同一般的软件。</p>  <p>安装好之后，就会开始进行账户设置，同样借用官方说明：</p>  <blockquote>   <div class="article_content"><strong>开始之前</strong>:      * 强烈推荐使用PC Suite或其他管理软件来备份手机数据。       <p>* 请确认你的手机型号是Mail for Exchange所支持的，并且确认你的Mail for Exchange是最新版本。接下来请按照下面的步骤配置：</p>      <p>1. 打开手机中Mail for Exchange的目录，并且运行Mail for Exchange的程序。</p>      <p>2. 当询问你是否要创建新的档案时，选择Yes。</p>      <p><img style="margin-left: 0px;margin-right: 0px" alt="Confirm Yes" src="http://i340.photobucket.com/albums/o350/claudxiao/sync_147951d_sync_create_en.png" /> </p>      <p>3. 然后如下步骤配置档案：</p>      <p><img style="margin-left: 0px;margin-right: 0px" alt="Connection Config" src="http://i340.photobucket.com/albums/o350/claudxiao/sync_147951b_sync_connections_en.png" /> </p>      <p>* 连接</p>      <ol>       <ul>-Exchange 服务器: m.google.com         -安全连接: Yes          -接入点: （自行选择）          -漫游时同步: （自行选择）          -使用默认端口: Yes</ul>        <ul></ul>        <ul></ul>        <ul></ul>        <ul></ul>        <ul></ul>        <ul></ul>        <ul></ul>        <ul></ul>        <ul><img style="margin: 20px 0px 0px" src="http://i340.photobucket.com/albums/o350/claudxiao/sync_147951c_sync_password_en.png" />           </ul>        <p>* 证书</p>        <ul>-用户名: 你的gmail邮箱全名, e.g. jon@gmail.com         -密码: Gmail密码          -域: 留空          </ul>        <p>&#160;</p>        <p>* 同步日程</p>        <ul>该设定用于决定何时启动同步. 如果使用始终打开，可以保证数据的即时性, 但是显然会更加耗电.</ul>        <ul></ul>        <ul></ul>        <ul><img style="margin: 15px 0px 0px" src="http://i340.photobucket.com/albums/o350/claudxiao/sync_147951a_sync_calendar_en.png" />&#160;</ul>        <p>* 日历</p>        <ul>同步日历: 是或者否</ul>        <ul>同步日历回溯: 自行选择         初次同步: 决定第一次同步时对于手机端和网络端的内容的取舍.</ul>        <ul>         </ul>        <p>*任务</p>        <ul>同步任务: 否(当前不支持)         </ul>        <p>&#160;</p>        <p>*联系人</p>        <ul>同步联系人: 是或者否         初次同步: 决定第一次同步时对于手机端和网络端的内容的取舍.</ul>        <ul>         </ul>        <p>*邮件</p>        <ul>同步邮件: 否(当前不支持)</ul>        <ul>         </ul>     </ol>   </div> </blockquote>  <p>&#160;</p>  <p>之后，一切就顺风顺水，无论是日历还是联系人，都可以非常方便的进行自动的同步了，而第三方的类似服务，在这个情况下，显然只有被无情抛弃一途了。而Google的这一步，让人不由的又开始期待，会不会有那么一天，它再顺便把‘Mail&#039;的同步也直接做进去呢？</p>
+
+
+
+
+	<div style="margin-top:40px;margin-bottom:10px;font-size:16px;font-style:italic;text-align:right;color:#555;">29 Jul 2009 , 写毕。</div>
+
+
+
+
+<img class='top' src="/top.png" onclick="scroll(0,0);" />
+<img class='home' src="/home.png" onclick="window.location='/'" />
+<script>
+	$('.home').click(function(){
+		if($.cookie('homeaddress') == null) {
+			window.location = "/";
+		} else {
+			window.location = $.cookie('homeaddress') ;
+		}
+	});
+</script>
+
+
+<!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"mooninsky"};
+	(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = 'http://static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	|| document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- Duoshuo Comment END -->
+
+</body>
+</html>
