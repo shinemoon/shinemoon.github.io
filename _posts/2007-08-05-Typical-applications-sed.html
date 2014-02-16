@@ -1,0 +1,12 @@
+---
+layout: post
+title: Sed 的典型应用
+categories:
+- 闲话
+tags: []
+status: publish
+type: post
+published: true
+meta: {}
+---
+<div><p>一、 批量文件更名：</p><br /><p>for curfile in *; do</p><br /><p>mv $curfile `echo $curfile | sed -e s/old/new/g `</p><br /><p>done</p><br /><p>二、 文件内容修改：</p><br /><p>sed -i s/oldstring/newstring/g `grep oldstring -rl yourdir`</p></div>
