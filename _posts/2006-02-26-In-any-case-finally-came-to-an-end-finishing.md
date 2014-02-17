@@ -3,9 +3,10 @@ layout: post
 title: 不管怎样,终于整理告一段落了.
 categories:
 - 闲话
-tags: []
+tags: [笑书亭]
 status: publish
 type: post
+info: 笑书亭
 published: true
 meta: {}
 ---
