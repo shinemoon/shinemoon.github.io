@@ -16,9 +16,9 @@ meta: {}
 
 刚接触nethack，发现中文方面的东西少的可怜，兴起，打算翻这篇我感觉蛮有意思的FAQ，算是为自己备忘。本人AD&D基础薄弱，所以很多专有名词也就不能强求了。争取定时能够分段更新，不要连这个也太监，那也太没面子了....
 
-** YANFAQ **  
+**YANFAQ ** 
 
-*** 又一份被常常问到的问题(YANFAQ) *** 
+***又一份被常常问到的问题(YANFAQ) ***
 
 
 收集者: Sascha Wostmann (wostmann@geocities.com)
