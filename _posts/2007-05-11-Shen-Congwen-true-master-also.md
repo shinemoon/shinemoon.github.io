@@ -2,9 +2,10 @@
 layout: post
 title: 沈从文真大师也
 categories:
-- 闲话
-tags: []
+- 读书
+tags: [小说，中国小说,沈从文]
 status: publish
+info: 上海
 type: post
 published: true
 meta: {}

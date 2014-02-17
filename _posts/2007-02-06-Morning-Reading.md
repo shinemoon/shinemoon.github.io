@@ -3,9 +3,10 @@ layout: post
 title: 晨间读书
 categories:
 - 闲话
-tags: []
+tags: [上海]
 status: publish
 type: post
+info: 上海
 published: true
 meta: {}
 ---

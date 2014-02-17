@@ -3,7 +3,7 @@ layout: post
 title: 明天就要回家了
 categories:
 - 闲话
-tags: []
+tags: [上海]
 status: publish
 type: post
 published: true

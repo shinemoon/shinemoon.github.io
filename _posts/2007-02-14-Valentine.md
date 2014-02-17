@@ -3,7 +3,8 @@ layout: post
 title: 情人节的花儿
 categories:
 - 闲话
-tags: []
+tags: [上海]
+info: 上海
 status: publish
 type: post
 published: true
@@ -17,4 +18,4 @@ meta: {}
 
 早上到办公室，人手发了一朵布制玫瑰，插在桌缝间，看上去绿叶红苞，倒也真有一份绰约的风姿。
 
-让人欣慰的是早早订好的花，不像曾弄得我哭笑不得的机票一般，顺利的送到杭州，加上昨夜骤雨过后今天怒放的晴天，应当是一个愉快的情人节吧？<a><img />screen.width/2)this.width=screen.width/2;&#039; &gt;</a>
+让人欣慰的是早早订好的花，不像曾弄得我哭笑不得的机票一般，顺利的送到杭州，加上昨夜骤雨过后今天怒放的晴天，应当是一个愉快的情人节吧？
