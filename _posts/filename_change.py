@@ -52,6 +52,7 @@ for file in os.listdir(path):
 			m = re.match(r'(\d\d\d\d-\d\d-\d\d-)(.*)', realfilename)
 			cdate = m.groups()[0]
 			cname = m.groups()[1]
+			print cname
 			transname = translate(cname).replace(" " , "-")
 			cleanp = re.compile(r"-+")
 			#remove duplicated -

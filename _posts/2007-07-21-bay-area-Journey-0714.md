@@ -1,0 +1,139 @@
+---
+layout: post
+title: Bay Area 纪行 － 07/14
+categories:
+- 足迹
+tags: [美国]
+status: publish
+info: San Jose
+type: post
+published: true
+meta: {}
+---
+
+旧金山作为整个湾区最大和最著名的城市，应该也是最为中国人熟知的一个城市之一——那里的‘唐人街’使中国文化似乎也成为了旧金山的众多标志中的一个。 
+
+一大早就爬起来，拿着打印出来的各个BUS、轻轨和湾区快速交通的时刻表，我们甚至可以在转车三次、历经两个小时、途径Miltitas、Fremont、Oakland、San Francisco四个城市的旅程中把到达时间精确到分。这在上海或许是不可想象的事情。出发的BUS上，有半个车厢都是广东老头老太太，叽叽喳喳热闹的很，就好像在杭州的公交车上去晨练一样。一路上，东湾安静的路边房屋、右侧的连绵山脉和蓝天上飘过的白云，真是令人舒适的很，直到到了Oakland，这个港口工业城市，才显得令人回到了现实，林立的港口吊车、沿路略显灰色的房屋和久经沧桑的载货卡车、以及不那么整洁的街道似乎清晰的划分了与硅谷之间的界限。
+
+穿过海底隧道，我们从BART（Bay Area Rapid Transit）的Embarcodero（？）站下车，就发现了很奇怪的雕饰——直到现在我仍然没搞懂这是什么东西：
+ 
+
+![pic](http://docs.google.com/File?id=ddqzv64m_25f5xqn5kt)
+
+走出车站，今天的天气是多云，但是加州阳光的威力依然令人敬畏，不过幸亏得益阳光，我才不至于会冻的太厉害——要知道在美国其他许多地方连续高温的时候，四季如春的旧金山不过只有20度的样子，很值得羡慕了。
+
+BART 车站出来，就是旧金山的金融区，这里高楼最为密集，所谓现代化大都市的气质，多半都表现在这一带了——
+
+![pic](http://docs.google.com/File?id=ddqzv64m_27gsxjjwcs)
+
+走走停停间，惊奇的发现居然就走到了地图标志中东端的Pier I了，此时才相信了关于旧金山很小的说法，看看那张SF Downtown的地图，再看看数步可到的两个路口，把比例尺在心中重新估摸了一下，顿时坚定了我们用步行游览的决心。
+
+![pic](http://docs.google.com/File?id=ddqzv64m_28cnj8p4cg)
+
+跨过最后一个路口，海湾就在眼前，多云多少影响了拍摄的效果，但在当时，时时出现的阳光仍然是那么耀眼，仿佛可以把心底最深的热情都照射出来，而碧绿海面上的湛蓝天空，足以征服我这个第一次近距离看海人的心。
+
+![pic](http://docs.google.com/File?id=ddqzv64m_29hq8kdmcr)
+
+海最令人心动的是什么？海水、天空、桥梁、船只，似乎缺一不可，然而非风动，非幡动，心动也。真正点睛的，就是路灯上高高悬起的那绚烂的花球所象征的看海人心里的热情和沉醉。
+
+
+![pic](http://docs.google.com/File?id=ddqzv64m_32fw7p28gg)
+
+在海边的西侧，作为全城制高点的Telegraph Hill上的Coit Tower也在静静的打望海上来来往往的人们。旧金山整个面向海湾的岸边，整齐有序的从南向北排列着四五十个码头（Pier），如今已经开辟成为景点，所有船只都转停Oakland了，而其中最有名的是从有海狮出现的Pier39到最北端Pier45一带的渔人码头。而相对生僻的Pier I，游客要少一些，所以沿途走去，能够充分享受到那令人陶醉的宁馨海港的独特风味。
+
+![pic](http://docs.google.com/File?id=ddqzv64m_31drbpzzdx)
+
+走过了几个码头，我们打算开始从城市中央向北进行穿越了，于是向西转折，踏进了broadway，刚过去就觉得有些不可思议了，谁能想象，这样一条安静，鲜有行人的街道距离海边景点不过一步之遥，我真是喜欢这阳光下安静且干净的城市街道。坐在码头上的长椅上，几乎动也不想动了。
+
+![pic](http://docs.google.com/File?id=ddqzv64m_339wsgmd7c)
+
+越是前行，越是觉出这城市不大，越是觉出了它的亲切和友善。倘若两个初次到来的语言磕磕碰碰的家伙，能够凭一张标识得不那么清楚的地图，在这里轻松的到达任一个地点，这个城市早就在我这个路盲心中留下了极高的印象分了。穿过两三个街区，便发现了旧金山的几个特点。
+
+房屋纵不算很新，但却决不破旧，而且整饬的赏心悦目；
+
+![pic](http://docs.google.com/File?id=ddqzv64m_34gfthm5hp)
+
+![pic](http://docs.google.com/File?id=ddqzv64m_40cbgmk7gn)
+
+整个城市如同建筑在山上，路与路之间，房与房之间高低落差足让初到者瞠目结舌，难怪我们的Leader一再强调，其实开车游览旧金山是很不方便的事情；
+
+![pic](http://docs.google.com/File?id=ddqzv64m_35cm8g2rfc)
+
+![pic](http://docs.google.com/File?id=ddqzv64m_36h2jw34hr)
+
+![pic](http://docs.google.com/File?id=ddqzv64m_37g9vj63d2)
+
+还有就是时不时看得到的中文招牌、店名，还有贴在楼口的“靓房出租”的纸条之类，让人会心
+
+![pic](http://docs.google.com/File?id=ddqzv64m_38c7vrt5g8)
+
+途中，因为迷路（-_-)，我们穿进了一个比较集中的公寓住宅区，便是这后窗小道，看看也是别有味道的：
+
+![pic](http://docs.google.com/File?id=ddqzv64m_39jndsn7gk)
+
+经过一番跋涉，我们终于回到了正确的道路上，迎面出现的是Washington Square，广场正北就是一个中等规模的教堂，而教堂门前的草坪上，三三两两的人们，或是闲坐，或是散步，或是遛狗，加州的阳光很强烈，然而得益于太平洋吹来的海风和海洋气候，所以除了让旧金山显得更加明媚，似乎没有什么负面影响。
+
+![pic](http://docs.google.com/File?id=ddqzv64m_41gctqwghh)
+
+![pic](http://docs.google.com/File?id=ddqzv64m_42f6cndxdt)
+
+![pic](http://docs.google.com/File?id=ddqzv64m_43g3wwjwfs)
+
+![pic](http://docs.google.com/File?id=ddqzv64m_44fwxvmhhr)
+
+而Cocit Tower此时也近在眼前了——但是遵循“望山跑死马”的告诫，我们决定这次还是先饶过它，下次再说吧。
+
+![pic](http://docs.google.com/File?id=ddqzv64m_45dqwjh3c2)
+
+听着教堂悠扬的敲完了12点的钟声之后，我们一路向北，上山下坡，暗自庆幸没有听同事的建议租自行车出行，要不然十之八九会挂在路上——直到来到了旧金山的北端，也就是游人如织的渔人码头了。外滩、西湖，这竟然是同行MM的第一反应，也难怪，在安静的城市中穿行了这么久，一下子仿佛瞬间回国了，除了游客组成略有不同（为什么说略有？因为这里的华裔或貌似华裔的人也实在不少），看看人来人往，的确不愧景点之称。
+
+![pic](http://docs.google.com/File?id=ddqzv64m_46c3t2vtcx)
+
+![pic](http://docs.google.com/File?id=ddqzv64m_47hbwnrxc2)
+
+![pic](http://docs.google.com/File?id=ddqzv64m_49cfsx6bhj)
+
+这里集中了各式各样的店铺、纪念品店，还有Leader千叮万嘱不要上当的‘伪’渔夫码头海产小吃。可惜现在的海狮都跑到冰岛去生小孩去了——于是呼啦啦的只剩下了海边空荡荡的木板，九月份它们才会集体回游——所以我们只能参观来来去去的人群，以及远眺一下被打造成重要景点的‘恶魔岛’（到处都是卖囚犯主题的纪念品）了。
+
+![pic](http://docs.google.com/File?id=ddqzv64m_48gfnv4w56)
+
+按部就班随着人流晃完这边，觉得远远不如城市里的穿行动人——然而金门大桥是不能不去的，经过一番询问寻找，我们终于找到了前往金门大桥的Cable Car，这是个tour的形式，将会在2小时以内沿城里兜一圈——后来证明我们这个决定是异常正确的。
+
+车叮叮当当的出发了，穿过城区，一路西行，路上经过了异常陡峭的坡道，以致在某些下坡时全车旅客会一起惊呼；
+
+![pic](http://docs.google.com/File?id=ddqzv64m_509wgnzsdw)
+
+![pic](http://docs.google.com/File?id=ddqzv64m_51gk79vqgd)
+
+车子穿行过如画的San Peter Paul 大教堂，我们沿途看到了幸福的队列，途径之时，乐呵呵的司机连连拉响铃铛示以祝福；
+
+![pic](http://docs.google.com/File?id=ddqzv64m_53sx529dg)
+
+![pic](http://docs.google.com/File?id=ddqzv64m_524rsdmdn)
+
+从小小的街口会让你惊喜的瞥见远处的海滩，颇有中国园林的那种柳暗花明之妙；
+
+![pic](http://docs.google.com/File?id=ddqzv64m_54cck4kxgb)
+
+再有就是让人目瞪口呆的漂亮房子，虽然坐在车上不方便拍照，但是，车行过之后，我们毫无疑义的统一了看法，下周再过来一次，好好慢慢的把这里再逛上一圈——连吃饭的时间都不要浪费了，把干粮带足！——当然这里的房子也不是我们可以奢望的，八卦的司机一幢一幢的介绍每一幢华丽的房子是那位显贵用多少钱买下来的，直让乘客咋舌；不过，观赏终归是可以的，希望下周能够好好的把它们拍下来。
+
+终于来到了金门大桥，可惜这时又起了雾，不见了蓝天白云的明朗，但是云蒸雾绕的景观倒是我未曾想到的。
+
+![pic](http://docs.google.com/File?id=ddqzv64m_55g6s5qvcx)
+
+![pic](http://docs.google.com/File?id=ddqzv64m_56d5cf8wc3)
+
+接下来，我们被象坐过山车一样回到了起点，算算时间，开始向BART站进发，对准方向顺便穿越唐人街——由于在这里过了一段时间，早已有了心理准备，于是丝毫未被这里的“本地化程度”所震撼，倒是一些细节值得回味：
+
+![pic](http://docs.google.com/File?id=ddqzv64m_57fjsdszg5)
+
+![pic](http://docs.google.com/File?id=ddqzv64m_58xtbw53gw)
+
+![pic](http://docs.google.com/File?id=ddqzv64m_59d44f77gw)
+
+穿过唐人街，又回到了我们出发的金融区了，风格迥异的林立高楼间，展现的是不一样的旧金山，发现我无意间拍下的照片，竟然是Claude路路口？巧合巧合——
+
+![pic](http://docs.google.com/File?id=ddqzv64m_60gcvmkpgn)
+
+终于终于，踏上了回程，然而从来没有这样一个城市，让我在离开的时候就憧憬下一次的来到——尽管回到旅馆的时候，已经是十一点多钟了。
+

@@ -1,0 +1,30 @@
+---
+title: 月下闲话
+layout: archive
+description: 归档
+---
+<br>
+<table>
+<tr>
+<td>
+<ul class="rounded-list" style="width:600px;">
+{% for post in site.posts %}
+<li>{{ post.date|date_to_string }}	
+<ul>
+	<li><a href='{{ post.url }}' logo='' class='title'>{{ post.title }}</a></li>
+</ul>
+</li>
+{% endfor %}
+</ul>
+</td>
+<td style="vertical-align:top;">
+<div style="padding-top:35px;">
+<ul class="rectangle-list" style="font-size:14px; width:250px;">
+	{% include friends.html %}
+</ul>
+</div>
+
+</tr>
+</table>
+<br>
+
