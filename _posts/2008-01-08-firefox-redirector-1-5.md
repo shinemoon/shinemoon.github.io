@@ -16,7 +16,7 @@ meta: {}
 
 作者原文如下
 
-================================
+----
 
 This version pretty much adds all features and fixes that people have been asking for, that"s why I bumped the version all the way up to 1.5. Here"s what"s new:
 
