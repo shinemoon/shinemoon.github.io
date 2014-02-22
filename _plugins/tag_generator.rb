@@ -19,7 +19,7 @@ module Jekyll
     safe true
     def generate(site)
       if site.layouts.key? 'tag_index'
-        dir = site.config['tag_dir'] || 'tags'
+        dir = site.config['tag_dir'] || 'tag'
         site.tags.keys.each do |tag|
           site.pages << TagPage.new(site, site.source, File.join(dir, tag), tag)
         end

@@ -6,6 +6,7 @@
 
 <link rel="stylesheet" href="/css/votex.css" type="text/css" media="all">
 <link rel="stylesheet" href="/css/post.css" type="text/css" media="all">
+<link rel="icon" href="/moon.ico" mce_href="/moon.ico" type="image/x-icon">
 <script type="text/javascript" src="/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="/jquery-cookies.js"></script>
 
@@ -22,7 +23,7 @@
 {% endfor %} 
 
 {% for tag in page.tags %}
-<span class='tags' onclick="window.location='{{ site.base_url }}/tags/{{ tag }}/'">{{ tag }}</span>
+<span class='tags' onclick="window.location='{{ site.base_url }}/tag/{{ tag }}/'">{{ tag }}</span>
 {% endfor %} 
 </div>
 
@@ -53,7 +54,11 @@
 
 
 <!-- Duoshuo Comment BEGIN -->
+{% if page.meta.duoshuo_thread_id %}
+<div class="ds-thread" data-url="{{ site.url }}{{ page.url }}"></div>
+{% else %}
 <div class="ds-thread"></div>
+{% endif %}
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"mooninsky"};
 	(function() {

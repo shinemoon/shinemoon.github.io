@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>月下闲话 </title>
+<link rel="stylesheet" href="/css/index.css" type="text/css" media="all">
+<link rel="alternate" type="application/atom+xml" href="feed" title="Atom feed">
+<link rel="icon" href="/moon.ico" mce_href="/moon.ico" type="image/x-icon">
+<script type="text/javascript" src="/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/jquery-cookies.js"></script>
+
+</head>
+
+<body>
+
+<h1 style="cursor:pointer;"><span onclick="window.location='/'"> 月下闲话 </span><span onclick="window.location='http://fanfou.com/shinemoon'" style="cursor:pointer;margin-left:20px;font-weight:normal;font-size:16px;color:#ddd;">> <span style="font-size: 18px;font-style: italic;margin-right: 2px;color: #aaa;">S</span>hinemoon </span>
+ </h1> 
+<h4 class='des'> Tag: 随笔 </h4>
+
+
+
+<br>
+
+<ul class="rounded-list">
+
+<li>23 Mar 2005	
+<ul>
+	<li><a href='/oldsaying-reasonable' logo='' class='title'>有些东西恒久，必然有它的道理...</a></li>
+</ul>
+</li>
+
+</ul>
+<br>
+
+
+<script>
+	$(document).ready(function(){
+		$('.title').each(function(){
+			$(this).attr('logo',$(this).text().substr(0,1));
+			$(this).text($(this).text().substr(1));
+			if($(this).text().length==0) $(this).text(' ');
+		});
+
+		$.cookie('homeaddress', window.location.href, {expires:7, path:'/'});
+	});
+</script>
+<!-- Pagination links -->
+<table class="bottombar">
+<tr>
+<td class='copyright'> <span class="copyrightdetails"> Proudly Blogging from <span style="color:#099;font-size:14px;font-weight:normal;cursor:pointer;" onclick="window.location='/archive.html'">2003</span> </span><br> <span class='copyrightdetails'><span style="color:#099;font-weight:normal;font-size:14px;cursor:pointer;" onclick="window.location='mailto:shinemoon@gmail.com'"> shinemoon#gmail.com </span></span><br><span class="copyrightdetails">Or feel free to <span onclick="window.location='http://weibo.com/claudxiao'" style="cursor:pointer;color:#099;font-weight:normal;font-size:14px;"> @iClaud </span></span></td>
+<td class='copyright' style='text-align:left;'> <span class='copyrightdetails'>Designed & Posted by <span style="color:#099;font-weight:normal;font-size:14px;cursor:pointer;" onclick="window.location='http://fanfou.com/shinemoon'"> Shinemoon </span></span><br> <span class="copyrightdetails">Powered by <span style="color:#099;font-weight:normal;font-size:14px;cursor:pointer" onclick="window.location='http://jekyllrb.com'"> Jekyll</span></span><br> <span class="copyrightdetails">Hosted by <span style="color:#099;font-weight:normal;font-size:14px;cursor:pointer;" onclick="window.location='http://github.com'"> GitHub</span></span></td>
+</tr>
+</table>
+<script>
+</script>
+</body>
+</html>
+

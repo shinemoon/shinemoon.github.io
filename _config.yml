@@ -4,4 +4,4 @@ paginate_path: "/page/:num"
 permalink: /:title
 name: 月下闲话
 description: 非关病酒 不在酒后
-url: http://shinemoon.github.io
+url: http://mooninsky.net

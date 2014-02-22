@@ -45,4 +45,8 @@ meta:
 
 我这是越忙越折腾的作死的节奏啊。
 
+PS. 切换很顺利，而且评论也平滑的切换了，当中还有点小插曲。原来的WP中我选用的url格式是类似'http://mooninsky.net/title', 可是现在虽然我已经配置了'/:title'形式的url，但是在Githu Page上点击之后会自动跳转到形如'http://mooninksky.net/title/'的地址，多出这么一个'/'就硬是让「多说」没法识别了——[最后仔细看了下文档](http://dev.duoshuo.com/docs/5003ecd94cab3e7250000008)，只需要在post插入多说模块的时候,向.ds-thread传递data-url，保证这个地址和以前一样就可以了，多说是优先利用这个data-url来识别贴子的，至此，收工。
+
+
+
 
