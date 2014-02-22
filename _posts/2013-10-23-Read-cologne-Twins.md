@@ -10,6 +10,7 @@ tags:
 status: publish
 type: post
 info: 简书
+comment: 幸亏当天还想起来搬运修订了两篇文章，否则，这可是本人开始写博客整整十年的纪念日，没有一篇文章岂不是可惜？
 published: true
 meta:
   _edit_last: '1'

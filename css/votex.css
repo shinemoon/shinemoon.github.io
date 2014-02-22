@@ -329,7 +329,8 @@ blockquote cite a {
 
 a,
 a:visited {
-	color: #00a498;
+	color: #666666;
+	border-bottom:1px dotted #666666;
 	text-decoration: none;
 }
 
