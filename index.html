@@ -3,11 +3,14 @@ title: 月下闲话
 layout: entry
 description: 非關病酒 不在酒後
 ---
+
+<style>
+</style>
 <br>
 <table>
 <tr>
 <td>
-<ul class="rounded-list" style="width:600px;">
+<ul class="rounded-list" style="width:600px;height:410px;">
 {% for post in paginator.posts %}
 <li>{{ post.date|date_to_string }}	
 <ul>
@@ -24,7 +27,35 @@ description: 非關病酒 不在酒後
 </ul>
 </div>
 
+<div><input id="J_search" placeholder="请键入搜索"/></div>
+<div class='search-div'>
+</div>
+
 </tr>
 </table>
 <br>
-
+<link rel="stylesheet" target="_blank" rel="external nofollow" href="jquery-ui.css" type="text/css">
+<script src="jquery-ui.js"></script>
+<script>
+var arc = $("<div></div>");
+arc.load("/archive.html .title", function(){
+	var data = Array();
+	arc.find('.title').each(function(){
+		console.log($(this).attr("logo")+$(this).text());
+		data.push({
+			label:$(this).attr("logo")+$(this).text(),
+			url:$(this).attr("href")
+		});
+	});
+	console.log(data);
+	
+	$( "#J_search" ).autocomplete({
+		source: data,
+		minLength: 0,
+		appendTo: '.search-div',
+		select: function( event, ui ) {
+			window.location.href = ui.item.url;
+		}
+	});
+});
+</script>
