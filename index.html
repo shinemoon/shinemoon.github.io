@@ -42,12 +42,15 @@ arc.load("/archive.html .title", function(){
 	var data = Array();
 	arc.find('.title').each(function(){
 		//for display purpose, limited it to 7 items maximumn
-		if(data.length==7) return false;	
 		data.push({
 			label:$(this).attr("logo")+$(this).text(),
 			url:$(this).attr("href")
 		});
+		if(data.length==7) {
+			return false;	
+		}
 	});
+	console.log(data.length);
 	
 	$( "#J_search" ).autocomplete({
 		source: data,
