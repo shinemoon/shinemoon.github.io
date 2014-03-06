@@ -3,6 +3,7 @@ body {
 	font-family:Georgia,"Times New Roman",Times,"Songti SC","SimSun",serif,"宋体";
 	font-size:18px;
 	color:#333;
+	overflow:none;
 }
 
 h4.des {
@@ -27,7 +28,7 @@ td.pagination {
 td.copyright {
 	color:#aaa;	
 	font-size: 12px;
-	padding-left: 20px;
+	padding-left: 0px;
 	font-family: calibri,serif;
 	padding-top: 10px;
 }

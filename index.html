@@ -10,7 +10,7 @@ description: 非關病酒 不在酒後
 <table>
 <tr>
 <td>
-<ul class="rounded-list" style="width:600px;height:410px;">
+<ul class="rounded-list" style="width:600px;height:410px;margin-bottom:0px;">
 {% for post in paginator.posts %}
 <li>{{ post.date|date_to_string }}	
 <ul>
@@ -41,13 +41,11 @@ var arc = $("<div></div>");
 arc.load("/archive.html .title", function(){
 	var data = Array();
 	arc.find('.title').each(function(){
-		console.log($(this).attr("logo")+$(this).text());
 		data.push({
 			label:$(this).attr("logo")+$(this).text(),
 			url:$(this).attr("href")
 		});
 	});
-	console.log(data);
 	
 	$( "#J_search" ).autocomplete({
 		source: data,
