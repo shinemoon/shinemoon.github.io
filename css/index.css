@@ -17,7 +17,7 @@ h4.des {
 
 table.bottombar {
 	width:100%;
-	padding-bottom:40px;
+	padding-bottom:20px;
 }
 
 td.pagination {
@@ -29,7 +29,7 @@ td.copyright {
 	font-size: 12px;
 	padding-left: 20px;
 	font-family: calibri,serif;
-	padding-top: 40px;
+	padding-top: 10px;
 }
 
 img.next {
