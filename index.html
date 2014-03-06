@@ -29,7 +29,6 @@ description: 非關病酒 不在酒後
 
 <div>
 <input id="J_search" placeholder="Search Here"/>
-<label style="font: 0.75em/normal sans-serif; left: 5px; top: 3px; width: 147px; height: 15px; color: rgb(186, 186, 186); position: absolute; overflow-x: hidden; font-size-adjust: none; font-stretch: normal;" for="J_search">Search Here</label>
 </div>
 <div class='search-div'>
 </div>
@@ -61,5 +60,18 @@ arc.load("/archive.html .title", function(){
 			window.location.href = ui.item.url;
 		}
 	});
+	$('[placeholder]').focus(function() {
+	  var input = $(this);
+	  if (input.val() == input.attr('placeholder')) {
+	    input.val('');
+	    input.removeClass('placeholder');
+	  }
+	}).blur(function() {
+	  var input = $(this);
+	  if (input.val() == '' || input.val() == input.attr('placeholder')) {
+	    input.addClass('placeholder');
+	    input.val(input.attr('placeholder'));
+	  }
+	}).blur();
 });
 </script>
