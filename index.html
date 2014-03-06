@@ -41,19 +41,17 @@ var arc = $("<div></div>");
 arc.load("/archive.html .title", function(){
 	var data = Array();
 	arc.find('.title').each(function(){
-		//for display purpose, limited it to 7 items maximumn
 		data.push({
 			label:$(this).attr("logo")+$(this).text(),
 			url:$(this).attr("href")
 		});
-		if(data.length==7) {
-			return false;	
-		}
 	});
-	console.log(data.length);
 	
 	$( "#J_search" ).autocomplete({
-		source: data,
+    	source: function(request, response) {
+	        var results = $.ui.autocomplete.filter(data, request.term);
+	        response(results.slice(0, 7));	//limit to 7 items for display
+	    },
 		minLength: 0,
 		appendTo: '.search-div',
 		select: function( event, ui ) {
