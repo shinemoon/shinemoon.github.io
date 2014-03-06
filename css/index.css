@@ -3,7 +3,7 @@ body {
 	font-family:Georgia,"Times New Roman",Times,"Songti SC","SimSun",serif,"宋体";
 	font-size:18px;
 	color:#333;
-	overflow:none;
+	overflow:hidden;
 }
 
 h4.des {
