@@ -34,7 +34,7 @@ categories: [技术]
 
 而且一些画龙点睛的细节，也确实标志着Google的野心：
 
-App Launch 开始方便的驻扎进了Windows的快捷访问栏，OSX的Dock；APP的图标独立，并且可以方便的Pin在任务栏或者Dock——而且，Google和以前不同，如果你没有打开Chrome，而是直接使用Launch选择packaged app，那么除了单独打开的app之外，用户根本看不到任何Chrome在后台运行的迹象（当然，打开任务管理器或者是top之类，当然无所遁形）；
+App Launch 开始方便的驻扎进了Windows的快捷访问栏，OSX的Dock；APP的图标独立，并且可以方便的Pin在任务栏或者Dock——而且，Google和以前不同，如果你没有打开Chrome，而是直接使用Launch选择packaged app，那么除了单独打开的app之外，用户根本看不到任何Chrome在后台运行的迹象（当然，打开任务管理器或者是top之类，依然无所遁形）；
 
 ![launcher](http://i340.photobucket.com/albums/o350/claudxiao/5C4F5E555FEB71672014-03-11123531AM_zpsfefaf4e2.png)
 
@@ -42,10 +42,10 @@ App Launch 开始方便的驻扎进了Windows的快捷访问栏，OSX的Dock；A
 
 同时，是为了「逼真」吗？Packaged APP的页面中，无法实现href的跳转、无法审查元素（除非打开flag中的调试）、当然也不可能让你刷新——的确扑朔迷离无法分辨。
 
-至于常被人说起的诸如安全性、开发复杂度（特别是一些算法等等）的问题，我能看到想到的，也就是NACL了，简单、直接、但是的确好用，不管怎样，C/C++始终不会孤单——再配合上Google逐步加强的，设备相关的API的深化（特别是考虑到日渐增多的ChromeBook和依然由Google把持着的Android），手机和其他移动设备厂商间的「军备竞赛」等等因素，Chrome App注定可以用Native App的姿态出现在更广泛的设备上的。
+至于常被人说起的诸如安全性、开发复杂度（特别是一些算法等等）的问题，我能看到想到的，也就是NACL了，简单、直接、但是的确好用，不管怎样，C/C++始终不会孤单——再配合上Google逐步加强的，设备相关的API的深化（特别是考虑到日渐增多的ChromeBook和依然由Google把持着的Android），手机和其他移动设备厂商间的「军备竞赛」等等因素，Chrome App注定可以用Native App的姿态出现在更广泛的设备上的——更重要的是，其实Chrome从最开始想做的，就不是一个简单的浏览器，而是一个操作系统，甚至是一个可以锲入到对手OS中，不动声色构建属于自己的生态的平台。
 
 而回到Android上来，Google有能力，并且早就开始做到对Linux的深度Chrome化定制，如果放到本来就由它主导的Android身上，恐怕更加轻松，虽然目前的进展和桌面端比起来偏保守，还停留在桌面加APP入口、打开后全屏的[初级阶段](https://developers.google.com/chrome/mobile/docs/installtohomescreen)，可是Google有一直负责Chrome的皮采来兼管Android，又何愁进展？目前移动设备越来越逆天的配置更是让可能出现的对性能的担忧日益减轻。
 
-用不了多久，花不了几个小版本的更迭，Chrome就会成为Android中更加底层和重要的平台， Chrome App on Android恐怕就会慢慢成为Android上的主流——到了那时候，成功完成了智能手机早期攻城拔寨任务的Android也就离功成身退不远了。
+用不了多久，花不了几个小版本的更迭，Chrome就会成为Android中更加底层和重要的平台， Chrome App on Android恐怕就会慢慢成为Android上的主流——到了那时候，成功完成了智能手机早期攻城拔寨任务的Android也就离功成身退不远了，而Google 这一盘棋才算是开始收线了。
 
 
