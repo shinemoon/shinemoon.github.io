@@ -46,6 +46,6 @@ App Launch 开始方便的驻扎进了Windows的快捷访问栏，OSX的Dock；A
 
 而回到Android上来，Google有能力，并且早就开始做到对Linux的深度Chrome化定制，如果放到本来就由它主导的Android身上，恐怕更加轻松，虽然目前的进展和桌面端比起来偏保守，还停留在桌面加APP入口、打开后全屏的[初级阶段](https://developers.google.com/chrome/mobile/docs/installtohomescreen)，可是Google有一直负责Chrome的皮采来兼管Android，又何愁进展？目前移动设备越来越逆天的配置更是让可能出现的对性能的担忧日益减轻。
 
-用不了多久，花不了几个小版本的更迭，Chrome就会成为Android中更加底层和重要的平台， Chrome App on Android恐怕就会慢慢成为Android上的主流——到了那时候，成功完成了智能手机早期攻城拔寨任务的Android也就离功成身退不远了，而Google 这一盘棋才算是开始收线了。
+用不了多久，花不了几个小版本的更迭，Chrome就会成为Android中更加底层和重要的平台， Chrome App on Android恐怕就会慢慢成为Android上的主流——到了那时候，成功完成了智能手机早期攻城拔寨任务的Android也就离功成身退不远，而Google 的这一盘棋才算是开始收线了。
 
 
