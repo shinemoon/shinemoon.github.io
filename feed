@@ -6,7 +6,8 @@ layout: nil
  
   <title>月下闲话</title>
   <link href="http://mooninsky.net/"/>
-  <link type="application/atom+xml" rel="self" href="http://mooninsky.net/feed"/>
+  <!--link type="application/atom+xml" rel="self" href="http://mooninsky.net/feed"/-->
+  <link rel="self" href="http://mooninsky.net/feed"/>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <id>http://mooninsky.net/</id>
   <author>
