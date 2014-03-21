@@ -14,7 +14,7 @@ layout: nil
     <email>shinemoon@gmail.com</email>
   </author>
 
-  {% for post in site.posts %}
+  {% for post in site.posts limit: 10 %}
   <entry>
     <id>http://mooninsky.net{{ post.id }}</id>
     <link type="text/html" rel="alternate" href="http://mooninsky.net{{ post.url }}"/>
