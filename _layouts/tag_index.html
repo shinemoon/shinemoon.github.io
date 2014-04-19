@@ -1,22 +1,29 @@
 ---
 title: 月下闲话
 description: 
+layout: default
 ---
 
 {% include header.html %}
 
 <br>
 
-<ul class="rounded-list">
-{% for post in site.tags[page.tag] %}
+<!--ul class="rounded-list">
+{.% for post in site.posts %}
+	{.% for tag in post.tags %}
+		{.% if tag == page.tag %}
 <li>{{ post.date|date_to_string }}	
 <ul>
 	<li><a href='{{ post.url }}' logo='' class='title'>{{ post.title }}</a></li>
 </ul>
 </li>
-{% endfor %}
-</ul>
+		{.% endif %}
+	{.% endfor %}
+{.% endfor %}
+
+</ul-->
 <br>
 
 
 {% include footer_without_paginator.html %}
+

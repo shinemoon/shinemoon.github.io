@@ -3,7 +3,7 @@ layout: post
 title: 想把以前的一个系列的文章传上来....
 categories:
 - 闲话
-tags: [blogcn,职业]
+tags: [职业]
 status: publish
 type: post
 published: true

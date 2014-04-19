@@ -3,7 +3,6 @@ layout: post
 title: 关于档次
 categories:
 - 闲话
-tags: [blogcn]
 info: 大学宿舍
 comment: 依然记得那晚第一次看到芯片放烟火的激动。
 status: publish

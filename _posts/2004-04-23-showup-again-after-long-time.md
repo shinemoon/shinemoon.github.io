@@ -3,7 +3,6 @@ layout: post
 title: 冒泡
 categories:
 - 闲话
-tags: [blogcn]
 info: 大学宿舍
 comment: 很久没碰过blog之后，忽然心血来潮又回头写的结果。
 status: publish

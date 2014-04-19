@@ -1,5 +1,2 @@
 #!/bin/sh
-rm -rf categories tag;
 jekyll build;
-cp -R -f _site/categories .;
-cp -R -f _site/tag .;

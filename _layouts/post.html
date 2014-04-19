@@ -29,11 +29,13 @@ var _hmt = _hmt || [];
 
 <div style='height:80px;'>
 {% for cat in page.categories %}
-<span class='tags cat' onclick="window.location='{{ site.base_url }}/categories/{{ cat }}/'">{{ cat }}</span>
+<!--span class='tags cat' onclick="window.location='{{ site.base_url }}/categories/{{ cat }}/'">{{ cat }}</span-->
+<span class='tags cat'>{{ cat }}</span>
 {% endfor %} 
 
 {% for tag in page.tags %}
-<span class='tags' onclick="window.location='{{ site.base_url }}/tag/{{ tag }}/'">{{ tag }}</span>
+<!--span class='tags' onclick="window.location='{{ site.base_url }}/tag/{{ tag }}/'">{{ tag }}</span-->
+<span class='tags'>{{ tag }}</span>
 {% endfor %} 
 </div>
 

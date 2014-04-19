@@ -4,7 +4,6 @@ title: 另外 昨夜有雨
 categories:
 - 闲话
 info: 大学宿舍
-tags: [blogcn]
 status: publish
 type: post
 published: true

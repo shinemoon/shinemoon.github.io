@@ -3,7 +3,7 @@ layout: post
 title: 伤情一刺
 categories:
 - 习作
-tags: [blogcn,小说,练笔]
+tags: [小说,练笔]
 status: publish
 type: post
 published: true

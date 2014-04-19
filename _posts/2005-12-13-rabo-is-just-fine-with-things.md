@@ -3,7 +3,6 @@ layout: post
 title: Rabo是个蛮好用的东西
 categories:
 - 闲话
-tags: []
 status: publish
 type: post
 published: true

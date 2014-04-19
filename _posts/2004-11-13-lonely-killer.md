@@ -1,9 +1,9 @@
 ---
- layout: post
+layout: post
 title: 寂寞一刺
 categories:
 - 习作
-tags: [小说,武侠小说,习作,blogcn]
+tags: [小说,武侠小说,习作]
 status: publish
 type: post
 published: true
