@@ -10,7 +10,7 @@ type: post
 published: true
 meta: {}
 ---
-上次还很勤劳的写了一篇[赞QQ邮箱的文章](http://mooninsky.net/best-mail-service-in-china-qqmail)，表达了对这个产品的支持，不过从自己的感觉以及朋友的回帖来看，大家一个共识就是[——@qq.com](mailto:——@qq.com)这个域名实在有点拿不出手，真要是做很正经的用途，似乎显得低幼了。
+上次还很勤劳的写了一篇[赞QQ邮箱的文章](http://mooninsky.net/best-mail-service-in-china-qqmail)，表达了对这个产品的支持，不过从自己的感觉以及朋友的回帖来看，大家一个共识就是这个域名实在有点拿不出手，真要是做很正经的用途，似乎显得低幼了。
 
 今天登陆邮箱，立马就看到了一封题为"邀请您注册@foxmail.com，立刻拥有一邮多名!"的邮件。这个服务我隐约就听说过，当时没有细想，只当是foxmail推广的一个手段罢了，何况我本来也有foxmail的账户，于是没向心里去。这次仔细一看邮件，原来这个功能比我原来以为的要妙。
 
