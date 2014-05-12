@@ -1,16 +1,4 @@
----
-title: 月下闲话
-layout: entry
-description: 非關病酒 不在酒後
----
-
-<style>
-</style>
-<br>
-<table>
-<tr>
-<td>
-<ul class="rounded-list" style="width:600px;height:410px;margin-bottom:0px;">
+ded-list" style="width:600px;height:410px;margin-bottom:0px;">
 {% for post in paginator.posts %}
 <li>{{ post.date|date_to_string }}	
 <ul>
@@ -27,11 +15,6 @@ description: 非關病酒 不在酒後
 </ul>
 </div>
 
-<div>
-<input id="J_search" placeholder="Search Here"/>
-</div>
-<div class='search-div'>
-</div>
 
 </tr>
 </table>
@@ -49,29 +32,5 @@ arc.load("/archive.html .title", function(){
 		});
 	});
 	
-	$( "#J_search" ).autocomplete({
-    	source: function(request, response) {
-	        var results = $.ui.autocomplete.filter(data, request.term);
-	        response(results.slice(0, 7));	//limit to 7 items for display
-	    },
-		minLength: 0,
-		appendTo: '.search-div',
-		select: function( event, ui ) {
-			window.location.href = ui.item.url;
-		}
-	});
-	$('[placeholder]').focus(function() {
-	  var input = $(this);
-	  if (input.val() == input.attr('placeholder')) {
-	    input.val('');
-	    input.removeClass('placeholder');
-	  }
-	}).blur(function() {
-	  var input = $(this);
-	  if (input.val() == '' || input.val() == input.attr('placeholder')) {
-	    input.addClass('placeholder');
-	    input.val(input.attr('placeholder'));
-	  }
-	}).blur();
 });
 </script>
