@@ -1,12 +1,10 @@
 ---
-title: StackEdit Trial
+title: PlaceHolder
 categories: 闲话
-tags: [tech, markdown]
+tags: []
 type: post
-info: Office
+info: 
 comment: 
-published: true
+published: false
 layout: post
 ---
-
-Just a simple trial of the new tool.
