@@ -11,7 +11,7 @@ layout: post
 
 自从用了Github Page的Jeykll之后，的确省心了不少，至少开始更多的做减法，而不是做加法；能减掉的功能都减掉了。现在的Blog基本上终于到了勉强算的上「反璞归真」；
 
-但是，Jeykll的问题当然也很明显，至少，写和发布一般来讲需要分开来做，就为了push一下文章，你的机器上少不了去装个Git的客户端，这对于想在外面发布文章的情况就比较尴尬了。不过，无心插柳，这天，在Chrome应用商店「瞎逛」，居然就看到了这个扩潳， [StackEdit](https://chrome.google.com/webstore/detail/stackedit/iiooodelglhkcpgbajoejffhijaclcdg?utm_source=chrome-ntp-launcher),顿时就柳暗花明了。
+但是，Jeykll的问题当然也很明显，至少，写和发布一般来讲需要分开来做，就为了push一下文章，你的机器上少不了去装个Git的客户端，这对于想在外面发布文章的情况就比较尴尬了。不过，无心插柳，这天，在Chrome应用商店「瞎逛」，居然就看到了这个应用， [StackEdit](https://chrome.google.com/webstore/detail/stackedit/iiooodelglhkcpgbajoejffhijaclcdg?utm_source=chrome-ntp-launcher),顿时就柳暗花明了。
 
 下图就很清楚的说明了它的方便：
 
