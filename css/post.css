@@ -80,3 +80,9 @@
 		margin-right: 5px;
 		border-radius: 3px;
 	}
+
+	ul li {
+		font-size: 14px;
+		margin-top: 8px;
+		margin-bottom: 8px;
+	}
