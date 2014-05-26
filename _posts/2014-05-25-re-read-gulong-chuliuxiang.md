@@ -3,7 +3,7 @@ title: 再读古龙——「楚留香」
 categories: 读书
 tags: [再读古龙,读书]
 type: post
-info: 陆陆续续的写就
+info: 断断续续的零碎时光
 comment: 
 published: true
 layout: post
