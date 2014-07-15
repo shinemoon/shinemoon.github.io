@@ -21,12 +21,13 @@ layout: post
 
 不管是虾米还是百度Aria的支持，「关键技术」本身都是很简单的，无非一个WebRequest的监听，和对aria jsonrpc的直接使用；真正花功夫的还是一些蛋疼的细节罢了，例如，在网页上图标的插入和Ajax刷新之后的动态监测、chrome的下载bar的显示隐藏时机、页码的跳转显示等等。
 
-总而言之，终于完工，这次懒得写什么说明，精修截图之类的了，糊弄着上传store，纯粹自用，然后很满意的，试图回想起大概一周前，那首让我起了念头的歌到底是那一首？
+总而言之，[终于完工，这次懒得写什么说明，精修截图之类的了，糊弄着上传store][2]，纯粹自用，然后很满意的，试图回想起大概一周前，那首让我起了念头的歌到底是那一首？
 
-![enter image description here][2]
+![enter image description here][3]
 
 结果，我忘记了。
 
 
   [1]: https://github.com/ghostry/toAria2
-  [2]: http://i340.photobucket.com/albums/o350/claudxiao/Untitled_zps6176f66e.png
+  [2]: https://chrome.google.com/webstore/detail/%E4%B8%8B%E8%BD%BD%E5%B7%A5%E5%85%B7%E9%9B%86/bbkbmckcblbohnkkhjknhggkjloiklio
+  [3]: http://i340.photobucket.com/albums/o350/claudxiao/Untitled_zps6176f66e.png
