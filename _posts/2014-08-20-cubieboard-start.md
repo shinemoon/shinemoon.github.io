@@ -1,5 +1,5 @@
 ---
-title:CubieBoard入手相关 
+title: CubieBoard入手相关 
 categories: 技术 
 tags: [ARM, 嵌入式, Linux]
 type: post
@@ -7,6 +7,8 @@ comment:
 published: true
 layout: post
 ---
+
+
 ![overview] [a]
 
 *图片为Radax Rock，并非Cubieboard，是Cubie创始团队基于瑞芯微的RX系列开发的类似的下一代开发板*
@@ -147,3 +149,4 @@ Wifi正式OK，那么终于可以移动使用了。
 [d]: http://i340.photobucket.com/albums/o350/claudxiao/cubieboard_zpseebcbc43.jpg
 
 [10]: https://github.com/cubieplayer/cubian/wiki/%E4%B8%8A%E6%89%8BCubian
+
