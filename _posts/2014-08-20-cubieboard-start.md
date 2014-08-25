@@ -1,17 +1,16 @@
 ---
-title: CubieBoard入手相关 
-categories: 技术 
-tags: [ARM, 嵌入式, Linux]
+title: CubieBoard入手相关
+categories: 技术
+tags: [Linux, ARM]
 type: post
 comment: 
 published: true
 layout: post
 ---
 
+*图片为Radax Rock，并非Cubieboard，是Cubie创始团队基于瑞芯微的RX系列开发的类似的下一代开发板*
 
 ![overview] [a]
-
-*图片为Radax Rock，并非Cubieboard，是Cubie创始团队基于瑞芯微的RX系列开发的类似的下一代开发板*
 
 NOTE: 本文主要聚焦CubieBoard相关的特殊内容，而对于类似Android或者Linux本身相关的内容不做过多展开和深入。
 
