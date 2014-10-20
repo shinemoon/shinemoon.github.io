@@ -89,6 +89,7 @@ Google之后的结论是，有一些开发者的工具，例如这位php直接�
 
 
 ```html
+
 {block:IfDisqusShortname}
 <div id="disqus_thread"></div>
 <script type="text/javascript">
@@ -105,8 +106,8 @@ Google之后的结论是，有一些开发者的工具，例如这位php直接�
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-
 {/block:IfDisqusShortname}
+
 ```
 
 
