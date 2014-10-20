@@ -88,7 +88,7 @@ Google之后的结论是，有一些开发者的工具，例如这位php直接�
 - 然后搜索并且紧接在`{/block:Posts}`后，插入如下代码：
 
 
-```html
+```
 
 {block:IfDisqusShortname}
 <div id="disqus_thread"></div>
