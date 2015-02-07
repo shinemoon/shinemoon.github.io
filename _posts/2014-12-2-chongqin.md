@@ -5,12 +5,14 @@ date: '2014-12-2'
 info: 归来后
 layout: post
 published: true
-sha: 5eebd0c2ccd5004e76720cc36524c1de1be1a5dc
+sha: f27a4edd836e15641361df7edebce83a1892ac31
 slug: chongqin
-tags: 旅行,国内
+tags: '[旅行,国内]'
 title: 重庆
 type: post
+
 ---
+
 
 
 被逼着组织部门活动，原本以为这群忙碌的一塌糊涂的人，还兼顾杭州北京两个地点的人员，实在成行机会极低，谁料最后竟然一切都搞定，所有的人终于在重庆滨江的酒店大堂里碰头了，大出意外。
