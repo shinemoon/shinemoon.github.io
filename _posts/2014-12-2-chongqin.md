@@ -1,17 +1,21 @@
 ---
-categories: 足迹
+categories:
+  - 足迹
 comment: 行走还是件很惬意的事情。
 date: '2014-12-2'
 info: 归来后
 layout: post
 published: true
-sha: f27a4edd836e15641361df7edebce83a1892ac31
+sha: e5c88ae4bab7d99993c3a809fafebb3563067dc7
 slug: chongqin
-tags: '[旅行,国内]'
+tags:
+  - 旅行
+  - 国内
 title: 重庆
 type: post
 
 ---
+
 
 
 
