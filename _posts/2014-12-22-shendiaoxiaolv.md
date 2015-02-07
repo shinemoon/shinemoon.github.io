@@ -1,13 +1,20 @@
 ---
-title: 神雕侠侣再读后 
 categories: 读书
-tags: [金庸,武侠小说]
-type: post
-comment: 
-info:
-published: true
+comment: null
+date: '2014-12-22'
+info: null
 layout: post
+published: true
+sha: fa0e631fbf59ee9786768fc0fe168e2880a6f3eb
+slug: shendiaoxiaolv
+tags:
+  - 金庸
+  - 武侠小说
+title: 神雕侠侣再读后
+type: post
+
 ---
+
 
 真的不是为了凑最近电视剧新播的热闹。我拿着kindle在书荒期间就开始读射雕三部曲，恰恰在这个时候读到了《神雕侠侣》罢了。
 
