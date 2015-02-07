@@ -1,14 +1,14 @@
----tags: Linux
-type: post
+---type: post
 comment: 东西终究还是写在自己的地方不会丢...
 info: 
 published: true
 layout: post
 date: '2014-11-11'
-sha: 19b4bb0b49125301ae0f9abb19ecc68722197f30
+sha: 1d04b3430dc5d12a26ddd4e15f7d92dec2af0b04
 slug: vlc-remote-control
 title: 'VLC 远程播放控制方法'
 categories: 技术
+tags: linux
 ---
 
 开宗明义，在Headless （ i.e. without a monitor or input device）的服务器（例如，各类嵌入式「玩具板子」）上如果架起VLC进行多媒体播放，怎样才是最方便的控制方式？
