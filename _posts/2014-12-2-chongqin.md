@@ -1,4 +1,5 @@
----categories: 足迹
+---
+categories: 足迹
 comment: 行走还是件很惬意的事情。
 date: '2014-12-2'
 info: 归来后
