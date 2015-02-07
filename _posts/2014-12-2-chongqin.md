@@ -1,12 +1,14 @@
----
-title: 重庆
-categories: 足迹
-tags: [旅行]
-type: post
-comment:  写的时候开头有激情，打断之后反而草草收尾。
-info:
-published: true
+---categories: 足迹
+comment: 写的时候开头有激情，打断之后反而草草收尾。
+date: '2014-12-2'
+info: 工具测试
 layout: post
+published: true
+sha: ce77d31e94c3bc2afb2c460dbeaa029ff28e6c31
+slug: chongqin
+tags: 旅行
+title: 重庆
+type: post
 ---
 
 
