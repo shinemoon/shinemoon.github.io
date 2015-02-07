@@ -1,12 +1,14 @@
----
-title: 命令行下怎样远程控制VLC播放
-categories: 技术 
-tags: [Linux]
+---title: 命令行下怎样远程控制VLC播放
+categories: 技术
+tags: Linux
 type: post
-comment: 
-info:
+comment: 东西终究还是写在自己的地方不会丢...
+info: 
 published: true
 layout: post
+date: '2014-11-11'
+sha: ba39d51982a9c045ad9031a8a4804e03fb36b62b
+slug: vlc-remote-control
 ---
 
 开宗明义，在Headless （ i.e. without a monitor or input device）的服务器（例如，各类嵌入式「玩具板子」）上如果架起VLC进行多媒体播放，怎样才是最方便的控制方式？
