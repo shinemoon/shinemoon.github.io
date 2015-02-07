@@ -7,7 +7,7 @@ layout: post
 published: true
 sha: 5eebd0c2ccd5004e76720cc36524c1de1be1a5dc
 slug: chongqin
-tags: '旅行,国内'
+tags: 旅行,国内
 title: 重庆
 type: post
 ---
