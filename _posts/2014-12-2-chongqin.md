@@ -4,9 +4,9 @@ date: '2014-12-2'
 info: 归来后
 layout: post
 published: true
-sha: 66058acfd11375c0060e5dc80d8d179ac6e2515b
+sha: 5eebd0c2ccd5004e76720cc36524c1de1be1a5dc
 slug: chongqin
-tags: 旅行
+tags: '旅行,国内'
 title: 重庆
 type: post
 ---
