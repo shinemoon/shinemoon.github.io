@@ -1,14 +1,14 @@
----comment: 写的时候开头有激情，打断之后反而草草收尾。
-date: '2014-12-2'
+---date: '2014-12-2'
 info: 工具测试-Again
 layout: post
 published: true
-sha: 75eda398eff4f89f3880fbdeb0d156ee8b8f9186
+sha: f4c257e80847be89e291763925916b8162ef751e
 slug: chongqin
 tags: 旅行
 title: 重庆
 type: post
-categories: 
+categories: 足迹
+comment: 
 ---
 
 
