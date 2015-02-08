@@ -1,12 +1,12 @@
 ---
 categories:
   - 读书
-comment: 'From Jekyller Again  '
+comment: 老书越读越有趣
 date: '2014-12-22'
 info: 再读罢
 layout: post
 published: true
-sha: c5f57fd5a1f01676c1994bb56e8942fcbd97e556
+sha: d2b52bf9e4ae9eac93736939272297e14f39ff5e
 slug: shendiaoxiaolv
 tags:
   - 金庸
@@ -15,6 +15,7 @@ title: 神雕侠侣再读后
 type: post
 
 ---
+
 
 真的不是为了凑最近电视剧新播的热闹。我拿着kindle在书荒期间就开始读射雕三部曲，恰恰在这个时候读到了《神雕侠侣》罢了。
 
