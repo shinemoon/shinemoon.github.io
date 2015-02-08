@@ -1,12 +1,12 @@
 ---
 categories:
   - 读书
-comment: 'From Jekyller Again>'
+comment: 'From Jekyller Again'
 date: '2014-12-22'
 info: 
 layout: post
 published: true
-sha: 5e51917d19b0af4c5b7f7606b743740aeb16027a
+sha: 26e21a74ea6e42481f4c8bf6c1a30671c48d2d5c
 slug: shendiaoxiaolv
 tags:
   - 金庸
