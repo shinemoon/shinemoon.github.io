@@ -6,7 +6,7 @@ date: '2015-5-25'
 info: 连日读后
 layout: post
 published: false
-sha: 83cc878eb892d2cc03fa927da6819a58214b7fe0
+sha: 6830f4b18ae291dc88d2fc7255e0fc3a99d45c52
 slug: reread-gu-long-luxiaofeng
 tags:
   - 读书
@@ -17,6 +17,7 @@ title: 再读古龙之陆小凤
 type: post
 
 ---
+
 
 “小李飞刀成绝响，人间不见楚留香”，算是性情中人的倪匡，竟然不提陆小凤，殊是可惜。
 
@@ -66,7 +67,9 @@ type: post
 
 如同我在重读楚留香时提到过，《陆小凤》系列中的群像描写，恐怕是古龙小说的巅峰。
 
-花满楼的从容、淡泊、宁静；
+花满楼的从容、优雅，仿佛是楚留香的投影；
+
+司空摘星的跳脱、狡黠，恰如陆小凤的
 
 
 
