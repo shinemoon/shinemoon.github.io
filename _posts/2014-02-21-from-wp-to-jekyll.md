@@ -29,7 +29,7 @@ meta:
 
 特别是为了能够平滑保留多说系统的评论内容，我想用无后缀名的页面地址，可是由于早年不讲究所导致的中文文章标题，在这种情况下似乎有bug，无法正确生成链接。更不用说以前的那些中文标题名体现在文件名上，都是眼花缭乱的URL编码；
 
-所以我决定开始把所有这些乱码文件名都改成英文的……改了十几个之后，我就退缩了。开始写python，先URIdecode变成中文，再用google translate变成英文，最后重命名，幸亏有这种好工具，[好歹花半个晚上脚本](https://github.com/shinemoon/shinemoon.github.io/blob/master/_posts/filename_change.py)，再花了点时间转换，可算是搞定了。
+所以我决定开始把所有这些乱码文件名都改成英文的……改了十几个之后，我就退缩了。开始写python，先URIdecode变成中文，再用google translate变成英文，最后重命名，幸亏有这种好工具，[好歹花半个晚上脚本](https://github.com/shinemoon/shinemoon.github.io/blob/master/filename_change.py)，再花了点时间转换，可算是搞定了。
 
 其次是早就知道的问题了，导出的生成的文件都是html格式，基本上内容都是各种tag满天飞，而且05年以前的博文，直接格式在我上次搬移的时候就已经丢失了，不管多长的文字都是一行到底，到了这个时候才深切的感到markdown的美，面对这十年间写下的550多篇文章，就算垃圾，也忍不住想好好整理一遍，所以我就开始逐篇进行格式转换甚至是添加「注释」了。然后，几乎导致了这段时间的睡眠严重不足甚至是肩周疾病……
 
@@ -48,5 +48,5 @@ meta:
 PS. 切换很顺利，而且评论也平滑的切换了，当中还有点小插曲。原来的WP中我选用的url格式是类似'http://mooninsky.net/title', 可是现在虽然我已经配置了'/:title'形式的url，但是在Githu Page上点击之后会自动跳转到形如'http://mooninksky.net/title/'的地址，多出这么一个'/'就硬是让「多说」没法识别了——[最后仔细看了下文档](http://dev.duoshuo.com/docs/5003ecd94cab3e7250000008)，只需要在post插入多说模块的时候,向.ds-thread传递data-url，保证这个地址和以前一样就可以了，多说是优先利用这个data-url来识别贴子的，至此，收工。
 
 
-
+PS. 再次更新一下： 为了写jekll我也蛮拼的，这个app是我自写自用，不过感觉应该还不错... [Chrome Web Store Link](https://chrome.google.com/webstore/detail/jekyller/lgdhgkhhglmhiacjecigalebiffjklec)
 
