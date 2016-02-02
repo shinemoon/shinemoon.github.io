@@ -4,13 +4,13 @@ categories:
 tags:
   - 西泽保彦
   - 小说
-comment: 
+comment: 顺手保存自己的知乎长回答
 info: 
 date: '2016-2-2'
 type: post
 layout: post
 published: true
-sha: 
+sha: 434e6a0c70710f61f6ad58e8ee4e1e320e42db3d
 slug: about-xize-baoyan
 title: 关于西泽保彦
 
