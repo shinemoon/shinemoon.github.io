@@ -7,8 +7,8 @@ info:
 date: '2016-6-1'
 type: post
 layout: post
-published: false
-sha: 
+published: true
+sha: d645785d3fad6b6490016f834fab48d6c31f40d4
 slug: about-gamer
 title: 关于玩游戏的一点回忆
 
