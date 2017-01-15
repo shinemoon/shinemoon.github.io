@@ -1,97 +1,81 @@
 
 body { 
 		margin-left:auto;margin-right:auto;width:860px;
-		font-family: Baskerville, "Times New Roman", "Liberation Serif", STFangsong, FangSong, FangSong_GB2312, "CWTEX\-F", serif;
+/*		font-family: Baskerville, "Times New Roman", "Liberation Serif", STFangsong, FangSong, FangSong_GB2312, "CWTEX\-F", serif;
 		font-size:20px;
 		color:#000;
-	}
-	img {
-		max-width:100%;
-		margin-left:auto;margin-right:auto;
-	}
-	p img {
-		display:block;
-		margin:0 auto;
-	}
-	.tags {
-		font-size: 13px;
-		border-radius: 2px;
-		padding-right: 10px;
-		padding-top: 5px;
-		padding-bottom: 5px;
-		padding-left: 10px;
-		background: #bbb;
-		color: white;
-		cursor:pointer;
-		float:right;
-		margin-right:5px;
-		height:18px;
+*/
 	}
 
-	.tags.cat {
-		background: #666;
-	}
-	#ds-thread #ds-reset li.ds-tab a.ds-current {
-		border-radius:0px;
-		padding-left:20px;
-		padding-right:20px;
-	}
+/*
+img {
+	max-width:100%;
+	margin-left:auto;margin-right:auto;
+}
 
-	img.top {
-		cursor:pointer;
-		position:fixed;
-		right:30px;
-		bottom:50px;
-		opacity:0.1;
-		width:36px;
-	}
+p img {
+	display:block;
+	margin:0 auto;
+}
+*/
 
-	img.top:hover {
-		opacity:0.8;
-	}
+.tags {
+	font-size: 13px;
+	border-radius: 2px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	background: #bbb;
+	color: white;
+	cursor:pointer;
+	float:right;
+	margin-right:5px;
+	height:18px;
+}
 
-	img.home {
-		width:36px;
-		cursor:pointer;
-		position:fixed;
-		right:30px;
-		bottom:100px;
-		opacity:0.1;
-	}
+.tags.cat {
+	background: #666;
+}
+#ds-thread #ds-reset li.ds-tab a.ds-current {
+	border-radius:0px;
+	padding-left:20px;
+	padding-right:20px;
+}
 
-	img.home:hover {
-		opacity:0.8;
-	}
+img.top {
+	cursor:pointer;
+	position:fixed;
+	right:30px;
+	bottom:50px;
+	opacity:0.1;
+	width:36px;
+}
 
-	hr {
-		border:1px #e0e0e0 dotted;
-		margin-top:40px;
-		margin-bottom:40px;
-	}
+img.top:hover {
+	opacity:0.8;
+}
 
-	p.ds-powered-by a{ display:none;}
-	#ds-reset .ds-gradient-bg {background:#fff!important;}
-	#ds-thread #ds-reset .ds-textarea-wrapper {background:#fff!important;}
+img.home {
+	width:36px;
+	cursor:pointer;
+	position:fixed;
+	right:30px;
+	bottom:100px;
+	opacity:0.1;
+}
 
-	code {
-		font-size: 12px;
-		background: #E2E8EB;
-		color: black;
-		padding-left: 5px;
-		padding-right: 5px;
-		padding-top: 3px;
-		padding-bottom: 3px;
-		margin-left: 5px;
-		margin-right: 5px;
-		border-radius: 3px;
-	}
+img.home:hover {
+	opacity:0.8;
+}
 
-	ul li {
-		font-size: 18px;
-		margin-top: 8px;
-		margin-bottom: 8px;
-		background:rgba(250,250,250,0.4);
-	}
+hr {
+	border:1px #e0e0e0 dotted;
+	margin-top:40px;
+	margin-bottom:40px;
+}
+
+p.ds-powered-by a{ display:none;}
 
 
 
