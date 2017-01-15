@@ -1,4 +1,4 @@
-/*
+
 body { 
 		margin-left:auto;margin-right:auto;width:860px;
 		font-family: Baskerville, "Times New Roman", "Liberation Serif", STFangsong, FangSong, FangSong_GB2312, "CWTEX\-F", serif;
@@ -91,7 +91,7 @@ body {
 		margin-top: 8px;
 		margin-bottom: 8px;
 		background:rgba(250,250,250,0.4);
-	}*/
+	}
 
 
 
@@ -234,6 +234,7 @@ audio:not([controls]),
 body {
   font-family: Helvetica, Tahoma, Arial, 'Hiragino Sans GB', '\51AC\9752\9ED1\4F53', 'Microsoft YaHei', '\5FAE\8F6F\96C5\9ED1', STXihei, '\534E\6587\7EC6\9ED1', SimSun, '\5B8B\4F53', Heiti, '\9ED1\4F53', sans-serif;
   font-size: 16px;
+	margin-left:auto;margin-right:auto;width:860px;
 }
 @media screen and (max-width: 767px) {
   body {
