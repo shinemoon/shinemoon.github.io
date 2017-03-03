@@ -62,12 +62,26 @@
 	img.home:hover {
 		opacity:0.8;
 	}
-
-	hr {
-		border:1px #e0e0e0 dotted;
-		margin-top:40px;
-		margin-bottom:40px;
-	}
+hr {
+    margin-top:30px;
+    border: 0px double #bbb;
+    border-top: 4px double #666;
+    text-align: center;
+}
+hr:after {
+    content: '§';
+    //content: '\002665';
+    position: relative;
+    top: -15px;
+    padding: 0 10px;
+    background: #f0f0f0;
+    color: #666;
+    font-size: 18px;
+    background:rgb(66, 79, 90);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    transform: rotate(60deg);
+}
 
 	p.ds-powered-by a{ display:none;}
 	#ds-reset .ds-gradient-bg {background:#fff!important;}
