@@ -105,3 +105,31 @@ hr:after {
 		margin-bottom: 8px;
 		background:rgba(250,250,250,0.4);
 	}
+
+blockquote {
+    background:rgba(30,30,30,0.2);
+    padding-left:20px;
+    border-left:5px solid rgba(255,0,0,0.8);
+}
+
+
+hr {
+    margin-top:30px;
+    border: 0px double #bbb;
+    border-top: 4px double #666;
+    text-align: center;
+}
+hr:after {
+    content: '§';
+    //content: '\002665';
+    position: relative;
+    top: -15px;
+    padding: 0 10px;
+    background: #f0f0f0;
+    color: #666;
+    font-size: 18px;
+    background:rgb(66, 79, 90);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    transform: rotate(60deg);
+}
