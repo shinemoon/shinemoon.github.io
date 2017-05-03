@@ -30,8 +30,11 @@
 	}
 
 	.tags.cat {
-		background: #666;
+		background: #00a498;
 	}
+span#post-box {
+	border-radius:40px;
+}
 	#ds-thread #ds-reset li.ds-tab a.ds-current {
 		border-radius:0px;
 		padding-left:20px;
