@@ -3,7 +3,7 @@
 	/*	font-family: Baskerville, "Times New Roman", "Liberation Serif", STFangsong, FangSong, FangSong_GB2312, "CWTEX\-F", serif;*/
     font-family: Georgia, "Nimbus Roman No9 L", "Songti SC", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
 		//font-size:20px;
-		font-size:1em;
+		font-size:1.1em;
 		color:#000;
 		padding-bottom:150px;
 	}
@@ -106,7 +106,7 @@ blockquote {
 }
 
 blockquote p{
-		font-size: 1.1em;
+		font-size: 1.2em;
 		color:black;
 }
 
