@@ -1,0 +1,930 @@
+
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/assets/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/assets/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/assets/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="MooninskY" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Vim+Ctags+Taglist的应用是一个非常方便的解决方案，网络上关于这样的简单介绍数不胜数，只要愿意不妨搜索一下即可。但是有一个问题是大多数文章没有阐明的，那就是如何添加原本不被Ctags和taglist所支持的语言呢？花了点时间，找到了解决，姑且备忘于下，希望利人利己。本文均以SystemVerilog为例说明：">
+<meta name="keywords" content="Blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何在Vim+Ctags+Taglist应用中添加自定义语言">
+<meta property="og:url" content="http://0.0.0.0:4000/%E6%8A%80%E6%9C%AF/2009/08/23/Vimctagstaglist-how-to-add-customized-lang/">
+<meta property="og:site_name" content="MooninskY">
+<meta property="og:description" content="Vim+Ctags+Taglist的应用是一个非常方便的解决方案，网络上关于这样的简单介绍数不胜数，只要愿意不妨搜索一下即可。但是有一个问题是大多数文章没有阐明的，那就是如何添加原本不被Ctags和taglist所支持的语言呢？花了点时间，找到了解决，姑且备忘于下，希望利人利己。本文均以SystemVerilog为例说明：">
+<meta property="og:locale" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何在Vim+Ctags+Taglist应用中添加自定义语言">
+<meta name="twitter:description" content="Vim+Ctags+Taglist的应用是一个非常方便的解决方案，网络上关于这样的简单介绍数不胜数，只要愿意不妨搜索一下即可。但是有一个问题是大多数文章没有阐明的，那就是如何添加原本不被Ctags和taglist所支持的语言呢？花了点时间，找到了解决，姑且备忘于下，希望利人利己。本文均以SystemVerilog为例说明：">
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://0.0.0.0:4000/"/>
+
+
+
+<style type="text/css"> 
+blockquote{
+    border-left: 4px solid #ffbbbb;
+}
+</style>
+
+
+
+  <title>如何在Vim+Ctags+Taglist应用中添加自定义语言</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">MooninskY</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">月下闲话</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+<div id="posts" class="posts-expand">
+  
+  
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-post " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://0.0.0.0:4000/%E6%8A%80%E6%9C%AF/2009/08/23/Vimctagstaglist-how-to-add-customized-lang/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Claud Xiao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/assets/images/Avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MooninskY">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+          
+          
+            如何在Vim+Ctags+Taglist应用中添加自定义语言
+          
+        </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2009-08-23T00:00:00+08:00">
+                2009-08-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/category/#/%E6%8A%80%E6%9C%AF" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+            
+                <div class="post-description">
+                    
+                </div>
+            
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Vim+Ctags+Taglist的应用是一个非常方便的解决方案，网络上关于这样的简单介绍数不胜数，只要愿意不妨搜索一下即可。但是有一个问题是大多数文章没有阐明的，那就是如何添加原本不被Ctags和taglist所支持的语言呢？花了点时间，找到了解决，姑且备忘于下，希望利人利己。本文均以SystemVerilog为例说明：</p>
+
+<p>###Ctags中添加新的语言###</p>
+
+<p>ctags的配置文件其实在 ~/.ctags中，打开该文件，添加如下代码</p>
+
+<ol>
+  <li>从某论坛上看到，做了一定修改，用以支持extern,static等前缀：</li>
+</ol>
+
+<pre>
+--langdef=systemverilog
+--langmap=systemverilog:.sv.svh.svi
+--regex-systemverilog=/^[ 	]*(virtual)?[ 	]*class[ 	]*([a-zA-Z_0-9]+)/2/c,class/
+--regex-systemverilog=/^[ 	]*(extern)?[ 	]*(static)?[ 	]*(virtual)?[ 	]*task[ 	]*.*[ 	]+([a-zA-Z_0-9]*::)?([a-zA-Z_0-9]+)[ 	]*[(;]/5/t,task/
+--regex-systemverilog=/^[ 	]*(extern)?[ 	]*(static)?[ 	]*(virtual)?[ 	]*function[ 	]*.*[ 	]+([a-zA-Z_0-9]*::)?([a-zA-Z_0-9]+)[ 	]*[(;]/5/f,function/
+--regex-systemverilog=/^[ 	]*module[ 	]*([a-zA-Z_0-9]+)/1/m,module/
+--regex-systemverilog=/^[ 	]*program[ 	]*([a-zA-Z_0-9]+)/1/p,program/
+--regex-systemverilog=/^[ 	]*interface[ 	]*([a-zA-Z_0-9]+)/1/i,interface/
+--regex-systemverilog=/^[ 	]*package[ 	]*([a-zA-Z_0-9]+)/1/k,package/
+--regex-systemverilog=/^[ 	]*typedef[ 	]+.*[ 	]+([a-zA-Z_0-9]+)[ 	]*;/1/e,typedef/
+--systemverilog-kinds=+ctfmpie
+</pre>
+
+<p>这里从代码可以读出无非是依次定义了新的语言种类，指明了文件后缀，然后使用正则匹配来抓出你希望的关键字，熟悉正则表达式的人自然一读就懂，可以自己扩展，不熟悉的人，那就照copy吧。</p>
+
+<p>###Taglist中添加语言种类###</p>
+
+<p>打开taglist的文件，例如 ~/.vim/plugin/taglist.vim, 添加下面的内容：</p>
+
+<blockquote>
+  <p>systemverilog languagelet s:tlist_def_systemverilog_settings= ‘systemverilog;m:module;c:class;’ .</p>
+</blockquote>
+
+<blockquote>
+  <p>t:task;p:program;f:function;i:interface;e:typedef</p>
+</blockquote>
+
+<p>语句也很简单，就是添加了一类可以被Taglist识别的语法种类，同时规定了那些部分是需要显示在tag list当中的；</p>
+
+<p>###Vim当中添加File type###</p>
+
+<p>似乎有点本末倒置了，呵呵，其实最开始的一点就是要让vim也能够识别出systemverilog的文件，那么请打开~/.vim/filetype.vim，加入下面这一行：</p>
+
+<blockquote>
+  <p>au BufNewFile,BufRead <em>.sv,</em>.svh
+setf systemverilog</p>
+</blockquote>
+
+<p>同时不要忘记’set filetype on’来保证vim会去识别语法种类（当然，这个其实也是使用语法高亮的基本要求）。</p>
+
+<p>###步骤###</p>
+
+<p>使用的时候，无非就是按照：</p>
+
+<ol>
+  <li>
+    <p>ctags -R * 来生成tag文件；</p>
+  </li>
+  <li>
+    <p>vim打开文件，并且可以适当设置’ set tags=xxxxxx’ 来load文件；</p>
+  </li>
+  <li>
+    <p>用:Tlist打开tag侧边栏，其余都可以按照网上教程操作。</p>
+  </li>
+</ol>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+      
+      
+
+      
+      
+        <div class="post-nav" id="post-nav-id">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/%E9%97%B2%E8%AF%9D/2009/08/23/eee-pc-1000ha-start/" rel="next" title="Eee PC 1000HA 入手">
+                <i class="fa fa-chevron-left"></i> Eee PC 1000HA 入手
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/%E9%97%B2%E8%AF%9D/2009/08/16/Life-is-always-farther-again/" rel="prev" title="人生就是始终要再远一点">
+                人生就是始终要再远一点 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+      
+
+      
+    </footer>
+  </article>
+
+  <div class="post-spread">
+    
+  </div>
+
+
+
+
+	<div style="margin-top:10px;margin-bottom:10px;font-size:12px;text-align:right;color:#555;">23 Aug 2009 , 写于 <span style="color:#333;">杭州 </span>。</div>
+
+
+
+
+</div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzAwNi85NTY4"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        
+        
+        
+
+
+
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/assets/images/Avatar.png"
+               alt="Claud Xiao" />
+          <p class="site-author-name" itemprop="name">Claud Xiao</p>
+           
+              <p class="site-description motion-element" itemprop="description">不存在彻头彻尾的绝望</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">620</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/">
+                <span class="site-state-item-count">115</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+        
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="http://fanfou.com/shinemoon" target="_blank" title="饭否">
+                  
+                    <i class="fa fa-fw fa-user-circle-o"></i>
+                  
+                  饭否
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="https://github.com/shinemoon" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="https://www.douban.com/people/claud.xiao/" target="_blank" title="豆瓣">
+                  
+                    <i class="fa fa-fw fa-book"></i>
+                  
+                  豆瓣
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="mailto://shinemoon@gmail.com" target="_blank" title="Mail">
+                  
+                    <i class="fa fa-fw fa-google-plus-square"></i>
+                  
+                  Mail
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="http://maybe2020.github.io/" title="近寐遥喧" target="_blank">近寐遥喧</a>
+                </li>
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="http://ievanz.net/" title="为埃斯米而作" target="_blank">为埃斯米而作</a>
+                </li>
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.zeove.com/" title="哲尔夫" target="_blank">哲尔夫</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i style="color:red" class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Claud Xiao</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://jekyllrb.com">Jekyll</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/simpleyyt/jekyll-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/assets/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/assets/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/assets/js/src/post-details.js?v=5.1.1"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+    
+      <script type="text/javascript">
+        (function(d, s) {
+          var j, e = d.getElementsByTagName(s)[0];
+          if (typeof LivereTower === 'function') { return; }
+          j = d.createElement(s);
+          j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+          j.async = true;
+          e.parentNode.insertBefore(j, e);
+        })(document, 'script');
+      </script>
+    
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
+

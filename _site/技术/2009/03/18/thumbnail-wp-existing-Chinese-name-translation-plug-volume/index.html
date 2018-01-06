@@ -1,0 +1,907 @@
+
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/assets/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/assets/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/assets/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="wordpress," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="MooninskY" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="前段时间写过帖子是介绍了可以自动获取标题中的slug信息，或者自动翻译标题信息的插件。这个当然是很好，但是对于我来说，还有一大批没有设置过英文缩略名的历史文章，这个该怎么处理，我倒是大伤过脑筋。 说到为什么一定要英文缩略名呢？主要是看起来不爽。浏览器遇到中文缩略名，就只会处理成一大长串不可读的编码,例如：http://mooninsky.net/%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90——这个其实就是中文‘新年快乐’的编码而已。 其次就是有时候这种名字会导致搜索引擎无法正确追踪——至少我在google的管理员工具里就看到这种告警。 所以，我下了决心要解决这个问题。 事实说明，万事万物都是有解决的，果然看到了这个神奇的插件：cos_slug_converter，关于使用方法也很详细的列在了作者的主页上。 使用有点特殊，引用如下：">
+<meta name="keywords" content="wordpress">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WP现有中文缩略名批量翻译插件">
+<meta property="og:url" content="http://0.0.0.0:4000/%E6%8A%80%E6%9C%AF/2009/03/18/thumbnail-wp-existing-Chinese-name-translation-plug-volume/">
+<meta property="og:site_name" content="MooninskY">
+<meta property="og:description" content="前段时间写过帖子是介绍了可以自动获取标题中的slug信息，或者自动翻译标题信息的插件。这个当然是很好，但是对于我来说，还有一大批没有设置过英文缩略名的历史文章，这个该怎么处理，我倒是大伤过脑筋。 说到为什么一定要英文缩略名呢？主要是看起来不爽。浏览器遇到中文缩略名，就只会处理成一大长串不可读的编码,例如：http://mooninsky.net/%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90——这个其实就是中文‘新年快乐’的编码而已。 其次就是有时候这种名字会导致搜索引擎无法正确追踪——至少我在google的管理员工具里就看到这种告警。 所以，我下了决心要解决这个问题。 事实说明，万事万物都是有解决的，果然看到了这个神奇的插件：cos_slug_converter，关于使用方法也很详细的列在了作者的主页上。 使用有点特殊，引用如下：">
+<meta property="og:locale" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="WP现有中文缩略名批量翻译插件">
+<meta name="twitter:description" content="前段时间写过帖子是介绍了可以自动获取标题中的slug信息，或者自动翻译标题信息的插件。这个当然是很好，但是对于我来说，还有一大批没有设置过英文缩略名的历史文章，这个该怎么处理，我倒是大伤过脑筋。 说到为什么一定要英文缩略名呢？主要是看起来不爽。浏览器遇到中文缩略名，就只会处理成一大长串不可读的编码,例如：http://mooninsky.net/%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90——这个其实就是中文‘新年快乐’的编码而已。 其次就是有时候这种名字会导致搜索引擎无法正确追踪——至少我在google的管理员工具里就看到这种告警。 所以，我下了决心要解决这个问题。 事实说明，万事万物都是有解决的，果然看到了这个神奇的插件：cos_slug_converter，关于使用方法也很详细的列在了作者的主页上。 使用有点特殊，引用如下：">
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://0.0.0.0:4000/"/>
+
+
+
+<style type="text/css"> 
+blockquote{
+    border-left: 4px solid #ffbbbb;
+}
+</style>
+
+
+
+  <title>WP现有中文缩略名批量翻译插件</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">MooninskY</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">月下闲话</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+<div id="posts" class="posts-expand">
+  
+  
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-post " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://0.0.0.0:4000/%E6%8A%80%E6%9C%AF/2009/03/18/thumbnail-wp-existing-Chinese-name-translation-plug-volume/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Claud Xiao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/assets/images/Avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MooninskY">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+          
+          
+            WP现有中文缩略名批量翻译插件
+          
+        </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2009-03-18T00:00:00+08:00">
+                2009-03-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/category/#/%E6%8A%80%E6%9C%AF" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+            
+                <div class="post-description">
+                    
+                </div>
+            
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>前段时间写过<a href="http://mooninsky.net/how-to-set-postname-in-offline-editting">帖子是介绍了可以自动获取标题中的slug信息，或者自动翻译标题信息的插件</a>。这个当然是很好，但是对于我来说，还有一大批没有设置过英文缩略名的历史文章，这个该怎么处理，我倒是大伤过脑筋。</p>
+
+<p>说到为什么一定要英文缩略名呢？主要是看起来不爽。浏览器遇到中文缩略名，就只会处理成一大长串不可读的编码,例如：<a href="http://mooninsky.net/%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90">http://mooninsky.net/%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90</a>——这个其实就是中文‘新年快乐’的编码而已。</p>
+
+<p>其次就是有时候这种名字会导致搜索引擎无法正确追踪——至少我在google的管理员工具里就看到这种告警。</p>
+
+<p>所以，我下了决心要解决这个问题。</p>
+
+<p>事实说明，万事万物都是有解决的，果然看到了这个神奇的插件：<a href="http://www.storyday.com/wp-content/uploads/2008/12/cos_slug_converter.zip">cos_slug_converter</a>，<a href="http://www.storyday.com/html/y2007/1219_slug-batch-conversion-plug-in-for-english.html">关于使用方法</a>也很详细的列在了作者的主页上。</p>
+
+<p>使用有点特殊，引用如下：</p>
+
+<blockquote>
+  <p>废话少说，使用方法，下载这个文件到插件目录，然后后台激活插件。如果你的wordpress没有静态化，请访问 http://youwordpress/?cos=true,否则请访问http://yourwordpress/page/2 /?cos=true,页面将自动现实翻译的状态，一次翻译5个标题，翻译完毕之后请自动往后翻页，直到不能翻页为止，此时则表示翻译结束，有需要的朋友，赶快下载吧。</p>
+
+  <p>记住，使用完毕之后让这个插件处于未激活状态，免得带来效率的问题（虽然表面上看几乎没有效率的问题存在）。</p>
+</blockquote>
+
+<p>所以我一鼓作气，把以前的历史遗留问题给彻底解决了，终于可以告别那囧囧的乱码标题了。</p>
+
+<p>但是，也遇到了一些小问题：</p>
+
+<ol>
+  <li>
+    <p>由于使用的Google 翻译的服务，那么自然，Google如果翻译的很乱来，那么自然也只能接受这个乱来的结果了；</p>
+  </li>
+  <li>
+    <p>对于标题中含有中文标点的情况，会导致很离奇的翻译：直接把标点也翻译成单词，而且有时候会导致残留部分中文的情况。这个根本原因还是在于1.</p>
+  </li>
+  <li>
+    <p>使用之后，发现页面CSS的h2样式有变，不知道具体原因，必须停用之后，才恢复——当然，这个是无伤大雅的。</p>
+  </li>
+</ol>
+
+<p>虽然不够完美，但是依然是非常值得推荐的插件——或者按照作者本人的说法，这个一次性的东西，还是称为工具更好一点。</p>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            
+            <a href="/tag/#/wordpress" rel="tag"># wordpress</a>
+          
+        </div>
+      
+
+      
+      
+      
+      
+      
+
+      
+      
+        <div class="post-nav" id="post-nav-id">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/%E6%8A%80%E6%9C%AF/2009/03/20/Recommended-reading-comics-online-comic-shelf-tools/" rel="next" title="推荐在线漫画阅读工具Comic Shelf">
+                <i class="fa fa-chevron-left"></i> 推荐在线漫画阅读工具Comic Shelf
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/%E8%AF%BB%E4%B9%A6/2009/03/18/From-hard-science-fiction-to-fiction/" rel="prev" title="从硬科幻到幻想小说">
+                从硬科幻到幻想小说 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+      
+
+      
+    </footer>
+  </article>
+
+  <div class="post-spread">
+    
+  </div>
+
+
+
+
+	<div style="margin-top:10px;margin-bottom:10px;font-size:12px;text-align:right;color:#555;">18 Mar 2009 , 写于 <span style="color:#333;">上海 </span>。</div>
+
+
+
+
+</div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzAwNi85NTY4"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        
+        
+        
+
+
+
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/assets/images/Avatar.png"
+               alt="Claud Xiao" />
+          <p class="site-author-name" itemprop="name">Claud Xiao</p>
+           
+              <p class="site-description motion-element" itemprop="description">不存在彻头彻尾的绝望</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">620</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/">
+                <span class="site-state-item-count">115</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+        
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="http://fanfou.com/shinemoon" target="_blank" title="饭否">
+                  
+                    <i class="fa fa-fw fa-user-circle-o"></i>
+                  
+                  饭否
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="https://github.com/shinemoon" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="https://www.douban.com/people/claud.xiao/" target="_blank" title="豆瓣">
+                  
+                    <i class="fa fa-fw fa-book"></i>
+                  
+                  豆瓣
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="mailto://shinemoon@gmail.com" target="_blank" title="Mail">
+                  
+                    <i class="fa fa-fw fa-google-plus-square"></i>
+                  
+                  Mail
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="http://maybe2020.github.io/" title="近寐遥喧" target="_blank">近寐遥喧</a>
+                </li>
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="http://ievanz.net/" title="为埃斯米而作" target="_blank">为埃斯米而作</a>
+                </li>
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.zeove.com/" title="哲尔夫" target="_blank">哲尔夫</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i style="color:red" class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Claud Xiao</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://jekyllrb.com">Jekyll</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/simpleyyt/jekyll-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/assets/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/assets/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/assets/js/src/post-details.js?v=5.1.1"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+    
+      <script type="text/javascript">
+        (function(d, s) {
+          var j, e = d.getElementsByTagName(s)[0];
+          if (typeof LivereTower === 'function') { return; }
+          j = d.createElement(s);
+          j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+          j.async = true;
+          e.parentNode.insertBefore(j, e);
+        })(document, 'script');
+      </script>
+    
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
+

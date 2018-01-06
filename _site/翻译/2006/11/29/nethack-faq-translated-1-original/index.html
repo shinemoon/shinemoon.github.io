@@ -1,0 +1,1106 @@
+
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/assets/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/assets/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/assets/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="game,nethack," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="MooninskY" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="刚接触nethack，发现中文方面的东西少的可怜，兴起，打算翻这篇我感觉蛮有意思的FAQ，算是为自己备忘。本人AD&amp;amp;D基础薄弱，所以很多专有名词也就不能强求了。争取定时能够分段更新，不要连这个也太监，那也太没面子了….">
+<meta name="keywords" content="game, nethack">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nethack FAQ 翻译 [1]">
+<meta property="og:url" content="http://0.0.0.0:4000/%E7%BF%BB%E8%AF%91/2006/11/29/nethack-faq-translated-1-original/">
+<meta property="og:site_name" content="MooninskY">
+<meta property="og:description" content="刚接触nethack，发现中文方面的东西少的可怜，兴起，打算翻这篇我感觉蛮有意思的FAQ，算是为自己备忘。本人AD&amp;amp;D基础薄弱，所以很多专有名词也就不能强求了。争取定时能够分段更新，不要连这个也太监，那也太没面子了….">
+<meta property="og:locale" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Nethack FAQ 翻译 [1]">
+<meta name="twitter:description" content="刚接触nethack，发现中文方面的东西少的可怜，兴起，打算翻这篇我感觉蛮有意思的FAQ，算是为自己备忘。本人AD&amp;amp;D基础薄弱，所以很多专有名词也就不能强求了。争取定时能够分段更新，不要连这个也太监，那也太没面子了….">
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://0.0.0.0:4000/"/>
+
+
+
+<style type="text/css"> 
+blockquote{
+    border-left: 4px solid #ffbbbb;
+}
+</style>
+
+
+
+  <title>Nethack FAQ 翻译 [1]</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">MooninskY</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">月下闲话</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+<div id="posts" class="posts-expand">
+  
+  
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-post " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://0.0.0.0:4000/%E7%BF%BB%E8%AF%91/2006/11/29/nethack-faq-translated-1-original/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Claud Xiao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/assets/images/Avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MooninskY">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+          
+          
+            Nethack FAQ 翻译 [1]
+          
+        </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2006-11-29T00:00:00+08:00">
+                2006-11-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/category/#/%E7%BF%BB%E8%AF%91" itemprop="url" rel="index">
+                    <span itemprop="name">翻译</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+            
+                <div class="post-description">
+                    
+                </div>
+            
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>刚接触nethack，发现中文方面的东西少的可怜，兴起，打算翻这篇我感觉蛮有意思的FAQ，算是为自己备忘。本人AD&amp;D基础薄弱，所以很多专有名词也就不能强求了。争取定时能够分段更新，不要连这个也太监，那也太没面子了….</p>
+
+<p>**YANFAQ **</p>
+
+<p><em>**又一份被常常问到的问题(YANFAQ) **</em></p>
+
+<p>收集者: Sascha Wostmann (wostmann@geocities.com)</p>
+
+<p>提问:	rec.games.roguelike.nethack 游戏的爱好者回答:</p>
+
+<p>主要由 Sascha Wostmann 回答</p>
+
+<p>Date: May-06-97Version:</p>
+
+<p>1.2我不打算把所有的Spoiler(nethack攻略类资料的别称）都复制过来，而是尽量在这里把那些在新闻组里被常常提到的问题的答案给出来（这就是所谓的FAQ，不是么？）。我根据问题可能出现的先后时间给它们标上了‘级别’。级别就在每个问题的”Q”之前。如果问题属于上一个版本的新问题，那么我在问题前用<em>表示，例如</em>2Q: what is …有一些答案属于ROT13(译者：我不知道这个是指什么…),所以如果你不想读到这些，将不会显示。你也可以在我的攻略主页上将所有的答案用纯文本的方式下载，因为大部分的编辑器都不支持ROT13。当然，欢迎任何的注释和补充。Happy hacking, Saschawostmann@geocities.com(http://www.geocities.com/TimesSquare/3216/index.html) 感谢在修改这篇FAQ中给我建议的：</p>
+
+<p>Dean Luick (dean@falcon.natinst.com)</p>
+
+<p>Kevin Hugo (hugo@cae.wisc.edu)</p>
+
+<p>还有那些我记不清的人，原谅我：）</p>
+
+<hr />
+
+<p>1Q: 我到哪里下载游戏?</p>
+
+<p>在下列站点你可以找到编译好的游戏，或者源码（部分站点）:</p>
+
+<p>ftp://ftp.uu.net/pub/games/nethack</p>
+
+<p>http://www.win.tue.nl/games/roguelike/nethack/index.html</p>
+
+<p>http://www.eecs.lehigh.edu/~jgt2/NetHack/</p>
+
+<p>http://neylonpc.engin.umich.edu/nethack/</p>
+
+<p>http://blues.helsinki.fi/~vviitane/nhcode.html</p>
+
+<hr />
+
+<p>1Q: 我到哪里去找spoiler和其他信息?</p>
+
+<p>下面的站点提供Spoilers，提示以及各类有关内容：</p>
+
+<p>http://www.geocities.com/TimesSquare/3216/index.html</p>
+
+<p>(spoilers etc.)</p>
+
+<p>http://www.eecs.lehigh.edu/~jgt2/NetHack/</p>
+
+<p>(spoilers and binaries)</p>
+
+<p>http://neylonpc.engin.umich.edu/nethack/</p>
+
+<p>http://www.rhein-main.de/~ptower/</p>
+
+<p>(hints etc.)</p>
+
+<p>http://www.rz.tu-ilmenau.de/~wi019/</p>
+
+<p>(Slash 4.1.2-x)</p>
+
+<p>http://members.xoom.com/wac/nethack/</p>
+
+<p>(Slash”em beta)</p>
+
+<p>http://www-personal.engin.umich.edu/~mneylon/nethack/ (spoilers etc.)</p>
+
+<p>http://www.win.tue.nl/games/roguelike/nethack/index.html (anything, but old)</p>
+
+<p>http://users.aol.com/ADOMDev/index.html</p>
+
+<p>(ADOM, a variant)而下面这些可以找到一些附加程序，例如NHSound:</p>
+
+<p>http://www.geocities.com/TimesSquare/3216/index.html</p>
+
+<p>(NH_Alert, MK_Bones)</p>
+
+<p>http://www.hut.fi/~tax/nhsound.html</p>
+
+<p>(NHSound)</p>
+
+<p>http://www.cs.hope.edu/~rvaniwaa/xf86ports.html</p>
+
+<p>(OS/2 Tiles version)</p>
+
+<hr />
+
+<p>1Q: NetHack 可以多用户游戏么?</p>
+
+<p>不行。有不少人尝试将它修改成多用户游戏，但是目前为止还没有人完成（实际上，nethack也还没有完成…）</p>
+
+<hr />
+
+<p>1Q: 我怎样使用图形界面游戏?</p>
+
+<p>从3.2版本开始，nethack就包含了一些图形元素。首先，查看你的文档以确认你的版本是否支持。例如DOS版本。如果你想在DOS下激活图形，你必须修改你的配置文件nethack.cnf并且将#OPTIONS=video:autodetect的注释取消。只需要把前面的#符号删掉。当你再次打开nethack，就会以图形界面的方式进入了。在 Unix版本中，你需要修改win/X11/NetHack.ad文件，该文件中包含了大量的X11（Unix图形驱动）可修改参数。最简单的办法就是将该文件中的内容添加到.Xdefaults文件中。该文件中的一个入口注释句为：
+NetHack.tile_file: x11tiles
+去掉注释符号，就可以进入图形模式。</p>
+
+<hr />
+
+<p>1Q: 我怎样进入探索模式，这样有什么好处?</p>
+
+<p>探索模式下，你将不会死亡。每当你的hp到0时，你可以通过die” target=_blank)http://www.geocities.com/TimesSquare/3216/index.html感谢在修改这篇FAQ中给我建议的：</p>
+
+<p>Dean Luick (dean@falcon.natinst.com)</p>
+
+<p>Kevin Hugo (hugo@cae.wisc.edu)还有那些我记不清的人，原谅我：）</p>
+
+<hr />
+
+<p>1Q: 我到哪里下载游戏?</p>
+
+<p>在下列站点你可以找到编译好的游戏，或者源码（部分站点）:</p>
+
+<p>ftp://ftp.uu.net/pub/games/nethack</p>
+
+<p>http://www.win.tue.nl/games/roguelike/nethack/index.html</p>
+
+<p>http://www.eecs.lehigh.edu/~jgt2/NetHack/</p>
+
+<p>http://neylonpc.engin.umich.edu/nethack/</p>
+
+<p>http://blues.helsinki.fi/~vviitane/nhcode.html</p>
+
+<hr />
+
+<p>1Q: 我到哪里去找spoiler和其他信息?</p>
+
+<p>下面的站点提供Spoilers，提示以及各类有关内容：</p>
+
+<p>http://www.geocities.com/TimesSquare/3216/index.html</p>
+
+<p>(spoilers etc.)</p>
+
+<p>http://www.eecs.lehigh.edu/~jgt2/NetHack/</p>
+
+<p>&amp;nbsp<br />;</p>
+
+<p>(spoilers and binaries)</p>
+
+<p>http://neylonpc.engin.umich.edu/nethack/</p>
+
+<p>http://www.rhein-main.de/~ptower/</p>
+
+<p>(hints etc.)</p>
+
+<p>http://www.rz.tu-ilmenau.de/~wi019/</p>
+
+<p>(Slash 4.1.2-x)</p>
+
+<p>http://members.xoom.com/wac/nethack/</p>
+
+<p>(Slash”em beta)</p>
+
+<p>http://www-personal.engin.umich.edu/~mneylon/nethack/ (spoilers etc.)</p>
+
+<p>http://www.win.tue.nl/games/roguelike/nethack/index.html (anything, but old)</p>
+
+<p>http://users.aol.com/ADOMDev/index.html</p>
+
+<p>(ADOM, a variant)而下面这些可以找到一些附加程序，例如NHSound:</p>
+
+<p>http://www.geocities.com/TimesSquare/3216/index.html</p>
+
+<p>(NH_Alert, MK_Bones)</p>
+
+<p>http://www.hut.fi/~tax/nhsound.html</p>
+
+<p>(NHSound)</p>
+
+<p>http://www.cs.hope.edu/~rvaniwaa/xf86ports.html</p>
+
+<p>(OS/2 Tiles version)</p>
+
+<hr />
+
+<p>1Q: NetHack 可以多用户游戏么?</p>
+
+<p>不行。有不少人尝试将它修改成多用户游戏，但是目前为止还没有人完成（实际上，nethack也还没有完成…）</p>
+
+<hr />
+
+<p>1Q: 我怎样使用图形界面游戏?</p>
+
+<p>从3.2版本开始，nethack就包含了一些图形元素。首先，查看你的文档以确认你的版本是否支持。例如DOS版本。如果你想在DOS下激活图形，你必须修改你的配置文件nethack.cnf并且将#OPTIONS=video:autodetect的注释取消。只需要把前面的#符号删掉。当你再次打开nethack，就会以图形界面的方式进入了。在 Unix版本中，你需要修改win/X11/NetHack.ad文件，该文件中包含了大量的X11（Unix图形驱动）可修改参数。最简单的办法就是将该文件中的内容添加到.Xdefaults文件中。该文件中的一个入口注释句为：
+NetHack.tile_file: x11tiles
+去掉注释符号，就可以进入图形模式。</p>
+
+<hr />
+
+<p>1Q: 我怎样进入探索模式，这样有什么好处?</p>
+
+<p>探索模式下，你将不会死亡。每当你的hp到0时，你可以通过die[yn]?</p>
+
+<p>选择n来继续活下拉。你只需要按X就可以在游戏中进入探索模式，或者用nethack -X来打开游戏，而如果你这样进入，同时还会有一支愿望之杖。但是，你无法进入排行榜记录。</p>
+
+<hr />
+
+<p>1Q: 我怎样进入巫师模式，这样有什么好处?</p>
+
+<p>一般版本下使用nethack -u wizard -D可以进入巫师模式。其他修改版本可能会有不同的方法，例如SLASH是nethack -u wizard -Z。在Unix下，你必须是游戏的编译者才能进入，此时只需要 nethack- D即可。在Mac系统中，你只需要把nethack defaults file从目录中临时拿开，就可以在进入的时候出现选择进入巫师模式的对话框。在巫师模式下，你有许多附加的魔法命令，例如魔法定位，搜索，传送等等。你可以用?</p>
+
+<p>并且选择wizard mode commands来获取帮助。该选项仅在巫师模式下有效。同时，还有许多扩展指令有效，但是他们主要是一些调试工具。在巫师模式下主要的不同是：你可以随心所欲的传送（甚至跨层），可以进行魔法定位，可以许愿（包括各种东西，例如祭坛、陷阱等），可以搜索（就像持有暗门探索杖），而且就像探索模式下，你永生不死。</p>
+
+<hr />
+
+<p>1Q: 我在游戏中系统崩溃，导致我最好的一个角色丢失了。我还有办法找回它么?</p>
+
+<p>也许可以。nethack发布中有一个叫做”recover”的程序，他就是你需要的东西。你的nethack目录里会有几个含有你角色的名字并且用数字作为后缀的文件。你只要输入 recover . (无后缀的文件名) 那么就可以恢复你的档案到你进入当前层的时候。注意，”.”是指目录，可能需要更换但是，如果是3.2.1那就没有办法了，因为那个版本中，recover存在一个错误。PS: Mac版本可能用”mrecover”或者”recoer”.用法很直接，你打开程序，打开 level 0文件，接下来都是自动恢复了。不幸的是，</p>
+
+<p>过去几个发布版本中的recover都是有问题的。所以还是要经常复制保存你的存档文件。</p>
+
+<hr />
+
+<p>1Q: 我听说过所谓Bone文件，这是什么?</p>
+
+<p>如果你的角色死了，有一定的几率当前层信息会被保存下来。该信息文件就叫做bone文件。当另一个角色进入该层数时，有一定的几率，该层不再随机生成，而是读取bone文件重新加载。那么你可以找到前一次死在这一层的尸体，包括尸体上的道具。但是注意，此时大部分的道具都会处于‘诅咒’状态。</p>
+
+<hr />
+
+<p>1Q: 可是我的win95的版本下从来没有找到过bone文件.对，这可能是因为DOS的3.2.2版中存在一个bug。在我的主页上下载安装MK_BONES来修正这个问题。(你会觉得肚子变饱。)</p>
+
+<hr />
+
+<p>1Q: 我在新闻组里面老读到叫Rodney或者Dudley的名字，他们到底是谁？你游戏的主要敌人是Yendor的巫师，是他偷走了Yendor之符。现在，你试着把Yendor到过来看，那么就是Rodney了，而这也是某些老版本游戏中的缺省角色名字。至于Dudley则是有人把Rodney拼错创造出来的名字，一般就当是别名了。</p>
+
+<hr />
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            
+            <a href="/tag/#/game" rel="tag"># game</a>
+          
+            
+            <a href="/tag/#/nethack" rel="tag"># nethack</a>
+          
+        </div>
+      
+
+      
+      
+      
+      
+      
+
+      
+      
+        <div class="post-nav" id="post-nav-id">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/%E9%97%B2%E8%AF%9D/2006/11/29/nethack-first-experience-Original/" rel="next" title="nethack的初体验">
+                <i class="fa fa-chevron-left"></i> nethack的初体验
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/%E9%97%B2%E8%AF%9D/2006/11/05/Dad-found-Bo-opened-the-popularity-seems-to-be-pretty-good-sweat-rushing/" rel="prev" title="发现老爸开博了,人气好像还不错,汗哗哗的...">
+                发现老爸开博了,人气好像还不错,汗哗哗的... <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+      
+
+      
+    </footer>
+  </article>
+
+  <div class="post-spread">
+    
+  </div>
+
+
+	<div style="margin-top:20px;margin-bottom:10px;font-size: 12px;line-height:20px; background: #505050;border: 1px dotted #ddd;padding-left: 20px;padding-top: 5px;padding-bottom: 5px;padding-right:20px;border-radius: 3px;color: #ffffff;">好大的工程 </div>
+
+
+
+	<div style="margin-top:10px;margin-bottom:10px;font-size:12px;text-align:right;color:#555;">29 Nov 2006 , 写于 <span style="color:#333;">国信嘉园 </span>。</div>
+
+
+
+
+</div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzAwNi85NTY4"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        
+        
+        
+
+
+
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/assets/images/Avatar.png"
+               alt="Claud Xiao" />
+          <p class="site-author-name" itemprop="name">Claud Xiao</p>
+           
+              <p class="site-description motion-element" itemprop="description">不存在彻头彻尾的绝望</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">620</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/">
+                <span class="site-state-item-count">115</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+        
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="http://fanfou.com/shinemoon" target="_blank" title="饭否">
+                  
+                    <i class="fa fa-fw fa-user-circle-o"></i>
+                  
+                  饭否
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="https://github.com/shinemoon" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="https://www.douban.com/people/claud.xiao/" target="_blank" title="豆瓣">
+                  
+                    <i class="fa fa-fw fa-book"></i>
+                  
+                  豆瓣
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="mailto://shinemoon@gmail.com" target="_blank" title="Mail">
+                  
+                    <i class="fa fa-fw fa-google-plus-square"></i>
+                  
+                  Mail
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="http://maybe2020.github.io/" title="近寐遥喧" target="_blank">近寐遥喧</a>
+                </li>
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="http://ievanz.net/" title="为埃斯米而作" target="_blank">为埃斯米而作</a>
+                </li>
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.zeove.com/" title="哲尔夫" target="_blank">哲尔夫</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i style="color:red" class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Claud Xiao</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://jekyllrb.com">Jekyll</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/simpleyyt/jekyll-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/assets/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/assets/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/assets/js/src/post-details.js?v=5.1.1"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+    
+      <script type="text/javascript">
+        (function(d, s) {
+          var j, e = d.getElementsByTagName(s)[0];
+          if (typeof LivereTower === 'function') { return; }
+          j = d.createElement(s);
+          j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+          j.async = true;
+          e.parentNode.insertBefore(j, e);
+        })(document, 'script');
+      </script>
+    
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
+

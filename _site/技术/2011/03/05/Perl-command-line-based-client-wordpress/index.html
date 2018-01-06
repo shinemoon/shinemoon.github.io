@@ -1,0 +1,986 @@
+
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/assets/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/assets/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/assets/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="wordpress," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="MooninskY" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="在使用过许多离线的博客编辑器之后，我发现自己对于编辑器的要求越来越极端了，轻巧，快捷，编辑器本身的舒服——同时对于多媒体类型的编辑功能的要求却非常的低；无疑，从Windows Live Writer到FireScribe，包括多平台上的各类开源闭源，收费免费的种种工具，大家多半走的是大而全的路线，所以到了最后，我打算自己干脆折腾一个算了。">
+<meta name="keywords" content="wordpress">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于Perl的命令行Wordpress客户端">
+<meta property="og:url" content="http://0.0.0.0:4000/%E6%8A%80%E6%9C%AF/2011/03/05/Perl-command-line-based-client-wordpress/">
+<meta property="og:site_name" content="MooninskY">
+<meta property="og:description" content="在使用过许多离线的博客编辑器之后，我发现自己对于编辑器的要求越来越极端了，轻巧，快捷，编辑器本身的舒服——同时对于多媒体类型的编辑功能的要求却非常的低；无疑，从Windows Live Writer到FireScribe，包括多平台上的各类开源闭源，收费免费的种种工具，大家多半走的是大而全的路线，所以到了最后，我打算自己干脆折腾一个算了。">
+<meta property="og:locale" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="基于Perl的命令行Wordpress客户端">
+<meta name="twitter:description" content="在使用过许多离线的博客编辑器之后，我发现自己对于编辑器的要求越来越极端了，轻巧，快捷，编辑器本身的舒服——同时对于多媒体类型的编辑功能的要求却非常的低；无疑，从Windows Live Writer到FireScribe，包括多平台上的各类开源闭源，收费免费的种种工具，大家多半走的是大而全的路线，所以到了最后，我打算自己干脆折腾一个算了。">
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://0.0.0.0:4000/"/>
+
+
+
+<style type="text/css"> 
+blockquote{
+    border-left: 4px solid #ffbbbb;
+}
+</style>
+
+
+
+  <title>基于Perl的命令行Wordpress客户端</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">MooninskY</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">月下闲话</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+<div id="posts" class="posts-expand">
+  
+  
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-post " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://0.0.0.0:4000/%E6%8A%80%E6%9C%AF/2011/03/05/Perl-command-line-based-client-wordpress/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Claud Xiao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/assets/images/Avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MooninskY">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+          
+          
+            基于Perl的命令行Wordpress客户端
+          
+        </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2011-03-05T00:00:00+08:00">
+                2011-03-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/category/#/%E6%8A%80%E6%9C%AF" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+            
+                <div class="post-description">
+                    
+                </div>
+            
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>在使用过许多离线的博客编辑器之后，我发现自己对于编辑器的要求越来越极端了，轻巧，快捷，编辑器本身的舒服——同时对于多媒体类型的编辑功能的要求却非常的低；无疑，从Windows Live Writer到FireScribe，包括多平台上的各类开源闭源，收费免费的种种工具，大家多半走的是大而全的路线，所以到了最后，我打算自己干脆折腾一个算了。</p>
+
+<p>加上在Ubuntu上试过Pyroom以后，这种Distraction Free的编辑器给我感觉非常的舒服，更是发生了：如果能用这个直接写博客该多好啊？这类奇怪的想法，不过看了看XMLRPC相关的资料以后，我发现这个想法一点都不奢侈，简单的Perl脚本就完全可以搞定了，不如自己动手DIY吧。</p>
+
+<p>我希望实现的目标如下：</p>
+
+<ul>
+  <li>
+    <p>创建新的博客文章；</p>
+  </li>
+  <li>
+    <p>删除新的博客文章；</p>
+  </li>
+  <li>
+    <p>有限的编辑最近文章，对我来讲5篇就足够了；</p>
+  </li>
+  <li>
+    <p>无论新建还是编辑，对于该篇文章的各个参数要能充分设置；</p>
+  </li>
+  <li>
+    <p>可以配合自己喜欢的编辑器；</p>
+  </li>
+  <li>
+    <p>支持代理服务器；</p>
+  </li>
+  <li>
+    <p>可以本地保存草稿；</p>
+  </li>
+</ul>
+
+<p>鉴于我既然坚定的需要基于简单的文本编辑器来完成这样的动作，那么做出的平衡自然就是如果用这样的方法，我显然只有老老实实的写HTML代码了——比起所见所得的富文本编辑器当然是要麻烦一点，但是习惯以后，却也自然有它的方便之处。</p>
+
+<p>编写过程意外的顺利，无非是些Perl基本东西，唯一让我稍微头疼了一下的问题，是中文字符在做HTTP Request时会遇到Message must be bytes的错误，经过一番查询，发现必须在做content之前做一个utf8的encode动作，不得已，只好把Frontier::RPC2的包复制到本目录下，改个名字，加入了这个encode的预处理才算是搞定，不过这样一来，倒也省去了要用户先行安装Frontier包的麻烦，只要编辑一下脚本里的路径就好了。</p>
+
+<p>老习惯，代码依然托管在Bitbucket，链接如下：</p>
+
+<p><a href="https://bitbucket.org/claudxiao/perlwp/wiki/Home">perlWP 项目链接</a>
+<a href="https://bitbucket.org/claudxiao/perlwp/downloads/perlWP.tar.gz">perlWP 下载链接</a></p>
+
+<p>直接在本地建立一个目录，将所有文件复制到目录下即可，重点在于修改perlwp的配置内容：</p>
+
+<p>当然，你也可以在任意地方建立你希望的lnk来指向它，例如放置在常规放置bin的位置。</p>
+
+<p>#######################################################
+#Default setting
+#Please Modify Below Configurations If Needed
+#######################################################
+use lib ‘[dir]’; #路径请使用绝对路径，例如/home/username/xx/,而不要是~
+my $url  = “http://yoursite.site/xmlrpc.php”;
+my $user =”xxxxxxxxx”;
+my $pwd=”xxxxxxxxxxxxx”;
+my $editor=”vim”;
+my $proxy = “proxy”;
+#######################################################</p>
+
+<p>使用命令和简单，用perlwp -help就可以看到详细的帮助，顺便也贴在下面：</p>
+
+<p>###NAME###</p>
+
+<p>perlwp - Use Perl command line to post/edit/manage your wordpress blog.</p>
+
+<p>###SYNOPSIS###</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>perlwp \[OPTION\]
+</code></pre></div></div>
+
+<p>###DESCRIPTION###</p>
+
+<p>perlwp is a simple perl script to post/edit/manage your wordpress blog via xmlrpcl.php. Only commandline is needed as the interface, and user can use any favorite editor to edit the pure html post content, while most post parameters including title, slug, tags, categories and so on can be defined easily.
+-user=sthe user name for your blog, if ignored, default user name in perlwp file will be used;
+-pwd=s		Set the user password for your blog, if ignored, default user password in perlwp file will be used;
+-editor=s	Set editor,if ignored, default editor in perlwp file will be used;
+-c		Create new post/Open existed draft to continue, depends on if any existed draft there;
+-e=s		Edit the post with postid equal to ‘s’;
+-gp		Get recent posts’ info including postid and title, support most recent 5 posts;
+-p		Use proxy to connect the internet, if ‘-proxy=’ is not set, default proxy in perlwp file will be used;
+-proxy=s	Set the proxy setting, like ‘http://user:pwd@xx.xx.xx.xx.:port’
+-info		Get the info about the blog, can be used to  connection;
+-help		Print this help info;</p>
+
+<p>###NOTE:###</p>
+
+<p>Please  set the default setting in perlwp file before usage, especially for $url and use lib path!
+And thanks for Frontier::RPC2, great module. But to fix some minor issue in utf-8 encoding, I add 3 lines in Client part, and put it inside perwp dir as ‘new’ WPFrontier to make it more easy for users.
+If there is any issue or suggestion, pls feel free to contact with shinemoon#gmail.com, thanks.</p>
+
+<p>也许是敝帚自珍吧，每次打开上网本，然后几行命令行之后，pyroom全屏之后感觉世界都清净了，这样的感觉是我一直在许多离线编辑器上寻找却无法找到的。Linux Rocks！</p>
+
+<p>PS. 几种典型的应用场景：</p>
+
+<ul>
+  <li>
+    <p>读取基本博客信息（主要是为了测试配置和连接情况）：perlwp -info [-p] [-user=] [-pwd=];</p>
+  </li>
+  <li>
+    <p>读取最近的博文信息（仅支持最近的五篇内容，主要是为了获取post id用于编辑博文）：perlwp -gp [-p] [-user=] [-pwd=];</p>
+  </li>
+  <li>
+    <p>新建博文，或者是在已有的本地草稿基础上继续编辑（具体是新建还是继续取决于是否有本地草稿存在，以及用户在提示符出现后的选择。）：perlwp -c [-p] [-user=] [-pwd=] [-editor=];</p>
+  </li>
+  <li>
+    <p>如果本地draft存在，此时会需要选择:Please select action:[R(eopen)/D(elete)/C(ancel)] 分别代表了在已有草稿上继续编辑，删除草稿重新开始以及取消返回的选项；</p>
+  </li>
+  <li>
+    <p>编辑博文：perlwp -e=postid [-p] [-user=] [-pwd=] [-editor=];</p>
+  </li>
+  <li>
+    <p>如果本地draft存在，此时会需要选择:Please select action:[D(elete)/C(ancel)] 分别代表了删除草稿重新开始以及取消返回的选项；</p>
+  </li>
+  <li>
+    <p>删除博文：perlwp -d=postid [-p] [-user=] [-pwd=] ;</p>
+  </li>
+</ul>
+
+<p>Posted By <a href="//bitbucket.org/claudxiao/perlwp/wiki/Home'">PerlWP</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            
+            <a href="/tag/#/wordpress" rel="tag"># wordpress</a>
+          
+        </div>
+      
+
+      
+      
+      
+      
+      
+
+      
+      
+        <div class="post-nav" id="post-nav-id">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/%E9%97%B2%E8%AF%9D/2011/03/11/The-topics-for-gtd/" rel="next" title="GTD的杂谈">
+                <i class="fa fa-chevron-left"></i> GTD的杂谈
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/%E9%97%B2%E8%AF%9D/2011/03/04/microsoft-and-nokia/" rel="prev" title="MicroSoft 与 Nokia">
+                MicroSoft 与 Nokia <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+      
+
+      
+    </footer>
+  </article>
+
+  <div class="post-spread">
+    
+  </div>
+
+
+
+
+	<div style="margin-top:10px;margin-bottom:10px;font-size:12px;text-align:right;color:#555;">05 Mar 2011 , 写于 <span style="color:#333;">杭州 </span>。</div>
+
+
+
+
+</div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzAwNi85NTY4"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        
+        
+        
+
+
+
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/assets/images/Avatar.png"
+               alt="Claud Xiao" />
+          <p class="site-author-name" itemprop="name">Claud Xiao</p>
+           
+              <p class="site-description motion-element" itemprop="description">不存在彻头彻尾的绝望</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">620</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/">
+                <span class="site-state-item-count">115</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+        
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="http://fanfou.com/shinemoon" target="_blank" title="饭否">
+                  
+                    <i class="fa fa-fw fa-user-circle-o"></i>
+                  
+                  饭否
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="https://github.com/shinemoon" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="https://www.douban.com/people/claud.xiao/" target="_blank" title="豆瓣">
+                  
+                    <i class="fa fa-fw fa-book"></i>
+                  
+                  豆瓣
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="mailto://shinemoon@gmail.com" target="_blank" title="Mail">
+                  
+                    <i class="fa fa-fw fa-google-plus-square"></i>
+                  
+                  Mail
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="http://maybe2020.github.io/" title="近寐遥喧" target="_blank">近寐遥喧</a>
+                </li>
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="http://ievanz.net/" title="为埃斯米而作" target="_blank">为埃斯米而作</a>
+                </li>
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.zeove.com/" title="哲尔夫" target="_blank">哲尔夫</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i style="color:red" class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Claud Xiao</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://jekyllrb.com">Jekyll</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/simpleyyt/jekyll-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/assets/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/assets/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/assets/js/src/post-details.js?v=5.1.1"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+    
+      <script type="text/javascript">
+        (function(d, s) {
+          var j, e = d.getElementsByTagName(s)[0];
+          if (typeof LivereTower === 'function') { return; }
+          j = d.createElement(s);
+          j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+          j.async = true;
+          e.parentNode.insertBefore(j, e);
+        })(document, 'script');
+      </script>
+    
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
+

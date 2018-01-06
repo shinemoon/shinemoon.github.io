@@ -1,0 +1,917 @@
+
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/assets/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/assets/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/assets/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="音乐," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="MooninskY" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="按照流行的说法，现在标题不长就没人看…有时候心血来潮的时候，想在文章里面插入点mp3，也用过目前几家流行的音乐共享软件提供的博客播放器，例如YOBO、虾米等等，但是，很多时候，我其实不想要那么完整的一个播放器，只是想‘低调’的放上一个单曲的播放按钮——因为偶尔看过别人做过，但是当时不得其法，徒然艳羡罢了。">
+<meta name="keywords" content="音乐">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于在优博中插入单曲播放器-顺便推歌一首...">
+<meta property="og:url" content="http://0.0.0.0:4000/%E9%97%B2%E8%AF%9D/2008/12/25/About-inserting-singles-player-Yubo-in-the-way-to-push-the-song-a-song/">
+<meta property="og:site_name" content="MooninskY">
+<meta property="og:description" content="按照流行的说法，现在标题不长就没人看…有时候心血来潮的时候，想在文章里面插入点mp3，也用过目前几家流行的音乐共享软件提供的博客播放器，例如YOBO、虾米等等，但是，很多时候，我其实不想要那么完整的一个播放器，只是想‘低调’的放上一个单曲的播放按钮——因为偶尔看过别人做过，但是当时不得其法，徒然艳羡罢了。">
+<meta property="og:locale" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="关于在优博中插入单曲播放器-顺便推歌一首...">
+<meta name="twitter:description" content="按照流行的说法，现在标题不长就没人看…有时候心血来潮的时候，想在文章里面插入点mp3，也用过目前几家流行的音乐共享软件提供的博客播放器，例如YOBO、虾米等等，但是，很多时候，我其实不想要那么完整的一个播放器，只是想‘低调’的放上一个单曲的播放按钮——因为偶尔看过别人做过，但是当时不得其法，徒然艳羡罢了。">
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://0.0.0.0:4000/"/>
+
+
+
+<style type="text/css"> 
+blockquote{
+    border-left: 4px solid #ffbbbb;
+}
+</style>
+
+
+
+  <title>关于在优博中插入单曲播放器-顺便推歌一首...</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">MooninskY</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">月下闲话</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+<div id="posts" class="posts-expand">
+  
+  
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-post " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://0.0.0.0:4000/%E9%97%B2%E8%AF%9D/2008/12/25/About-inserting-singles-player-Yubo-in-the-way-to-push-the-song-a-song/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Claud Xiao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/assets/images/Avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MooninskY">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+          
+          
+            关于在优博中插入单曲播放器-顺便推歌一首...
+          
+        </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2008-12-25T00:00:00+08:00">
+                2008-12-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/category/#/%E9%97%B2%E8%AF%9D" itemprop="url" rel="index">
+                    <span itemprop="name">闲话</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+            
+                <div class="post-description">
+                    
+                </div>
+            
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>按照流行的说法，现在标题不长就没人看…有时候心血来潮的时候，想在文章里面插入点mp3，也用过目前几家流行的音乐共享软件提供的博客播放器，例如YOBO、虾米等等，但是，很多时候，我其实不想要那么完整的一个播放器，只是想‘低调’的放上一个单曲的播放按钮——因为偶尔看过别人做过，但是当时不得其法，徒然艳羡罢了。</p>
+
+<p>后来看到8box上的单曲播放器界面还是很不错的，也试过两次，是我需要的效果，可惜，他家的服务器，似乎不怎么牢靠，速度和可靠性都让人有点担心，远不如九九音乐上的资源丰富和速度快捷。</p>
+
+<p>再后来，终于发现了，原来WP上的Audio Player插件早就搞定了这个问题….而优博也支持，只能怪自己没有早点看到了。</p>
+
+<p>使用方法简明的很：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. 进入插件配置界面，启用 Audio Player Plugin;
+2. 然后进入到Audio Player Plugin的配置，里面可以做一些具体的设置，比较关键的是外观颜色的修改、以及插入方法的设定。 
+</code></pre></div></div>
+
+<p>颜色我很满意，淡灰色，就是这个效果；至于方法，缺省的是在文中用[audio:]的方式来产生一个单曲播放器，但是,我倾向于直接用链接的方式插入——就是直接使用一个到mp3的超链接来产生播放器。</p>
+
+<p>这样更加省事。</p>
+
+<p>当然，各有所好，缺省方法也是很好的。</p>
+
+<p>下面这首歌，传唱度似乎不是很高？但是仔细听听恐怕就会联想起那首曾经火热的《K歌之王》。</p>
+
+<p>看过网上有人分析它的组成，但是总有疏漏，特别是结尾那句”而你那呵欠绝得不能绝 绝到溶掉我 “配上几乎一模一样的收尾编曲，分明就是向这首傅佩嘉的《绝》的致意。</p>
+
+<p>虽然是很绝望的歌，但是架不住的好听。</p>
+
+<p>傅佩嘉-绝</p>
+
+<blockquote>
+  <p>寧願滯留在此處　
+寧願叫時間中止我不會再信未來　
+我不要再看歷史還能活才是諷刺　
+故此不用做傻事讓痛苦　
+輪千次　
+彰顯那快樂有盡時</p>
+
+  <p>曙光全部熄滅　
+殺掉我影子我只能獨處　
+背后全沒有支柱#</p>
+
+  <p>什麼叫絕望　
+抬起眼望望如今我在你面前呈堂　
+隨便收看靈魂被抽干　
+殘留著軀干從此與未了願同存亡　
+地老天荒還不夠絕望　
+尚可更絕望留給我日後用來形容前面境況能夠這樣　
+謝謝你幫忙將僅有願望都風光殮葬我的平淡生命再沒有宗旨再堅持什麼　對未來沒有好處何來未來未開創　我對希望沒期望未放開　提前釋放明知道敗仗　就不應該對抗能夠這樣　全靠你幫忙給戀愛絕后的標准答案</p>
+</blockquote>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            
+            <a href="/tag/#/%E9%9F%B3%E4%B9%90" rel="tag"># 音乐</a>
+          
+        </div>
+      
+
+      
+      
+      
+      
+      
+
+      
+      
+        <div class="post-nav" id="post-nav-id">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/%E5%BD%B1%E9%9F%B3/2008/12/26/everyone-has-his-magic-hour/" rel="next" title="Everyone has His Magic Hour">
+                <i class="fa fa-chevron-left"></i> Everyone has His Magic Hour
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/%E9%97%B2%E8%AF%9D/2008/12/24/Cold-Christmas-Eve/" rel="prev" title="寒冷的平安夜">
+                寒冷的平安夜 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+      
+
+      
+    </footer>
+  </article>
+
+  <div class="post-spread">
+    
+  </div>
+
+
+
+
+	<div style="margin-top:10px;margin-bottom:10px;font-size:12px;text-align:right;color:#555;">25 Dec 2008 , 写于 <span style="color:#333;">上海 </span>。</div>
+
+
+
+
+</div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzAwNi85NTY4"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        
+        
+        
+
+
+
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/assets/images/Avatar.png"
+               alt="Claud Xiao" />
+          <p class="site-author-name" itemprop="name">Claud Xiao</p>
+           
+              <p class="site-description motion-element" itemprop="description">不存在彻头彻尾的绝望</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">620</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/">
+                <span class="site-state-item-count">115</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+        
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="http://fanfou.com/shinemoon" target="_blank" title="饭否">
+                  
+                    <i class="fa fa-fw fa-user-circle-o"></i>
+                  
+                  饭否
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="https://github.com/shinemoon" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="https://www.douban.com/people/claud.xiao/" target="_blank" title="豆瓣">
+                  
+                    <i class="fa fa-fw fa-book"></i>
+                  
+                  豆瓣
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="mailto://shinemoon@gmail.com" target="_blank" title="Mail">
+                  
+                    <i class="fa fa-fw fa-google-plus-square"></i>
+                  
+                  Mail
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="http://maybe2020.github.io/" title="近寐遥喧" target="_blank">近寐遥喧</a>
+                </li>
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="http://ievanz.net/" title="为埃斯米而作" target="_blank">为埃斯米而作</a>
+                </li>
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.zeove.com/" title="哲尔夫" target="_blank">哲尔夫</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i style="color:red" class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Claud Xiao</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://jekyllrb.com">Jekyll</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/simpleyyt/jekyll-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/assets/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/assets/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/assets/js/src/post-details.js?v=5.1.1"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+    
+      <script type="text/javascript">
+        (function(d, s) {
+          var j, e = d.getElementsByTagName(s)[0];
+          if (typeof LivereTower === 'function') { return; }
+          j = d.createElement(s);
+          j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+          j.async = true;
+          e.parentNode.insertBefore(j, e);
+        })(document, 'script');
+      </script>
+    
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
+

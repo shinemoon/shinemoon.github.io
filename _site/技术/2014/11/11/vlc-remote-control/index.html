@@ -1,0 +1,1103 @@
+
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/assets/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/assets/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/assets/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="linux, vlc," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="MooninskY" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="开宗明义，在Headless （ i.e. without a monitor or input device）的服务器（例如，各类嵌入式「玩具板子」）上如果架起VLC进行多媒体播放，怎样才是最方便的控制方式？">
+<meta name="keywords" content="linux, vlc">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VLC 远程播放控制方法">
+<meta property="og:url" content="http://0.0.0.0:4000/%E6%8A%80%E6%9C%AF/2014/11/11/vlc-remote-control/">
+<meta property="og:site_name" content="MooninskY">
+<meta property="og:description" content="开宗明义，在Headless （ i.e. without a monitor or input device）的服务器（例如，各类嵌入式「玩具板子」）上如果架起VLC进行多媒体播放，怎样才是最方便的控制方式？">
+<meta property="og:locale" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="VLC 远程播放控制方法">
+<meta name="twitter:description" content="开宗明义，在Headless （ i.e. without a monitor or input device）的服务器（例如，各类嵌入式「玩具板子」）上如果架起VLC进行多媒体播放，怎样才是最方便的控制方式？">
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://0.0.0.0:4000/"/>
+
+
+
+<style type="text/css"> 
+blockquote{
+    border-left: 4px solid #ffbbbb;
+}
+</style>
+
+
+
+  <title>VLC 远程播放控制方法</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">MooninskY</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">月下闲话</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+<div id="posts" class="posts-expand">
+  
+  
+
+  
+
+  
+  
+  
+
+  <article class="post post-type- " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://0.0.0.0:4000/%E6%8A%80%E6%9C%AF/2014/11/11/vlc-remote-control/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Claud Xiao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/assets/images/Avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MooninskY">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+          
+          
+            VLC 远程播放控制方法
+          
+        </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2014-11-11T00:00:00+08:00">
+                2014-11-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/category/#/%E6%8A%80%E6%9C%AF" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+            
+                <div class="post-description">
+                    
+                </div>
+            
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>开宗明义，在Headless （ i.e. without a monitor or input device）的服务器（例如，各类嵌入式「玩具板子」）上如果架起VLC进行多媒体播放，怎样才是最方便的控制方式？</p>
+
+<p>同时，因为希望是可以脚本控制，所以最好是可以做到非互动式的指令。</p>
+
+<p>如下是简单的步骤：</p>
+
+<h2 id="使能vlc的remote-control接口">使能VLC的Remote Control接口</h2>
+
+<p>VLC实际上拥有灵活强大的控制方式，由于我们上来就限定了Headless，那么命令行显然是先决条件，VLC文档中已经列出了支持的几种Remote方式：</p>
+
+<ul>
+  <li>rc interface</li>
+  <li>ncurses interface</li>
+  <li>telnet interface</li>
+</ul>
+
+<p>考虑到三者中rc应该是最强大和灵活的（ncurses需要configure，telnet更多的是互动型，何况rc本身就可以支持telnet访问），我们就focus在rc 接口上。</p>
+
+<p>使能方法非常简单，调用vlc的时候，用：</p>
+
+<p><code class="highlighter-rouge">cvlc -I rc --rc-fake-tty --rc-host &lt;ip&gt;:&lt;port&gt;</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>选项</th>
+      <th>意义</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>‘-I rc’</td>
+      <td>启动rc接口；</td>
+    </tr>
+    <tr>
+      <td>’–rc-fake-tty’</td>
+      <td>强迫将标准输入当做tty</td>
+    </tr>
+    <tr>
+      <td>’–rc-host’</td>
+      <td>选定的监听地址和端口</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>注意：如果需要局域网内访问，请填写本机ip，如果只要本机访问，用localhost就可以了</p>
+
+<p>得到如下信息（忽略那些错误吧，毕竟Headless么，很多接口对VLC来说都缺失，但是不影响使用）</p>
+
+<blockquote>
+  <p>cvlc -I rc –rc-fake-tty –rc-host localhost:8888      <br />
+VLC media player 2.0.3 Twoflower (revision 2.0.2-93-g77aa89e)      <br />
+[0x11eed70] inhibit interface error: Failed to connect to the D-Bus session daemon: Unable to autolaunch a dbus-daemon without a $DISPLAY for X11      <br />
+[0x11eed70] main interface error: no suitable interface module      <br />
+[0x11eed70] main interface error: no suitable interface module      <br />
+[0x10858f0] main libvlc error: interface “globalhotkeys,none” initialization failed      <br />
+[0x11eed70] [cli] lua interface: Listening on host “localhost:8888”.</p>
+</blockquote>
+
+<h2 id="rc-接口指令">RC 接口指令</h2>
+
+<p>直接借助帮助文件, 可见还是非常强大的：</p>
+
+<blockquote>
+  <p>+—-[ CLI commands ]      <br />
+| add XYZ  . . . . . . . . . . . . . . . . . . . . add XYZ to playlist      <br />
+| enqueue XYZ  . . . . . . . . . . . . . . . . . queue XYZ to playlist      <br />
+| playlist . . . . . . . . . . . . .  show items currently in playlist      <br />
+| search [string]  . .  search for items in playlist (or reset search)      <br />
+| sort key . . . . . . . . . . . . . . . . . . . . . sort the playlist      <br />
+| sd [sd]  . . . . . . . . . . . . . show services discovery or toggle      <br />
+| play . . . . . . . . . . . . . . . . . . . . . . . . . . play stream      <br />
+| stop . . . . . . . . . . . . . . . . . . . . . . . . . . stop stream      <br />
+| next . . . . . . . . . . . . . . . . . . . . . .  next playlist item      <br />
+| prev . . . . . . . . . . . . . . . . . . . .  previous playlist item      <br />
+| goto, gotoitem . . . . . . . . . . . . . . . . .  goto item at index      <br />
+| repeat [on|off]  . . . . . . . . . . . . . .  toggle playlist repeat      <br />
+| loop [on|off]  . . . . . . . . . . . . . . . .  toggle playlist loop      <br />
+| random [on|off]  . . . . . . . . . . . . . .  toggle playlist random      <br />
+| clear  . . . . . . . . . . . . . . . . . . . . .  clear the playlist      <br />
+| status . . . . . . . . . . . . . . . . . . . current playlist status      <br />
+| title [X]  . . . . . . . . . . . . . . set/get title in current item      <br />
+| title_n  . . . . . . . . . . . . . . . .  next title in current item      <br />
+| title_p  . . . . . . . . . . . . . .  previous title in current item      <br />
+| chapter [X]  . . . . . . . . . . . . set/get chapter in current item      <br />
+| chapter_n  . . . . . . . . . . . . . .  next chapter in current item      <br />
+| chapter_p  . . . . . . . . . . . .  previous chapter in current item      <br />
+|       <br />
+| seek X . . . . . . . . . . . seek in seconds, for instance `seek 12’      <br />
+| pause  . . . . . . . . . . . . . . . . . . . . . . . .  toggle pause      <br />
+| fastforward  . . . . . . . . . . . . . . . . . . set to maximum rate      <br />
+| rewind . . . . . . . . . . . . . . . . . . . . . set to minimum rate      <br />
+| faster . . . . . . . . . . . . . . . . . .  faster playing of stream      <br />
+| slower . . . . . . . . . . . . . . . . . .  slower playing of stream      <br />
+| normal . . . . . . . . . . . . . . . . . .  normal playing of stream      <br />
+| rate [playback rate] . . . . . . . . . .  set playback rate to value      <br />
+| frame  . . . . . . . . . . . . . . . . . . . . . play frame by frame      <br />
+| fullscreen, f, F [on|off]  . . . . . . . . . . . . toggle fullscreen      <br />
+| info . . . . . . . . . . . . .  information about the current stream      <br />
+| stats  . . . . . . . . . . . . . . . .  show statistical information      <br />
+| get_time . . . . . . . . .  seconds elapsed since stream’s beginning      <br />
+| is_playing . . . . . . . . . . . .  1 if a stream plays, 0 otherwise      <br />
+| get_title  . . . . . . . . . . . . . the title of the current stream      <br />
+| get_length . . . . . . . . . . . .  the length of the current stream      <br />
+|       <br />
+| volume [X] . . . . . . . . . . . . . . . . . .  set/get audio volume      <br />
+| volup [X]  . . . . . . . . . . . . . . .  raise audio volume X steps      <br />
+| voldown [X]  . . . . . . . . . . . . . .  lower audio volume X steps      <br />
+| adev [X] . . . . . . . . . . . . . . . . . . .  set/get audio device      <br />
+| achan [X]  . . . . . . . . . . . . . . . . .  set/get audio channels      <br />
+| atrack [X] . . . . . . . . . . . . . . . . . . . set/get audio track      <br />
+| vtrack [X] . . . . . . . . . . . . . . . . . . . set/get video track      <br />
+| vratio [X] . . . . . . . . . . . . . . .  set/get video aspect ratio      <br />
+| vcrop, crop [X]  . . . . . . . . . . . . . . . .  set/get video crop      <br />
+| vzoom, zoom [X]  . . . . . . . . . . . . . . . .  set/get video zoom      <br />
+| vdeinterlace [X] . . . . . . . . . . . . .  set/get video deintelace      <br />
+| vdeinterlace_mode [X]  . . . . . . . . set/get video deintelace mode      <br />
+| snapshot . . . . . . . . . . . . . . . . . . . . take video snapshot      <br />
+| strack [X] . . . . . . . . . . . . . . . . . set/get subtitles track      <br />
+|       <br />
+| vlm  . . . . . . . . . . . . . . . . . . . . . . . . .  load the VLM      <br />
+| description  . . . . . . . . . . . . . . . . .  describe this module      <br />
+| help, ? [pattern]  . . . . . . . . . . . . . . . . .  a help message      <br />
+| longhelp [pattern] . . . . . . . . . . . . . . a longer help message      <br />
+| lock . . . . . . . . . . . . . . . . . . . .  lock the telnet prompt      <br />
+| logout . . . . . . . . . . . . . .  exit (if in a socket connection)      <br />
+| quit . . . . . . . .  quit VLC (or logout if in a socket connection)      <br />
+| shutdown . . . . . . . . . . . . . . . . . . . . . . .  shutdown VLC      <br />
++—-[ end of help ]</p>
+</blockquote>
+
+<h2 id="如何访问">如何访问：</h2>
+
+<p>实际上，在一些<a href="http://n0tablog.wordpress.com/2009/02/09/controlling-vlc-via-rc-remote-control-interface-using-a-unix-domain-socket-and-no-programming/">讨论</a>中看到，如果只是需要本机访问,更高效的办法是借助一个unix socket文件，从而通过socket文件来访问，简单说就是将上面提到的-rc-host选项变成-rc-unix然后用一个文件作为输入；</p>
+
+<p>这样可以用类似于形如下面指令的方法来模拟socket访问 (作者以OSX为例，应当是没有问题的）：</p>
+
+<p><code class="highlighter-rouge">echo normal | nc -U /Users/vlc.sock</code></p>
+
+<p>我的例子，Debian中，nc似乎是不适用，更多人推荐用socat （需要安装）</p>
+
+<p><code class="highlighter-rouge">echo “pause” | socat – UNIX-CONNECT:/Users/vlc.sock</code></p>
+
+<p>上面可以理解成将管道化之后的ECHO字符向这个Unix的Socket发送。可是在我这里死活都会遇到文件connection refused，作为菜鸟，实在无力解决，特别是看到有强者遇到类似问题交叉比较得出可能和特定版本的kernel stock存在bug有关之后，不管看不看得懂，我都理直气壮的放弃了——直接转向了上面提到的host:port的方案。</p>
+
+<p>所以：</p>
+
+<h3 id="osx">OSX</h3>
+
+<p>如果是互动式，直接 <code class="highlighter-rouge">nc &lt;host&gt; &lt;port&gt;</code>，就可以进入这个接口界面了:</p>
+
+<blockquote>
+  <p>$ nc 192.168.199.105 8888      <br />
+VLC media player 2.0.3 Twoflower      <br />
+Command Line Interface initialized. Type `help’ for help.      <br />
+$ <strong>status</strong>      <br />
+( new input: file:///home/user/test.mp3 )      <br />
+( audio volume: 256 )      <br />
+( state playing )      <br />
+$ <strong>info</strong>      <br />
++—-[ Stream 0 ]      <br />
+|      <br />
+| Bitrate: 160 kb/s      <br />
+| Type: Audio      <br />
+| Channels: Stereo      <br />
+| Sample rate: 44100 Hz      <br />
+| Codec: MPEG Audio layer 1/2/3 (mpga)      <br />
+|      <br />
++—-[ end of stream info ]</p>
+</blockquote>
+
+<p>如果不需要互动：</p>
+
+<p>参考上节：</p>
+
+<p><code class="highlighter-rouge">echo status | nc -w 0 &lt;ip&gt; &lt;port&gt;</code></p>
+
+<p>-w是指示说该命令之后，立刻退出，实际上OSX下并不一定需要，只是为了和下面Linux对照一下。</p>
+
+<h3 id="linux">LINUX</h3>
+
+<p>大致相同，区别只是在非互动式下，</p>
+
+<p><code class="highlighter-rouge">echo status | nc -q 0 &lt;ip&gt; &lt;port&gt;</code></p>
+
+<p>两者区别只是一个用了’ <strong>w</strong>ait’之意，另外一个是’ <strong>q</strong>uit’罢了，想想还挺风趣….风趣个妹啊，这不是折腾跨平台用户吗？！</p>
+
+<p>##结论</p>
+
+<p>至此，该问题解决，不论是想在远程控制无输入（显示）设备上的播放，还是想用脚本对其他线程的VLC播放进行自动化的干预控制，都不成问题了。</p>
+
+<p>——怪不得有那么多人喜欢用VLC啊，我恍然。</p>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            
+            <a href="/tag/#/linux" rel="tag"># linux</a>
+          
+            
+            <a href="/tag/#/%20vlc" rel="tag">#  vlc</a>
+          
+        </div>
+      
+
+      
+      
+      
+      
+      
+
+      
+      
+        <div class="post-nav" id="post-nav-id">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/%E8%B6%B3%E8%BF%B9/2014/12/02/chongqin/" rel="next" title="重庆">
+                <i class="fa fa-chevron-left"></i> 重庆
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/%E9%97%B2%E8%AF%9D/2014/11/08/moonshine-039/" rel="prev" title="Moonshine 039">
+                Moonshine 039 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+      
+
+      
+    </footer>
+  </article>
+
+  <div class="post-spread">
+    
+  </div>
+
+
+	<div style="margin-top:20px;margin-bottom:10px;font-size: 12px;line-height:20px; background: #505050;border: 1px dotted #ddd;padding-left: 20px;padding-top: 5px;padding-bottom: 5px;padding-right:20px;border-radius: 3px;color: #ffffff;">东西终究还是写在自己的地方不会丢... </div>
+
+
+
+	<div style="margin-top:10px;margin-bottom:10px;font-size:12px;text-align:right;color:#555;">11 Nov 2014 , 写毕。</div>
+
+
+
+
+</div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzAwNi85NTY4"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        
+        
+        
+
+
+
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/assets/images/Avatar.png"
+               alt="Claud Xiao" />
+          <p class="site-author-name" itemprop="name">Claud Xiao</p>
+           
+              <p class="site-description motion-element" itemprop="description">不存在彻头彻尾的绝望</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">620</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/">
+                <span class="site-state-item-count">115</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+        
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="http://fanfou.com/shinemoon" target="_blank" title="饭否">
+                  
+                    <i class="fa fa-fw fa-user-circle-o"></i>
+                  
+                  饭否
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="https://github.com/shinemoon" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="https://www.douban.com/people/claud.xiao/" target="_blank" title="豆瓣">
+                  
+                    <i class="fa fa-fw fa-book"></i>
+                  
+                  豆瓣
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="mailto://shinemoon@gmail.com" target="_blank" title="Mail">
+                  
+                    <i class="fa fa-fw fa-google-plus-square"></i>
+                  
+                  Mail
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="http://maybe2020.github.io/" title="近寐遥喧" target="_blank">近寐遥喧</a>
+                </li>
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="http://ievanz.net/" title="为埃斯米而作" target="_blank">为埃斯米而作</a>
+                </li>
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.zeove.com/" title="哲尔夫" target="_blank">哲尔夫</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+
+
+
+
+            
+              <div class="post-toc-content">
+    <ol class=nav>
+      <li class="nav-item nav-level-2"> <a class="nav-link" href="#使能vlc的remote-control接口"> <span class="nav-number">1</span> <span class="nav-text">使能VLC的Remote Control接口</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#rc-接口指令"> <span class="nav-number">2</span> <span class="nav-text">RC 接口指令</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#如何访问"> <span class="nav-number">3</span> <span class="nav-text">如何访问：</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-3"> <a class="nav-link" href="#osx"> <span class="nav-number">3.1</span> <span class="nav-text">OSX</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#linux"> <span class="nav-number">3.2</span> <span class="nav-text">LINUX</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child">
+    </ol>
+  </div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i style="color:red" class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Claud Xiao</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://jekyllrb.com">Jekyll</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/simpleyyt/jekyll-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/assets/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/assets/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/assets/js/src/post-details.js?v=5.1.1"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+    
+      <script type="text/javascript">
+        (function(d, s) {
+          var j, e = d.getElementsByTagName(s)[0];
+          if (typeof LivereTower === 'function') { return; }
+          j = d.createElement(s);
+          j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+          j.async = true;
+          e.parentNode.insertBefore(j, e);
+        })(document, 'script');
+      </script>
+    
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
+

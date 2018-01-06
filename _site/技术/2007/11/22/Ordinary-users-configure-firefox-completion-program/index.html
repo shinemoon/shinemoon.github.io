@@ -1,0 +1,973 @@
+
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/assets/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/assets/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/assets/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="firefox," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="MooninskY" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="作为曾经使用Maxthon多年的用户，终于在新版的不稳定之下换上了Firefox，但是很多浏览习惯又实在不想改变，自然只能求助于丰富多彩的插件了，姑且把这个配置过程记录一下，免得下次重装的时候，又要摸索回忆半天–某帖曾提到，每次重装系统所用的时间要远小于重新配置一遍Firefox插件的时间，所以为了防止这种事件的发生，还是未雨绸缪的好。">
+<meta name="keywords" content="firefox">
+<meta property="og:type" content="article">
+<meta property="og:title" content="普通用户的FireFox的配置补完计划">
+<meta property="og:url" content="http://0.0.0.0:4000/%E6%8A%80%E6%9C%AF/2007/11/22/Ordinary-users-configure-firefox-completion-program/">
+<meta property="og:site_name" content="MooninskY">
+<meta property="og:description" content="作为曾经使用Maxthon多年的用户，终于在新版的不稳定之下换上了Firefox，但是很多浏览习惯又实在不想改变，自然只能求助于丰富多彩的插件了，姑且把这个配置过程记录一下，免得下次重装的时候，又要摸索回忆半天–某帖曾提到，每次重装系统所用的时间要远小于重新配置一遍Firefox插件的时间，所以为了防止这种事件的发生，还是未雨绸缪的好。">
+<meta property="og:locale" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="普通用户的FireFox的配置补完计划">
+<meta name="twitter:description" content="作为曾经使用Maxthon多年的用户，终于在新版的不稳定之下换上了Firefox，但是很多浏览习惯又实在不想改变，自然只能求助于丰富多彩的插件了，姑且把这个配置过程记录一下，免得下次重装的时候，又要摸索回忆半天–某帖曾提到，每次重装系统所用的时间要远小于重新配置一遍Firefox插件的时间，所以为了防止这种事件的发生，还是未雨绸缪的好。">
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://0.0.0.0:4000/"/>
+
+
+
+<style type="text/css"> 
+blockquote{
+    border-left: 4px solid #ffbbbb;
+}
+</style>
+
+
+
+  <title>普通用户的FireFox的配置补完计划</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">MooninskY</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">月下闲话</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+<div id="posts" class="posts-expand">
+  
+  
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-post " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://0.0.0.0:4000/%E6%8A%80%E6%9C%AF/2007/11/22/Ordinary-users-configure-firefox-completion-program/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Claud Xiao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/assets/images/Avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MooninskY">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+          
+          
+            普通用户的FireFox的配置补完计划
+          
+        </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2007-11-22T00:00:00+08:00">
+                2007-11-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/category/#/%E6%8A%80%E6%9C%AF" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+            
+                <div class="post-description">
+                    
+                </div>
+            
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>作为曾经使用Maxthon多年的用户，终于在新版的不稳定之下换上了Firefox，但是很多浏览习惯又实在不想改变，自然只能求助于丰富多彩的插件了，姑且把这个配置过程记录一下，免得下次重装的时候，又要摸索回忆半天–某帖曾提到，每次重装系统所用的时间要远小于重新配置一遍Firefox插件的时间，所以为了防止这种事件的发生，还是未雨绸缪的好。</p>
+
+<p>列一下浏览的习惯，无非以下几个基本点：</p>
+
+<p>同步的在线收藏夹；</p>
+
+<p>鼠标手势；</p>
+
+<p>超级拖曳；</p>
+
+<p>地址栏搜索；</p>
+
+<p>强大的多标签；</p>
+
+<p>其他（这个，不要问我，我也一时列不清楚……. 形而上的东西…Maxthon可能干不到的）；</p>
+
+<p>在Firefox上无非又要加上一条，对某些网站的兼容性问题的解决。</p>
+
+<hr />
+
+<p>那么我来一一记录一下这些问题的解决：</p>
+
+<p><strong>同步收藏的功能：</strong></p>
+
+<p>这一点在我昨天已经详细阐述过了，参见几个插件配合，Firefox完美书签解决方案.</p>
+
+<p><strong>鼠标手势：</strong></p>
+
+<p>这个自然好说了，直接上号称Firefox最强手势插件的All-in-one Gesture(最强当然是我自认的…）。</p>
+
+<p>装好以后，连配置都不怎么改，大家的缺省动作怎么都这么像啊，除了一点，我把（右键）下右从‘关闭</p>
+
+<p>当前窗口’改成了‘关闭当前标签页’而已。</p>
+
+<p>常用手势：</p>
+
+<p>下右：关闭当前标签页；</p>
+
+<p>上左：前一个标签页；</p>
+
+<p>上右：下一个标签页；</p>
+
+<p>上：新建标签页。</p>
+
+<p><strong>超级拖曳</strong></p>
+
+<p>稍微罗嗦一点了，一般的应用使用Super DragAndGo就OK了，但是官方版本在Firefox的当前版本下居然不支持拖曳搜索了，因此推荐改用Drag de Go.，而Drag de Go确实很自由，它甚至可以指定让上下左右四个方向的拖曳都有不同的命令设置，我反而不喜欢太复杂的东西了，不过是改成了向左拖曳是google搜索，向右拖曳是baidu搜索而已–这样的确很爽。直接导致我删除了就不更新的Super DragAndGo.</p>
+
+<p><strong>地址栏搜索</strong></p>
+
+<p>我已经习惯了有什么问题，直接冲到地址栏敲入关键字的搜索习惯，这一点Firefox已经直接支持了–缺省的搜索引擎是Google，不过我希望能够地址栏搜索使用Baidu（我承认我土，但是中文切词，百度的确要比Google舒服…)，这个时候就要修改Firefox本身的参数了。地址栏输入about:config,然后找到keyword.URL,将其修改成http://www.baidu.com/s?ie=UTF-8&amp;wd=，OK，百度搜索搞定，当然，也可以修改成你需要的任何引擎。</p>
+
+<p><strong>强大的多标签</strong></p>
+
+<p>Firefox早已整合了多标签的功能，我需要的是更高的可配置性。</p>
+
+<p>这个交给我认为必装的Tab Mix Plus, 它能够满足你对标签页行为种种BT的要求，例如那些是需要新建标签页的，而哪些标签页是需要当时激活的，新建标签页的位置等等，和Maxthon的标签配置选项很像，但是更加灵活。</p>
+
+<p>再次更新点后话，发现原来TabMix会出现标签栏跳动的情况，找来找去，原来是和我用的ifox的主题冲突–想了想，还是换了个主题，忍痛抛弃了我喜欢的小三角下拉的ifox，不过现在在用的Whiteharf也是个很不错的主题，简洁但是框架的结合处却显得不失精致。</p>
+
+<p><strong>其他</strong></p>
+
+<p>这个，无非就指些乱七八糟的需求，当中有些也许已经超出了Maxthon的配置</p>
+
+<p>首先，我装了被推荐无数次的加速插件Fasterfox，看看选项，让它加速吧，我不知道具体效果如何，不过看来评价都好，想来还是有效的，安装之后，会在状态栏多出一个页面装载计时器。</p>
+
+<p>然后，我装了个Edit Cookies，我我个人觉得这是很好用的一个插件，它能够查看，并且很方便的修改你当前的Cookies，例如把一些本来是进程结束自动失效的改成永不过期之类的懒人举措–这也是我安装它的目的所在。</p>
+
+<p>接着是无害的ErrorZilla和ColorfulTab, 前者当你遇到404错误时，会给你一个华丽的，具备Google Cache、Ping、Trace等等选择的错误界面，后者可以根据你的标签所属的类型给标签打上各种颜色，让你一目了然，这个在你打开了无数的标签，觉得晕头转向时，很是实用。</p>
+
+<p>还有下载管理，我装上了可以在状态栏显示进度条和下载管理器的Download Statusbar 和可以自由关联各种下载工具的FlashGot，基本上下载已经非常惬意了。</p>
+
+<p>最后还有锦上添花的小东西，Restart Firefox和Screen grab!。前者可以一键让Firefox重新启动，后者可以直接把整个网页存成一张图片，相当方便，当然不要忘记把他们的按钮加到工具栏上来。</p>
+
+<p>如果需要，不妨再加上一个bosskey, 这样可以配置最小化时的行为，最典型的就是最小化到系统托盘当中去，而且可以设置老板键，据说明，它比MinimizeToTray好的是，最小化时会自动释放内存–而且好像是国人作品。</p>
+
+<p><strong>兼容性</strong></p>
+
+<p>不可否认，还存在着某些对Firefox的内核支持不好的网页，如果实在绕不开这么办，只有用IE Tab了，只需要一个按键，就能把当前标签页改成ie内核进行浏览，正如介绍里写的：“让Firefox也能内嵌IE用双核心"–甚至听说有人在Firefox上专用IE Tab的，如果真是这样，那可太无敌了。安装后会在状态栏右侧多出一个切换快捷按钮，相当成熟的插件，个人认为值得一装。</p>
+
+<p>至此，所有的改造全部OK，我曾经在Maxthon所希求的全部功能，在Firefox上已经更加完美的达成了，而且还有许多曾经不具备的功能已经添加–最为重要的是，它比起新版的Maxthon实在是稳定多了。而一共安装了插件16个，但是感觉对内存和速度并没有明显影响，再配上一个简洁的主题，嗯–完美。</p>
+
+<p>附录：</p>
+
+<hr />
+
+<p>有些特殊的要求也可以通过插件满足-</p>
+
+<p>WAP访问：wmlbrowser</p>
+
+<p>内存CPU监视：StatusbarEx 这个插件可以在状态栏加入Firefox消耗的内存和CPU的数据显示</p>
+
+<p>天气预报：ForecastFox l10n, 同样简洁不占地方，难得的是放置的位置也相当自由。</p>
+
+<p>Gmail：虽然Google的工具欄已经提供了一揽子的插件，不过我不喜欢它安装这么多我不用的内容，所以我选了Gmail manager，非常强大，效果几乎像是outlook了，非常自然的弹出通知和详细的信箱信息。</p>
+
+<p>Google Browser Sync： 用来备份Firefox的Google的官方插件，备份包括设置、填表内容，书签、访问内容等等，但是我比较喜欢它的进程恢复，会弹出个对话泡泡让你确认–比Firefox内建或是TabMix的感觉要舒服。</p>
+
+<p>Dog ears: 可以在浏览页面的任何地方留下标记，并且保存下来，这就是真正的书签啊。</p>
+
+<p>Line Marker: 很好用的标记笔，可以在页面上打标记，同样会保存本地，看长文或者技术性文章很好用。</p>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            
+            <a href="/tag/#/firefox" rel="tag"># firefox</a>
+          
+        </div>
+      
+
+      
+      
+      
+      
+      
+
+      
+      
+        <div class="post-nav" id="post-nav-id">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/%E9%97%B2%E8%AF%9D/2007/11/22/bad-day-at-the-office/" rel="next" title="Bad Day at the office">
+                <i class="fa fa-chevron-left"></i> Bad Day at the office
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/%E9%97%B2%E8%AF%9D/2007/11/20/Switch-to-firefox-completely-abandoned-maxthon/" rel="prev" title="彻底抛弃Maxthon,转投Firefox">
+                彻底抛弃Maxthon,转投Firefox <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+      
+
+      
+    </footer>
+  </article>
+
+  <div class="post-spread">
+    
+  </div>
+
+
+
+
+	<div style="margin-top:10px;margin-bottom:10px;font-size:12px;text-align:right;color:#555;">22 Nov 2007 , 写于 <span style="color:#333;">上海 </span>。</div>
+
+
+
+
+</div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzAwNi85NTY4"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        
+        
+        
+
+
+
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/assets/images/Avatar.png"
+               alt="Claud Xiao" />
+          <p class="site-author-name" itemprop="name">Claud Xiao</p>
+           
+              <p class="site-description motion-element" itemprop="description">不存在彻头彻尾的绝望</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">620</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/">
+                <span class="site-state-item-count">115</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+        
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="http://fanfou.com/shinemoon" target="_blank" title="饭否">
+                  
+                    <i class="fa fa-fw fa-user-circle-o"></i>
+                  
+                  饭否
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="https://github.com/shinemoon" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="https://www.douban.com/people/claud.xiao/" target="_blank" title="豆瓣">
+                  
+                    <i class="fa fa-fw fa-book"></i>
+                  
+                  豆瓣
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="mailto://shinemoon@gmail.com" target="_blank" title="Mail">
+                  
+                    <i class="fa fa-fw fa-google-plus-square"></i>
+                  
+                  Mail
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="http://maybe2020.github.io/" title="近寐遥喧" target="_blank">近寐遥喧</a>
+                </li>
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="http://ievanz.net/" title="为埃斯米而作" target="_blank">为埃斯米而作</a>
+                </li>
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.zeove.com/" title="哲尔夫" target="_blank">哲尔夫</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i style="color:red" class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Claud Xiao</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://jekyllrb.com">Jekyll</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/simpleyyt/jekyll-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/assets/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/assets/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/assets/js/src/post-details.js?v=5.1.1"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+    
+      <script type="text/javascript">
+        (function(d, s) {
+          var j, e = d.getElementsByTagName(s)[0];
+          if (typeof LivereTower === 'function') { return; }
+          j = d.createElement(s);
+          j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+          j.async = true;
+          e.parentNode.insertBefore(j, e);
+        })(document, 'script');
+      </script>
+    
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
+

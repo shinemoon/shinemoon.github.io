@@ -1,0 +1,910 @@
+
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/assets/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/assets/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/assets/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="MooninskY" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="ChromeOS的发布也就是在这几天的事情，当然，如同我们知道的，ChromeOS并非是纯粹的免费系统，它最终将以预装的形式随厂商的网本发布：像可能吧的评论文章一样，我对它的短期前景，特别是国内前景并不看好，原因很简单：所谓最大噱头的网络服务应用，web2.0的诸多网站，对于境内用户来说，根本就无法正常访问，这不是白搭么？作为天朝子民，越是优秀的网络服务，我们就越有可能无法访问，这几乎已经成为至理。">
+<meta name="keywords" content="Blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Netbook上的Jolicloud">
+<meta property="og:url" content="http://0.0.0.0:4000/%E6%8A%80%E6%9C%AF/2009/11/21/netbook-jolicloud/">
+<meta property="og:site_name" content="MooninskY">
+<meta property="og:description" content="ChromeOS的发布也就是在这几天的事情，当然，如同我们知道的，ChromeOS并非是纯粹的免费系统，它最终将以预装的形式随厂商的网本发布：像可能吧的评论文章一样，我对它的短期前景，特别是国内前景并不看好，原因很简单：所谓最大噱头的网络服务应用，web2.0的诸多网站，对于境内用户来说，根本就无法正常访问，这不是白搭么？作为天朝子民，越是优秀的网络服务，我们就越有可能无法访问，这几乎已经成为至理。">
+<meta property="og:locale" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Netbook上的Jolicloud">
+<meta name="twitter:description" content="ChromeOS的发布也就是在这几天的事情，当然，如同我们知道的，ChromeOS并非是纯粹的免费系统，它最终将以预装的形式随厂商的网本发布：像可能吧的评论文章一样，我对它的短期前景，特别是国内前景并不看好，原因很简单：所谓最大噱头的网络服务应用，web2.0的诸多网站，对于境内用户来说，根本就无法正常访问，这不是白搭么？作为天朝子民，越是优秀的网络服务，我们就越有可能无法访问，这几乎已经成为至理。">
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://0.0.0.0:4000/"/>
+
+
+
+<style type="text/css"> 
+blockquote{
+    border-left: 4px solid #ffbbbb;
+}
+</style>
+
+
+
+  <title>Netbook上的Jolicloud</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">MooninskY</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">月下闲话</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+<div id="posts" class="posts-expand">
+  
+  
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-post " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://0.0.0.0:4000/%E6%8A%80%E6%9C%AF/2009/11/21/netbook-jolicloud/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Claud Xiao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/assets/images/Avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MooninskY">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+          
+          
+            Netbook上的Jolicloud
+          
+        </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2009-11-21T00:00:00+08:00">
+                2009-11-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/category/#/%E6%8A%80%E6%9C%AF" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+            
+                <div class="post-description">
+                    
+                </div>
+            
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>ChromeOS的发布也就是在这几天的事情，当然，如同我们知道的，ChromeOS并非是纯粹的免费系统，它最终将以预装的形式随厂商的网本发布：像可能吧的评论文章一样，我对它的短期前景，特别是国内前景并不看好，原因很简单：所谓最大噱头的网络服务应用，web2.0的诸多网站，对于境内用户来说，根本就无法正常访问，这不是白搭么？作为天朝子民，越是优秀的网络服务，我们就越有可能无法访问，这几乎已经成为至理。</p>
+
+<p>至于其余品牌知名度，商业推广模式等等就先不用说了。</p>
+
+<p>更何况，除非愿意在虚拟机上编译源代码尝鲜，否则ChromeOS至少目前好像并不是那么方便应用的。</p>
+
+<p>但是无意间看到的另外一个网本OS的项目， <a href="http://www.jolicloud.com">Jolicloud</a> ，也算是挺有意思的一个发现了。</p>
+
+<p>脱胎于Ubuntu的jolicloud，算是一个针对netbook的定制版。</p>
+
+<p>其中很多想法算是得自于ChromeOS的启发，而且阐发的很好：    首先，一切服务都能够’web’化的思维。</p>
+
+<p>在这里也许区别就在于这些服务的独立化并非依靠google chrome，而是靠firefox的prism扩展的实现——当然，这里的firefox也是通过专门jolicloud扩展优化过的——twitter，facebook，google talk，gmail， google reader，等等都是已经作为定制模块和其他程序一起放在程序中心备选安装，当然作为中国用户，对其中很多都只有望洋兴叹罢了；   其次，简化用户接口，针对网本小屏幕，大图标居中排列的UI设计很是醒目 :   程序打开时，一般就是直接自动最大化占据全屏，仅仅只有顶端标题栏和系统托盘区，任务区低调存在，感觉大气不少；和dropbox服务漂亮的整合，如果是小硬盘的网本，更是意义非凡（希望不要被GFW盯上）。</p>
+
+<p>尤其值得一提的是jolicloud的用户中心相当让人期待。</p>
+
+<p>这里可以修改用户配置（事实上也就是用户在jolicloud服务器端配置）；可以安装卸载官方整理的软件和服务，如前文提到的很多服务，都是整理后分类放在这里，还有打分机制；可以自动寻找和管理软件以及系统的更新升级；……还可以follow其他的jolicloud用户，目前还只是能够看到一些软件系统更新信息，但是继续发展下去，如果能和一些社会化媒体深度整合，那么jolicloud可以轻易发展成一个社区化的网本OS。</p>
+
+<p>安装过程并不复杂，我的eeepc是堂堂正正的写在兼容列表里的设备，我只需要下载600M的iso以及一个usb安装盘制作软件，简单双击，就可以制造一个用于boot和安装的u盘了。</p>
+
+<p>然后从usb启动，安装，非常简单。</p>
+
+<p>只是后续过程里，不停的系统更新提醒纷至沓来，花了我小半天才终于up to date了……非常满足。</p>
+
+<p>不得不说，ubuntu本身就是个很方便的系统，在有网络的状态下，软件的安装是相当的麻利。</p>
+
+<p>而且可能也是jolicloud做过一些优化，以前比较麻烦的中文化工作，包括输入法，都是在选择并且安装中文支持后自动到位，相当省心。</p>
+
+<p>当然，毕竟不算是彻底的重新设计的发行版，有些地方也会流露出包装不充分的样子来，而且如果真是一个着眼于web2.0或者说社会化媒体的操作系统，在消息推送整合上本来应该有更大的增强——不妨参见近期Moto和Nokia的几款新手机的设计。</p>
+
+<p>当然，这样的要求对于jolicloud来说可能有点为难了。</p>
+
+<p>依然要提到的是，作为国内用户，这样一个操作系统，也只能说是作为netbook上的家庭第二系统使用，因为那些firefox，chrome永远无法正常访问的网银系统以及形形色色的ie only的网站。</p>
+
+<p>而这些’不和谐’的东西注定要在相当长的一段时间里在中国长期存在。</p>
+
+<p>而且，作为国内用户，你也依然只能对着那些优秀的网络应用喟叹:twitter, facebook, friendfeed, picasa 等等，而且越来越多的其他服务也正在得到墙的关注。</p>
+
+<p>就在昨天，很多人就诧异的发现，手机翻墙的利器，国际版的opera mini，对于中国ip再也无法使用，这条小路都被堵死，让人心凉。</p>
+
+<p>也许终有一天，我们会发现可以被访问的东西要少于不能被访问的，一张真正的’史上最大的’局域网就要在中国建成，而如同马伯庸笔下的’寂静之城’一样，我们能说的词要少于被过滤的词。</p>
+
+<p>到那时，我们要学会从满篇的星号中揣摩作者的意思了。</p>
+
+<p>PS.村上的新书，’1Q84’的简体中文版，不知道什么时候才会出版呢？等待中…</p>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+      
+      
+
+      
+      
+        <div class="post-nav" id="post-nav-id">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/%E8%AF%BB%E4%B9%A6/2009/11/23/once-upon-a-time-in-shanghai/" rel="next" title="Once Upon A Time In Shanghai">
+                <i class="fa fa-chevron-left"></i> Once Upon A Time In Shanghai
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/%E8%AF%BB%E4%B9%A6/2009/11/10/Real-dual-Dreams/" rel="prev" title="实为双梦记">
+                实为双梦记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+      
+
+      
+    </footer>
+  </article>
+
+  <div class="post-spread">
+    
+  </div>
+
+
+
+
+	<div style="margin-top:10px;margin-bottom:10px;font-size:12px;text-align:right;color:#555;">21 Nov 2009 , 写于 <span style="color:#333;">杭州 </span>。</div>
+
+
+
+
+</div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzAwNi85NTY4"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        
+        
+        
+
+
+
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/assets/images/Avatar.png"
+               alt="Claud Xiao" />
+          <p class="site-author-name" itemprop="name">Claud Xiao</p>
+           
+              <p class="site-description motion-element" itemprop="description">不存在彻头彻尾的绝望</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">620</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/">
+                <span class="site-state-item-count">115</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+        
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="http://fanfou.com/shinemoon" target="_blank" title="饭否">
+                  
+                    <i class="fa fa-fw fa-user-circle-o"></i>
+                  
+                  饭否
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="https://github.com/shinemoon" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="https://www.douban.com/people/claud.xiao/" target="_blank" title="豆瓣">
+                  
+                    <i class="fa fa-fw fa-book"></i>
+                  
+                  豆瓣
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="mailto://shinemoon@gmail.com" target="_blank" title="Mail">
+                  
+                    <i class="fa fa-fw fa-google-plus-square"></i>
+                  
+                  Mail
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="http://maybe2020.github.io/" title="近寐遥喧" target="_blank">近寐遥喧</a>
+                </li>
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="http://ievanz.net/" title="为埃斯米而作" target="_blank">为埃斯米而作</a>
+                </li>
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.zeove.com/" title="哲尔夫" target="_blank">哲尔夫</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i style="color:red" class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Claud Xiao</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://jekyllrb.com">Jekyll</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/simpleyyt/jekyll-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/assets/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/assets/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/assets/js/src/post-details.js?v=5.1.1"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+    
+      <script type="text/javascript">
+        (function(d, s) {
+          var j, e = d.getElementsByTagName(s)[0];
+          if (typeof LivereTower === 'function') { return; }
+          j = d.createElement(s);
+          j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+          j.async = true;
+          e.parentNode.insertBefore(j, e);
+        })(document, 'script');
+      </script>
+    
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
+

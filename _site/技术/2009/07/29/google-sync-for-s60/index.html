@@ -1,0 +1,972 @@
+
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/assets/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/assets/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/assets/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="MooninskY" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="以前我在写关于goosync的文章时就提到，这只能算是一个临时性的替代措施，一旦Google Sync的服务完善，立马就会没有市场。很遗憾，这一天真的来到了。 也不知道具体什么时候，Google Sync终于放开了对S60系统的日历同步——而且更干脆，连实现方式也从最开始的使用S60手机的同步功能变成了借助Mail for Exchange，这样一来，不用说同步日历这个要求了，甚至也直接实现了近乎Push的实时性的同步。 具体步骤可以参见Google Sync的官网介绍">
+<meta name="keywords" content="Blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Google Sync For S60">
+<meta property="og:url" content="http://0.0.0.0:4000/%E6%8A%80%E6%9C%AF/2009/07/29/google-sync-for-s60/">
+<meta property="og:site_name" content="MooninskY">
+<meta property="og:description" content="以前我在写关于goosync的文章时就提到，这只能算是一个临时性的替代措施，一旦Google Sync的服务完善，立马就会没有市场。很遗憾，这一天真的来到了。 也不知道具体什么时候，Google Sync终于放开了对S60系统的日历同步——而且更干脆，连实现方式也从最开始的使用S60手机的同步功能变成了借助Mail for Exchange，这样一来，不用说同步日历这个要求了，甚至也直接实现了近乎Push的实时性的同步。 具体步骤可以参见Google Sync的官网介绍">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://i340.photobucket.com/albums/o350/claudxiao/sync_147951d_sync_create_en.png">
+<meta property="og:image" content="http://i340.photobucket.com/albums/o350/claudxiao/sync_147951b_sync_connections_en.png">
+<meta property="og:image" content="http://i340.photobucket.com/albums/o350/claudxiao/sync_147951c_sync_password_en.png">
+<meta property="og:image" content="http://i340.photobucket.com/albums/o350/claudxiao/sync_147951a_sync_calendar_en.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Google Sync For S60">
+<meta name="twitter:description" content="以前我在写关于goosync的文章时就提到，这只能算是一个临时性的替代措施，一旦Google Sync的服务完善，立马就会没有市场。很遗憾，这一天真的来到了。 也不知道具体什么时候，Google Sync终于放开了对S60系统的日历同步——而且更干脆，连实现方式也从最开始的使用S60手机的同步功能变成了借助Mail for Exchange，这样一来，不用说同步日历这个要求了，甚至也直接实现了近乎Push的实时性的同步。 具体步骤可以参见Google Sync的官网介绍">
+<meta name="twitter:image" content="http://i340.photobucket.com/albums/o350/claudxiao/sync_147951d_sync_create_en.png">
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://0.0.0.0:4000/"/>
+
+
+
+<style type="text/css"> 
+blockquote{
+    border-left: 4px solid #ffbbbb;
+}
+</style>
+
+
+
+  <title>Google Sync For S60</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">MooninskY</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">月下闲话</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+<div id="posts" class="posts-expand">
+  
+  
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-post " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://0.0.0.0:4000/%E6%8A%80%E6%9C%AF/2009/07/29/google-sync-for-s60/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Claud Xiao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/assets/images/Avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MooninskY">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+          
+          
+            Google Sync For S60
+          
+        </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2009-07-29T00:00:00+08:00">
+                2009-07-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/category/#/%E6%8A%80%E6%9C%AF" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+            
+                <div class="post-description">
+                    
+                </div>
+            
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>以前我在写关于goosync的文章时就提到，这只能算是一个临时性的替代措施，一旦Google Sync的服务完善，立马就会没有市场。很遗憾，这一天真的来到了。</p>
+
+<p>也不知道具体什么时候，Google Sync终于放开了对S60系统的日历同步——而且更干脆，连实现方式也从最开始的使用S60手机的同步功能变成了借助Mail for Exchange，这样一来，不用说同步日历这个要求了，甚至也直接实现了近乎Push的实时性的同步。</p>
+
+<p>具体步骤可以参见Google Sync的官网介绍</p>
+
+<p>但是不幸的是，最近以来，从国内访问很多Google服务都会自动重定向到g.cn，Google Sync也是其中之一，所以我当时是拼命点stop才停在了Google Sync的页面，大家可以尝试一下，如果不行，就参照本文也可：</p>
+
+<p>###基本步骤###</p>
+
+<ol>
+  <li>
+    <p>推荐备份手机数据 - Backup your data</p>
+  </li>
+  <li>
+    <p>从nokia的网站下载Mail For Exchange软件并安装至手机 - <a href="http://www.businesssoftware.nokia.com/mail_for_exchange_downloads.php">Download mail software</a></p>
+  </li>
+  <li>
+    <p>按照Google的指示来设置Mail for Exchange - <a href="http://www.google.com/support/mobile/bin/answer.py?hl=en&amp;answer=147951">Set up Google Sync</a> (可以参照下文）</p>
+  </li>
+</ol>
+
+<p>简单说就是：备份数据 - 下载Mail For Exchange -设置mail for exchange的同步信息。</p>
+
+<p>下载安装都很简单，如同一般的软件。</p>
+
+<p>安装好之后，就会开始进行账户设置，同样借用官方说明：</p>
+
+<p>开始之前:</p>
+
+<p>强烈推荐使用PC Suite或其他管理软件来备份手机数据。</p>
+
+<p>请确认你的手机型号是Mail for Exchange所支持的，并且确认你的Mail for Exchange是最新版本。接下来请按照下面的步骤配置：</p>
+
+<ol>
+  <li>
+    <p>打开手机中Mail for Exchange的目录，并且运行Mail for Exchange的程序。</p>
+  </li>
+  <li>
+    <p>当询问你是否要创建新的档案时，选择Yes。</p>
+  </li>
+</ol>
+
+<p><img src="http://i340.photobucket.com/albums/o350/claudxiao/sync_147951d_sync_create_en.png" alt="image" /></p>
+
+<ol>
+  <li>然后如下步骤配置档案：</li>
+</ol>
+
+<p><img src="http://i340.photobucket.com/albums/o350/claudxiao/sync_147951b_sync_connections_en.png" alt="image" /></p>
+
+<p>连接</p>
+
+<p>-Exchange 服务器: m.google.com       <br />
+-安全连接: Yes        <br />
+-接入点: （自行选择）        <br />
+-漫游时同步: （自行选择）        <br />
+-使用默认端口: Yes</p>
+
+<p><img src="http://i340.photobucket.com/albums/o350/claudxiao/sync_147951c_sync_password_en.png" alt="image" /></p>
+
+<p>证书</p>
+
+<p>-用户名: 你的gmail邮箱全名, e.g. jon@gmail.com         -密码: Gmail密码          -域: 留空</p>
+
+<p>同步日程</p>
+
+<ul>
+  <li>该设定用于决定何时启动同步. 如果使用始终打开，可以保证数据的即时性, 但是显然会更加耗电.</li>
+</ul>
+
+<p><img src="http://i340.photobucket.com/albums/o350/claudxiao/sync_147951a_sync_calendar_en.png" alt="image" /> </p>
+
+<p>日历</p>
+
+<ul>
+  <li>
+    <p>同步日历: 是或者否</p>
+  </li>
+  <li>
+    <p>同步日历回溯: 自行选择         初次同步: 决定第一次同步时对于手机端和网络端的内容的取舍.</p>
+  </li>
+</ul>
+
+<p>任务</p>
+
+<ul>
+  <li>同步任务: 否(当前不支持)</li>
+</ul>
+
+<p>联系人</p>
+
+<ul>
+  <li>同步联系人: 是或者否         初次同步: 决定第一次同步时对于手机端和网络端的内容的取舍.</li>
+</ul>
+
+<p>邮件</p>
+
+<ul>
+  <li>同步邮件: 否(当前不支持)</li>
+</ul>
+
+<p>之后，一切就顺风顺水，无论是日历还是联系人，都可以非常方便的进行自动的同步了，而第三方的类似服务，在这个情况下，显然只有被无情抛弃一途了。而Google的这一步，让人不由的又开始期待，会不会有那么一天，它再顺便把‘Mail’的同步也直接做进去呢？</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+      
+      
+
+      
+      
+        <div class="post-nav" id="post-nav-id">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/%E8%AF%BB%E4%B9%A6/2009/08/04/Writers-divinity/" rel="next" title="作家的神性">
+                <i class="fa fa-chevron-left"></i> 作家的神性
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/%E8%AF%BB%E4%B9%A6/2009/07/23/Reading-Shen-Congwen-Huang-Jun-diary-notes/" rel="prev" title="读沈从文-《篁君日记》笔记">
+                读沈从文-《篁君日记》笔记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+      
+
+      
+    </footer>
+  </article>
+
+  <div class="post-spread">
+    
+  </div>
+
+
+
+
+	<div style="margin-top:10px;margin-bottom:10px;font-size:12px;text-align:right;color:#555;">29 Jul 2009 , 写于 <span style="color:#333;">杭州 </span>。</div>
+
+
+
+
+</div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzAwNi85NTY4"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        
+        
+        
+
+
+
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/assets/images/Avatar.png"
+               alt="Claud Xiao" />
+          <p class="site-author-name" itemprop="name">Claud Xiao</p>
+           
+              <p class="site-description motion-element" itemprop="description">不存在彻头彻尾的绝望</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">620</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/">
+                <span class="site-state-item-count">115</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+        
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="http://fanfou.com/shinemoon" target="_blank" title="饭否">
+                  
+                    <i class="fa fa-fw fa-user-circle-o"></i>
+                  
+                  饭否
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="https://github.com/shinemoon" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="https://www.douban.com/people/claud.xiao/" target="_blank" title="豆瓣">
+                  
+                    <i class="fa fa-fw fa-book"></i>
+                  
+                  豆瓣
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="mailto://shinemoon@gmail.com" target="_blank" title="Mail">
+                  
+                    <i class="fa fa-fw fa-google-plus-square"></i>
+                  
+                  Mail
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="http://maybe2020.github.io/" title="近寐遥喧" target="_blank">近寐遥喧</a>
+                </li>
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="http://ievanz.net/" title="为埃斯米而作" target="_blank">为埃斯米而作</a>
+                </li>
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.zeove.com/" title="哲尔夫" target="_blank">哲尔夫</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i style="color:red" class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Claud Xiao</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://jekyllrb.com">Jekyll</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/simpleyyt/jekyll-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/assets/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/assets/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/assets/js/src/post-details.js?v=5.1.1"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+    
+      <script type="text/javascript">
+        (function(d, s) {
+          var j, e = d.getElementsByTagName(s)[0];
+          if (typeof LivereTower === 'function') { return; }
+          j = d.createElement(s);
+          j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+          j.async = true;
+          e.parentNode.insertBefore(j, e);
+        })(document, 'script');
+      </script>
+    
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
+

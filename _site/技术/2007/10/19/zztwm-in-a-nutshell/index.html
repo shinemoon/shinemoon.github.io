@@ -1,0 +1,979 @@
+
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/assets/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/assets/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/assets/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="linux," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="MooninskY" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="本文只涉及到TWM的入门级知识，大家都知道很多UNIX下程序的教程都可以写成一本书，在这里我只介绍入门的一些东西，如果本文能帮助某些朋友对TWM有个大致的了解，就算完成它的使命了，其他的复杂部分，就需要自己去探索了。">
+<meta name="keywords" content="linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="转载: TWM in a nutshell">
+<meta property="og:url" content="http://0.0.0.0:4000/%E6%8A%80%E6%9C%AF/2007/10/19/zztwm-in-a-nutshell/">
+<meta property="og:site_name" content="MooninskY">
+<meta property="og:description" content="本文只涉及到TWM的入门级知识，大家都知道很多UNIX下程序的教程都可以写成一本书，在这里我只介绍入门的一些东西，如果本文能帮助某些朋友对TWM有个大致的了解，就算完成它的使命了，其他的复杂部分，就需要自己去探索了。">
+<meta property="og:locale" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="转载: TWM in a nutshell">
+<meta name="twitter:description" content="本文只涉及到TWM的入门级知识，大家都知道很多UNIX下程序的教程都可以写成一本书，在这里我只介绍入门的一些东西，如果本文能帮助某些朋友对TWM有个大致的了解，就算完成它的使命了，其他的复杂部分，就需要自己去探索了。">
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://0.0.0.0:4000/"/>
+
+
+
+<style type="text/css"> 
+blockquote{
+    border-left: 4px solid #ffbbbb;
+}
+</style>
+
+
+
+  <title>转载: TWM in a nutshell</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">MooninskY</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">月下闲话</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+<div id="posts" class="posts-expand">
+  
+  
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-post " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://0.0.0.0:4000/%E6%8A%80%E6%9C%AF/2007/10/19/zztwm-in-a-nutshell/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Claud Xiao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/assets/images/Avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MooninskY">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+          
+          
+            转载: TWM in a nutshell
+          
+        </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2007-10-19T00:00:00+08:00">
+                2007-10-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/category/#/%E6%8A%80%E6%9C%AF" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+            
+                <div class="post-description">
+                    
+                </div>
+            
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>本文只涉及到TWM的入门级知识，大家都知道很多UNIX下程序的教程都可以写成一本书，在这里我只介绍入门的一些东西，如果本文能帮助某些朋友对TWM有个大致的了解，就算完成它的使命了，其他的复杂部分，就需要自己去探索了。</p>
+
+<p>TWM 是Tab Window Manager for the X Window System的简称，它是一个窗口管理器，初次发布于1988年4月，是个非常容易上手的Window Manager。不像其他的X程序，它没有基于任何GUI组件，而是直接使用的XLib，这样带来的好处就是：小、更方便的配置。所谓窗口管理器，它是一个特殊的程序，它用来给X程序提供诸如：标题的绘制、窗口阴影、窗口图标化、用户自定义宏、鼠标点击、键盘焦点、缩放等功能。</p>
+
+<p>它和 GNOME、KDE不同，不是一个桌面环境(Desktop Enviroment,DE)。那些所谓的桌面环境都会有一个窗口管理器，比如CentOS的GNOME用的就是MetaCity，这些DE集成了大量的应用程序，包括一些非常便利的系统管理工具、实用小工具、游戏等，大大方便了用户。</p>
+
+<p>桌面环境纵有千般好，也会有它的短处，比如：由于它的庞大，在系统启动的时候会显的很慢，其实有很多应用我们都不会用到，这个时候，你可选择只加载一个窗口管理器即可。而且你将会发现，几乎所有的窗口管理器都可以用rc文件来配置，你可以在允许的范围内，任意的配置。比如TWM的配置文件就是.twmrc。它位于用户目录下，在TWM启的时候它会首先从用户的主目录下找这个文件，如果它找不到，TWM就会使用一个系统共用的配置文件，一般情况下它位于： /usr/X11R6/lib/X11/twm/system.twmrc。</p>
+
+<p>为了要启动TWM，而不是GNOME或KDE，我们需要在用户的目录下编辑一个.xinitrc的文件，它的内容如下：</p>
+
+<p>#!/bin/sh</p>
+
+<p>xclock -geometry 70x70+5+5 &amp;xterm -geometry +200+200 -fn 7x13 -fg gray -bg black &amp;</p>
+
+<p>exec twm</p>
+
+<p>这样，当你在执行startx的时候，就只会启动TWM了。最后一行表示启动TWM，前面的两行表示启动的其他程序，比如 xclock，它是一个时钟程序，它后面的参数表示它启动后所在的位置和大小。需要注意的是，除了最后一行，其他的行要在最后加上后台运行标志，否则后面的程序都没法进行了。除了最后一行，其他的都是可选的，你可以把你常用的一些程序放在exec twm前，这就和Windows下的启动一样。startx后，你将会发现，TWM的启动非常的快，至少比GNOME，KDE快多了，当然这样比有失公平。</p>
+
+<p>TWM的配置逻辑上被分为三类概念：变量(Variables)、绑定(Bindings)和菜单(Menus)。它们都保存在用户目录下的.twmrc文件中。</p>
+
+<p>变量</p>
+
+<p>变量的配置必须放在第一，它用来描述字体、颜色、指针、边框宽度、图标、窗口的位置摆放，高亮、自动获得焦点等。</p>
+
+<p>变量的名字和关键字是非大小写敏感的。字符串必须用引号引起来，比如：blue，并且字符串是大小写敏感的。</p>
+
+<p>举个例子：</p>
+
+<p>BorderColor gray50{ XTerm red xmh green}</p>
+
+<p>上面表示，所有的窗口的边框颜色为gray50，大致为灰色，括号中间表示特殊的情况，比如第一行的意思是：如果窗口的名字为XTerm，或者它的类名为XTerm(注)，它的边框颜色就为red，即红色的。我们可定义很多窗口元素的颜色，如菜单背景、菜单前景、标题背景、标题前景等。</p>
+
+<p>Color{ MenuBackground  gray50 MenuForeground  blue BorderColor  red { XTerm yellow } TitleForeground  yellow TitleBackground  blue}</p>
+
+<p>绑定</p>
+
+<p>绑定配置通常放在第二位，主要用于描述键盘或者鼠标在窗口、图标、标题、框架上动作时，产生的影响。</p>
+
+<p>比如我们可以把F1键绑定为最小化操作，把F2绑定为更改窗口的层次，把F11绑定为最大化窗口，把Shift+F4绑定为关闭窗口，F12用来把窗口焦点移到某个窗口上。</p>
+
+<p>F1     =        : all    : f.iconifyF2     =        : all    : f.raiselowerF4     = shift : all    : f.deleteF11    =        : all    : f.fullzoomF12    =        : all    : f.warpto XTerm Icon Manager</p>
+
+<p>绑定键盘的语法为：</p>
+
+<p>Button or Key = modlist : context : function</p>
+
+<p>Button or Key，就是鼠标的按键或者是键盘上的某个键。modlist是一些功能键或者它们的组合，比如shift, control, lock, meta, mod1, mod2,mod3, mod4, mod5等，shift, control和lock这些键大家都知道，meta在有些系统上就是alt键。其他的我也没搞明白是什么东西，如果你知道，请告诉我。context表示上下文，所谓上下文，就是指鼠标或者焦点所在的地方。比如上面的 F4键的行，其中的all表示当鼠标指针点在程序的任意位置，shift+F4都会把当前窗口关闭，上下文还包括：</p>
+
+<p>root：  根窗口frame：  窗口的框架title：  窗口的标题window： 窗口的客户区，就是窗口的内部那块区域，学过VC的应该很清楚icon：  图标iconmgr： 窗口管理器all：  就是所有啦</p>
+
+<p>再举个例子：</p>
+
+<p>Button1 = : root : f.menu TwmWindows</p>
+
+<p>表示当鼠标左键在根窗口上点击的时候，弹出TwmWindows菜单，TwmWindows是一个菜单的标志符，我将在后面说明。</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>上下文可以任意组合，比如想表示鼠标在框架或者标题上的绑定，我们可以这样写 F1 = shift : t</td>
+      <td>f : f.raise。其中t为title的缩写，f为frame的缩写。其他的上下文也都有缩写。</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>我们还可以把窗口的标题上加“标题按钮”，比如我们要在标题上加一个关闭按钮，我们可以这样：</p>
+
+<p>LeftTitleButton   /usr/X11R6/include/X11/bitmaps/xm_noenter16 = f.delete</p>
+
+<p>LeftTitleButton表示位置，然后是按钮图标的路径，最后是按钮的动作。</p>
+
+<p>菜单</p>
+
+<p>菜单用于给用户提供自定义单的机会。它们可以被分成不同组，方便管理。每个菜单都由一个名字来标识，这个名字将来用作f.menu的参数。并且，我们还可以定义菜单的背景色、前景色、菜单的项以及该项所对应的动作。如下例：</p>
+
+<p>menu LeftClickMenu{my menu        f.titlefcitx          f.exec exec fcitx &amp;kill fcitx     f.exec exec killall fcitx &amp;  (rgb:0/2/4:rgb:4/b/f)   f.nopXterm          f.exec exec xterm -fn 7x13 -fg gray -bg black &amp;GNOME Term     f.exec gnome-terminal &amp;FireFox        f.exec exec firefox &amp;Luma QQ        f.exec exec ~/bin/LumaQQ/lumaqq &amp;Gaim           f.exec exec gaim &amp;Time           f.exec exec xmessage <code class="highlighter-rouge">date +%F %R:%S [%u]</code> &amp;}</p>
+
+<p>菜单的内容编辑好后，你需要设置菜单的激活条件。比如上面的菜单，我们让它在鼠标左键点击屏幕时弹出。方法是在.twmrc中加入</p>
+
+<p>Button1 = : root : f.menu LeftClickMenu</p>
+
+<p>Button1表示鼠标左键，root表示根窗口，可以说就是桌面。</p>
+
+<p>正如你所看到的一样，配置非常的简单，其中我设置了一个空菜单，它用来分割不同类别的菜单项，它的颜色和别的稍有不同，括号中的前面表示前景色，后面表是背景色。而最后一项它的动作为f.nop表示没有任何动作。而f.exec表示执行某个程序。f.menu表示激活某个子菜单。</p>
+
+<p>图标管理器</p>
+
+<p>如果桌面上的图标过多，用起来比较麻烦，我们这个时候可以用图标管理器来简化工作。TWM支持多个图标管理器，每个还可以有一列或者多列，比如你想把所有的XTerm类程序的图标都放在一个图标管理器中管理，你可以创建一个如下的管理器：</p>
+
+<p>IconManager{ XTerm  =100x5-10+10 1}</p>
+
+<p>XTerm是窗口的类名(注)，后面的参数表示管理器窗口的位置在屏幕的右上角，大小为100X5， -10+10表示它在屏幕上的位置，最后的1表示它只有1列。这样你所打开的所有XTerm类的程序（比如xterm）的图标都会被这个管理器管理。管理器中的图标缺省是按照窗口打开的顺序来排序的，如果你愿意，你也可以修改排序的方式。</p>
+
+<p>有用的设定</p>
+
+<p>TWM默认情况下，在建立新窗口时，需要用户指定窗口的位置，这个“特色“实在让人头疼，不知道TWM的作者当初的用意何在。还好，有参数可以关闭它，在.twmrc的最上面加入RandomPlacement即可，以后新打开的窗口就会自动的找一个位置了。</p>
+
+<p>在. twmrc中加入AutoRelativeResize，然后你就可以拖动标题栏最右边的按钮来改变窗口大小了。在实际操作中，我发现，如果要缩小窗口，需要先向放大的方向拖动，然后再往缩小的方向拖动才可以。如果不加入这个参数，要想改变窗口大小，需要把鼠标移动到右下角才可以，不够方便。</p>
+
+<p>AutoRaise。有些窗口，我们会经常用到它，比如XTerm类(注)的窗口。为了方便起见，我们在配置中加入</p>
+
+<p>AutoRaise{XTerm}</p>
+
+<p>把你的鼠标移动到XTerm的窗口上，看到了吧，无须任何点击，窗口就会被放到最上层。</p>
+
+<p>结尾</p>
+
+<p>TWM并不是一个完美的窗口管理器，比如它在某种意义上说不够漂亮。但是每个窗口管理器都有它自己独特的地方，每个人都有可能爱上TWM，也许有一天你厌烦了别的管理器，你会尝试用一下TWM，以缓解一下审美疲劳。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            
+            <a href="/tag/#/linux" rel="tag"># linux</a>
+          
+        </div>
+      
+
+      
+      
+      
+      
+      
+
+      
+      
+        <div class="post-nav" id="post-nav-id">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/%E5%BD%B1%E9%9F%B3/2007/10/25/Unexpected-feelings/" rel="next" title="意外的感触">
+                <i class="fa fa-chevron-left"></i> 意外的感触
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/%E5%BD%B1%E9%9F%B3/2007/10/19/A-sense-of-drama-in-early-autumn/" rel="prev" title="秋季日剧初感">
+                秋季日剧初感 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+      
+
+      
+    </footer>
+  </article>
+
+  <div class="post-spread">
+    
+  </div>
+
+
+
+
+	<div style="margin-top:10px;margin-bottom:10px;font-size:12px;text-align:right;color:#555;">19 Oct 2007 , 写于 <span style="color:#333;">上海 </span>。</div>
+
+
+
+
+</div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzAwNi85NTY4"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        
+        
+        
+
+
+
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/assets/images/Avatar.png"
+               alt="Claud Xiao" />
+          <p class="site-author-name" itemprop="name">Claud Xiao</p>
+           
+              <p class="site-description motion-element" itemprop="description">不存在彻头彻尾的绝望</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">620</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/">
+                <span class="site-state-item-count">115</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+        
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="http://fanfou.com/shinemoon" target="_blank" title="饭否">
+                  
+                    <i class="fa fa-fw fa-user-circle-o"></i>
+                  
+                  饭否
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="https://github.com/shinemoon" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="https://www.douban.com/people/claud.xiao/" target="_blank" title="豆瓣">
+                  
+                    <i class="fa fa-fw fa-book"></i>
+                  
+                  豆瓣
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="mailto://shinemoon@gmail.com" target="_blank" title="Mail">
+                  
+                    <i class="fa fa-fw fa-google-plus-square"></i>
+                  
+                  Mail
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="http://maybe2020.github.io/" title="近寐遥喧" target="_blank">近寐遥喧</a>
+                </li>
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="http://ievanz.net/" title="为埃斯米而作" target="_blank">为埃斯米而作</a>
+                </li>
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.zeove.com/" title="哲尔夫" target="_blank">哲尔夫</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i style="color:red" class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Claud Xiao</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://jekyllrb.com">Jekyll</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/simpleyyt/jekyll-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/assets/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/assets/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/assets/js/src/post-details.js?v=5.1.1"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+    
+      <script type="text/javascript">
+        (function(d, s) {
+          var j, e = d.getElementsByTagName(s)[0];
+          if (typeof LivereTower === 'function') { return; }
+          j = d.createElement(s);
+          j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+          j.async = true;
+          e.parentNode.insertBefore(j, e);
+        })(document, 'script');
+      </script>
+    
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
+

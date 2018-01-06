@@ -1,0 +1,975 @@
+
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/assets/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/assets/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/assets/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="chrome," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="MooninskY" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="从火狐时代开始，一向乐衷于尝试新鲜事物的我，便犯上了扩展上瘾症，直到浏览器的反应速度撑不住为止。但是就算那个时候，我也绝没想到自己居然会乐此不疲的写起了扩展，虽然是在chrome上——毕竟，我的所学，所用，我的工作性质等等，虽然多少会接触一些软件性质的内容，但是我本人却是如假包换的硬件出身，更何况，从读书以来，对于所谓的网络编程，最靠近的部分也就是捣鼓自己wordpress的皮肤时所用的那一点css知识了。">
+<meta name="keywords" content="chrome">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小结chrome扩展">
+<meta property="og:url" content="http://0.0.0.0:4000/%E9%97%B2%E8%AF%9D/2012/09/12/about-my-chrome-extensions/">
+<meta property="og:site_name" content="MooninskY">
+<meta property="og:description" content="从火狐时代开始，一向乐衷于尝试新鲜事物的我，便犯上了扩展上瘾症，直到浏览器的反应速度撑不住为止。但是就算那个时候，我也绝没想到自己居然会乐此不疲的写起了扩展，虽然是在chrome上——毕竟，我的所学，所用，我的工作性质等等，虽然多少会接触一些软件性质的内容，但是我本人却是如假包换的硬件出身，更何况，从读书以来，对于所谓的网络编程，最靠近的部分也就是捣鼓自己wordpress的皮肤时所用的那一点css知识了。">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://mooninsky.net/wp-content/uploads/2012/01/wpid-C360_2012-01-11-00-06-54.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="小结chrome扩展">
+<meta name="twitter:description" content="从火狐时代开始，一向乐衷于尝试新鲜事物的我，便犯上了扩展上瘾症，直到浏览器的反应速度撑不住为止。但是就算那个时候，我也绝没想到自己居然会乐此不疲的写起了扩展，虽然是在chrome上——毕竟，我的所学，所用，我的工作性质等等，虽然多少会接触一些软件性质的内容，但是我本人却是如假包换的硬件出身，更何况，从读书以来，对于所谓的网络编程，最靠近的部分也就是捣鼓自己wordpress的皮肤时所用的那一点css知识了。">
+<meta name="twitter:image" content="http://mooninsky.net/wp-content/uploads/2012/01/wpid-C360_2012-01-11-00-06-54.jpg">
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://0.0.0.0:4000/"/>
+
+
+
+<style type="text/css"> 
+blockquote{
+    border-left: 4px solid #ffbbbb;
+}
+</style>
+
+
+
+  <title>小结chrome扩展</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">MooninskY</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">月下闲话</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+<div id="posts" class="posts-expand">
+  
+  
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-post " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://0.0.0.0:4000/%E9%97%B2%E8%AF%9D/2012/09/12/about-my-chrome-extensions/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Claud Xiao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/assets/images/Avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MooninskY">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+          
+          
+            小结chrome扩展
+          
+        </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2012-09-12T00:00:00+08:00">
+                2012-09-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/category/#/%E9%97%B2%E8%AF%9D" itemprop="url" rel="index">
+                    <span itemprop="name">闲话</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+            
+                <div class="post-description">
+                    
+                </div>
+            
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>从火狐时代开始，一向乐衷于尝试新鲜事物的我，便犯上了扩展上瘾症，直到浏览器的反应速度撑不住为止。但是就算那个时候，我也绝没想到自己居然会乐此不疲的写起了扩展，虽然是在chrome上——毕竟，我的所学，所用，我的工作性质等等，虽然多少会接触一些软件性质的内容，但是我本人却是如假包换的硬件出身，更何况，从读书以来，对于所谓的网络编程，最靠近的部分也就是捣鼓自己wordpress的皮肤时所用的那一点css知识了。</p>
+
+<p>数了数手上一共有那么几个扩展：</p>
+
+<p><a href="https://chrome.google.com/webstore/detail/nhalbnnplhdmjolngpljjpdccnocngfb">chrary:</a></p>
+
+<p>这是一个简单至极的扩展，所以涉及的知识和内容也简单得可怜。起因非常直接，就是我想知道某些在豆瓣上看到的书籍能不能在杭州图书馆借到。</p>
+
+<p>所以现在能看到的就是这样一个版本，对我本人的价值其实就在于了解了chrome的扩展的工作方式，基本知识，而当中使用最频繁的只不过是基本的js，所涉及的页面也不过就是POPUP和一个选项页面罢了；可怜当时我连基本的html和css都是一知半解，而javascript也不过是现查现用，好歹勉强算是整合了功能，加上实际上杭州图书馆的数字化服务，还有许多欠整理的细节，并不能特别精准的反映出馆藏情况，所以这个从书名到豆瓣书籍编号，再到图书馆的馆藏信息的扩展，我自己使用也并不太频繁；</p>
+
+<p>到了现在大致的情况是：</p>
+
+<p>使用者 393; 评价者 2； 评价星数 4.5；</p>
+
+<p><a href="https://chrome.google.com/webstore/detail/nndomihejeomoigdjeganklacijoolgg">Rabbook:</a></p>
+
+<p>虽然不能说是最用心的扩展，但是却实实在在是我花了最多功夫的一个，何以见得？因为为了这个扩展，居然心血来潮的重新重构过一遍，当年第一次写的时候，初来乍到，是纯粹用JS直接写完的；到了第二次，终于算是接触过Jquery了，一面鄙视自己以前的那种脑残写法，一面忍不住从UI到底层全部重新写过了一次，到底清爽了不少。</p>
+
+<p>用途什么的，再次抄录如下：本插件的目的是用于优化当前各类小说阅读网站的阅读体验，最大可能的在单一页面内进行无刷新等待的小说阅读。</p>
+
+<p>主要实现的功能包括：</p>
+
+<p>将小说内容读取进入到单一的新页面，无弹出广告，无广告图片，并且借此实现更理想的读入速度；</p>
+
+<p>对网站采用AJAX进行预读，令读者尽可能少的感觉到网络延迟带来的等待；</p>
+
+<p>基本的书签管理，方便用户记录和整理；</p>
+
+<p>由于直接是利用Chrome的书签，因此也解决了同步问题。 所有网站采用一致的快捷键设置（滚动、翻页以及返回），完全统一了所有小说的阅读体验，仅用空格就可完成阅读；</p>
+
+<p>开放了网站的配置接口，可以方便的添加自定义网站；</p>
+
+<p>支持自动和手动批量小说更新扫描；</p>
+
+<p>支持多皮肤切换及自定义皮肤；</p>
+
+<p>支持站点设置的导入导出。这个扩展从前端到一些html5的知识，都是我在编写过程中边写边学，乃至现学现卖的整合进入。到了目前这个阶段；</p>
+
+<p>第一次,从2010-12-27到2011-06-14间，有据可查的更新100次；</p>
+
+<p>第二次重构（2.0），从2011-09-15至今一共经历了135次版本更新；</p>
+
+<p>虽然我本人的确有点强迫症， 有时checkin得频繁了一些，但是下的功夫还是实实在在的。因为照例强迫症使然，一个如果自己用着用着就觉得不够舒服的东西，我当然会忍不住就去重新折腾；</p>
+
+<p>不过唯一庆幸的是，第二次重构之后，不管是可扩展性、DIY（对用户）而言，都基本到位，希望以后可以不再伤筋动骨——更让人高兴的是，也得到了很多用户的支持；</p>
+
+<p>前段时间在CSDN举办的一个扩展比赛中（因为无意中看到了Fawave作者在微博上提及，才兴起去参加），竟然忝列神器Fawave之后取得了第二名，在用户的大力支持以及拜托比赛影响力不大的原因吧。所以，非常高兴的收到了三星的I9003作为奖品（不过，如果按照水货价格，距离CSDN官方宣布的3000元的智能手机还是颇有距离的），刚刚顶住了老婆那台用了四年，眼看快要报废的iphone一代的班，而且很得她欢心；这算是好歹捞回了当年那5美元的Chrome web store注册费的成本了。</p>
+
+<p>Rabbook的目前的状态：</p>
+
+<p>使用者 19174; 评价者 76； 评价星数 4.75；</p>
+
+<p>而且也在诸如360极速浏览器等的推荐扩展之列——只是我也并没有弄清楚，到底360用户的计数是否也会被计入Google的webstore数据？</p>
+
+<p><img src="http://mooninsky.net/wp-content/uploads/2012/01/wpid-C360_2012-01-11-00-06-54.jpg" alt="image" /></p>
+
+<p><a href="https://chrome.google.com/webstore/detail/iigggdiliiogjkdljmhcmfkiglnmhcgb">有道阅读器增强工具</a>：</p>
+
+<p>因为国内随时会遇到的连接重置，以及即使不重置，几率也很高的不稳定情况，我不得不下决心离开了Google Reader，转而寻求国内替代服务。</p>
+
+<p>可惜鲜果现在RSS已经并非重点，老旧的服务也常常出现刷新困难；抓虾更是半死不活；其余的看来看去，只有有道虽然也是久不更新，但是至少速度还让我满意，而且网易家大业大的，应该也不会随便就关停吧？出于这种想法，终于试着把页面按我自己的习惯精简了下，加上一些GR曾经惯用的扩展脚本功能，花了可能几天的时间就整理出了这么个扩展——说起来有意思，这反而是我唯一一个每天必用的扩展：</p>
+
+<p>有道阅读器定制增强工具：</p>
+
+<ol>
+  <li>
+    <p>界面紧凑化，通过点击icon可以切换是否启用工具；</p>
+  </li>
+  <li>
+    <p>滚轮到顶部或者底部自动翻页；</p>
+  </li>
+  <li>
+    <p>对于非全文RSS,可以自定义规则自动实现全文抓取（支持CSS Selector）；</p>
+  </li>
+  <li>
+    <p>微博分享支持微博通、享拍微博通、Follow5；</p>
+  </li>
+  <li>
+    <p>点击标题可以在Background打开新页面；</p>
+  </li>
+  <li>
+    <p>支持badge未读数提醒和分类文章数显示；</p>
+  </li>
+  <li>
+    <p>采用易集网作为网络书签服务，Read it later.</p>
+  </li>
+</ol>
+
+<p>PS. 从Google Reader不得已转到国内的RSS阅读器厂商，原因是实在有时候无法忍受不可预期的链接重置，至于选择有道的原因也很简单，速度和稳定是优先考虑，其余的内容，自己动手吧.</p>
+
+<p>有问题或者建议，可以在微博上ping，多谢。目前的状态：</p>
+
+<p>使用者 525; 评价者 8； 评价星数 4.75；</p>
+
+<p>这篇小结般的文章其实大概是写在年初的，结果，结果，扔草稿箱里忘记了… 今天因为儿子闹腾，不得已六点不到起来，结果他（以及我老婆）喝饱之后呼呼睡去，留下不擅长回笼觉的我诡异的清晨刷网，想起来以后，顺手更新了一些数据，再次发出。</p>
+
+<p>而且，因为越来越忙（和越来越懒），以后恐怕更多的情况下，能够GM脚本搞定的，我也不会想到去写专门的扩展，即使这样管理、共享起来要不方便一些，这也是之所以写这个’小结’的目的吧？</p>
+
+<p>稍微喟叹一下的是，从大概两年前到现在，纯粹出于好奇而摸起来的东西，对于当时除了HTML之外一窍不通的我，算是在工作之外体会了一下从入门开始的种种自学过程，写出怎样的结果并不重要，重要的是如同游戏或者运动一样，从中体会到一种类似锻炼和升级的快感，这才是能够支撑我折腾这么久的原动力。</p>
+
+<p>保持旺盛的好奇心，保持执着的执行力，谨此自勉。</p>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            
+            <a href="/tag/#/chrome" rel="tag"># chrome</a>
+          
+        </div>
+      
+
+      
+      
+      
+      
+      
+
+      
+      
+        <div class="post-nav" id="post-nav-id">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/%E9%97%B2%E8%AF%9D/2012/09/27/sanya-trip-2012-2/" rel="next" title="三亚纪行">
+                <i class="fa fa-chevron-left"></i> 三亚纪行
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/%E6%8A%80%E6%9C%AF/2012/08/22/about-adblock/" rel="prev" title="关于AdBlock的乱弹">
+                关于AdBlock的乱弹 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+      
+
+      
+    </footer>
+  </article>
+
+  <div class="post-spread">
+    
+  </div>
+
+
+
+
+	<div style="margin-top:10px;margin-bottom:10px;font-size:12px;text-align:right;color:#555;">12 Sep 2012 , 写于 <span style="color:#333;">杭州 </span>。</div>
+
+
+
+
+</div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzAwNi85NTY4"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        
+        
+        
+
+
+
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/assets/images/Avatar.png"
+               alt="Claud Xiao" />
+          <p class="site-author-name" itemprop="name">Claud Xiao</p>
+           
+              <p class="site-description motion-element" itemprop="description">不存在彻头彻尾的绝望</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">620</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/">
+                <span class="site-state-item-count">115</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+        
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="http://fanfou.com/shinemoon" target="_blank" title="饭否">
+                  
+                    <i class="fa fa-fw fa-user-circle-o"></i>
+                  
+                  饭否
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="https://github.com/shinemoon" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="https://www.douban.com/people/claud.xiao/" target="_blank" title="豆瓣">
+                  
+                    <i class="fa fa-fw fa-book"></i>
+                  
+                  豆瓣
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="mailto://shinemoon@gmail.com" target="_blank" title="Mail">
+                  
+                    <i class="fa fa-fw fa-google-plus-square"></i>
+                  
+                  Mail
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="http://maybe2020.github.io/" title="近寐遥喧" target="_blank">近寐遥喧</a>
+                </li>
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="http://ievanz.net/" title="为埃斯米而作" target="_blank">为埃斯米而作</a>
+                </li>
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.zeove.com/" title="哲尔夫" target="_blank">哲尔夫</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i style="color:red" class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Claud Xiao</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://jekyllrb.com">Jekyll</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/simpleyyt/jekyll-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/assets/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/assets/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/assets/js/src/post-details.js?v=5.1.1"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+    
+      <script type="text/javascript">
+        (function(d, s) {
+          var j, e = d.getElementsByTagName(s)[0];
+          if (typeof LivereTower === 'function') { return; }
+          j = d.createElement(s);
+          j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+          j.async = true;
+          e.parentNode.insertBefore(j, e);
+        })(document, 'script');
+      </script>
+    
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
+

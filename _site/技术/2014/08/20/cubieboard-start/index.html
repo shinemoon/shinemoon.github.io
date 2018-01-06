@@ -1,0 +1,1060 @@
+
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/assets/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/assets/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/assets/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Linux,ARM," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="MooninskY" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="图片为Radax Rock，并非Cubieboard，是Cubie创始团队基于瑞芯微的RX系列开发的类似的下一代开发板">
+<meta name="keywords" content="Linux, ARM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CubieBoard入手相关">
+<meta property="og:url" content="http://0.0.0.0:4000/%E6%8A%80%E6%9C%AF/2014/08/20/cubieboard-start/">
+<meta property="og:site_name" content="MooninskY">
+<meta property="og:description" content="图片为Radax Rock，并非Cubieboard，是Cubie创始团队基于瑞芯微的RX系列开发的类似的下一代开发板">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://i340.photobucket.com/albums/o350/claudxiao/Rock_zps37e999f5.jpg">
+<meta property="og:image" content="http://i340.photobucket.com/albums/o350/claudxiao/cubieboard_zpseebcbc43.jpg">
+<meta property="og:image" content="http://i340.photobucket.com/albums/o350/claudxiao/livesuite_zpsf3e2334b.png">
+<meta property="og:image" content="http://i340.photobucket.com/albums/o350/claudxiao/livesuite_zpsf3e2334b.png">
+<meta property="og:image" content="http://i340.photobucket.com/albums/o350/claudxiao/cbbreakdown_zps53e9b662.jpg">
+<meta property="og:image" content="http://i340.photobucket.com/albums/o350/claudxiao/cbcomparison_zps3936900d.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CubieBoard入手相关">
+<meta name="twitter:description" content="图片为Radax Rock，并非Cubieboard，是Cubie创始团队基于瑞芯微的RX系列开发的类似的下一代开发板">
+<meta name="twitter:image" content="http://i340.photobucket.com/albums/o350/claudxiao/Rock_zps37e999f5.jpg">
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://0.0.0.0:4000/"/>
+
+
+
+<style type="text/css"> 
+blockquote{
+    border-left: 4px solid #ffbbbb;
+}
+</style>
+
+
+
+  <title>CubieBoard入手相关</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">MooninskY</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">月下闲话</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+<div id="posts" class="posts-expand">
+  
+  
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-post " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://0.0.0.0:4000/%E6%8A%80%E6%9C%AF/2014/08/20/cubieboard-start/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Claud Xiao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/assets/images/Avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MooninskY">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+          
+          
+            CubieBoard入手相关
+          
+        </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2014-08-20T00:00:00+08:00">
+                2014-08-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/category/#/%E6%8A%80%E6%9C%AF" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+            
+                <div class="post-description">
+                    
+                </div>
+            
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><em>图片为Radax Rock，并非Cubieboard，是Cubie创始团队基于瑞芯微的RX系列开发的类似的下一代开发板</em></p>
+
+<p><img src="http://i340.photobucket.com/albums/o350/claudxiao/Rock_zps37e999f5.jpg" alt="overview" /></p>
+
+<p>NOTE: 本文主要聚焦CubieBoard相关的特殊内容，而对于类似Android或者Linux本身相关的内容不做过多展开和深入。</p>
+
+<h2 id="入手安装">入手安装</h2>
+
+<p>缺省安装是android，在没有扩展键盘鼠标以及不方便接入hdml显示器（电视）的时候，开荒逻辑显然是：</p>
+
+<ol>
+  <li>TTL串口连接调试；</li>
+  <li>配置以及获取网络信息；</li>
+  <li>SSH</li>
+</ol>
+
+<p>而且明显的，android不满足我的操作要求，必须先刷成linux，而且server版尤佳。</p>
+
+<p>因此下面的部分也就是照这个思路进行的。</p>
+
+<p><img src="http://i340.photobucket.com/albums/o350/claudxiao/cubieboard_zpseebcbc43.jpg" alt="board" /></p>
+
+<h3 id="ttl线连接">TTL线连接</h3>
+
+<ul>
+  <li>无显示器情况下，TTL线连接，白线对应TX，绿线对应RX，黑线对应GND，** 据教程说明，红线悬空，否则会有烧板可能**;</li>
+  <li>需要ttl支持的软件，例如putty等，osx下使用minicom（需要安装）；</li>
+  <li>配置好minicom之后，要先打开minicom（port选择为/dev/cu.usbserial),然后打开电源，当然这之前，usb线得要接好，这样就可以看到启动的全过程了；</li>
+  <li>启动之后，直接是root账号登录了，可见cb为了开发者方便，上来就是直接裸奔，这个不重要，反正是要刷掉这个android的。</li>
+</ul>
+
+<h3 id="cubian-刷机">Cubian 刷机</h3>
+
+<p>细节参见<a href="http://docs.cubieboard.org/tutorials/cb1/installation/cb1_lubuntu_nand_install">官网</a>, 说的应该很清楚了，最花时间的部分却反而是我因为没有sd卡读卡器而几经周折的来回换电脑的经历.</p>
+
+<p>Cubian虽然是玩家自制，但是从完备和易用上远远超过了官方的版本，至少那个LED灯靠摩尔斯码显示ip地址的想法真是让人绝倒，绝对的上档次。</p>
+
+<p>插上无线网卡(我用的也是官方推荐的水星迷你无线网卡）之后，需要配置wifi（目前阶段且只管本身的）；</p>
+
+<ul>
+  <li>确保工具安装<code class="highlighter-rouge">sudo apt-get install wpasupplicant</code>, 因为iwconfig只能处理WEP，而对于WPA，必须需要wpasupplicant来处理，不过Cubian已经预装了；
+    <ul>
+      <li>利用<code class="highlighter-rouge">sudo iwlist wlan0 scan </code>来扫描wifi，届时需要处理提取ssid和加密方式来提示用户，目前暂时先不在意，直接填写家庭wifi以便调试；</li>
+      <li>利用<code class="highlighter-rouge">wpa_passpharase &lt;essid&gt; &lt;password&gt; &gt; /etc/wpa_supplicant.conf</code>生成配置文件；</li>
+      <li>
+        <blockquote>
+          <p><strong>本方法未成功</strong>，有错误，可能是wpa_supplicant 本身问题，<code class="highlighter-rouge">sudo wpa_supplicant -B -iwlan0 -c/etc/wpa_supplicant.conf -Dwext &amp;&amp; sudo dhclient wlan0</code> 来打开wifi, 于是采用了下面的方法；</p>
+        </blockquote>
+      </li>
+      <li>采用类似<a href="https://github.com/cubieplayer/cubian/wiki/%E4%B8%8A%E6%89%8BCubian">Cubian教程的方法</a>,
+        <ul>
+          <li>修改 /etc/network/interfaces文件，添加如下内容(其中psk请从前面passpharse中生成的文件中读取）
+            <blockquote>
+              <p>allow-hotplug wlan0  <br />
+iface wlan0 inet dhcp  <br />
+  wpa-ssid mynetwork  <br />
+  wpa-psk 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f</p>
+            </blockquote>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">ifup wlan0</code> 启用wifi</li>
+</ul>
+
+<p>Wifi正式OK，那么终于可以移动使用了。</p>
+
+<p>但是，如果仅这样，重启之后，wifi依然是disable的，需要手动打开（这对我headless的solution完全没有帮助），即使按照Cubian文档做了（即，添加auto wlan0在文件里，也无补于事）；最后找来找去，还是在/etc/rc.local里加上了这两句:</p>
+
+<p><code class="highlighter-rouge">/sbin/wpa_supplicant -c /etc/wpa_supplicant.conf -D wext -dd -i wlan0 -B</code></p>
+
+<p><code class="highlighter-rouge">dhclient wlan0</code></p>
+
+<p>才算是解决了重启的问题。Wifi正式OK，那么终于可以移动使用了;</p>
+
+<p>唯一不太爽的是，不知道为什么如果在有线连接的情况下，本来有线和无线的ip都是获取的，但是如果当中拔掉网线，反而无线也会失效，非要重启（因为我是headless的server版…无显示器、无键盘), 看看以后能不能解决吧。</p>
+
+<h3 id="lubuntu-刷机-弃用">Lubuntu 刷机 (弃用)</h3>
+
+<p>参考<a href="http://docs.cubieboard.org/tutorials/cb1/installation/cb1_lubuntu_nand_install">官方连接</a></p>
+
+<p>几点note:</p>
+
+<ul>
+  <li>可以选择刷机到sd卡或者是nand flash，作为强迫症的本人，当然选择刷NAND了, 有<a href="http://docs.cubieboard.org/tutorials/cb1/installation/cb1_lubuntu_nand_install">官方教程</a>；</li>
+  <li>那么，就需要全志的<a href="http://linux-sunxi.org/LiveSuit">官方工具LiveSuite了</a>, 很欣慰的是，居然是有Mac版本的，对Allwinner一下子很有信心了；</li>
+  <li>安装与打开都非常傻瓜
+ <img src="http://i340.photobucket.com/albums/o350/claudxiao/livesuite_zpsf3e2334b.png" alt="livesuite" /></li>
+  <li>接下来，就是选择image了，如前所述，Lubuntu Server 就是选择(382M的image), 原来的UbuntuOne的空间失效，似乎很难找，不过总算是找到了, <a href="http://dl.cubieboard.org/software/ubuntuone/public/cubieboard/cb_a10_ubuntu/">官方有备份</a>;</li>
+  <li>如果一切顺利，大家应该就可以按照类似下面Windows上的步骤刷机了…为什么我会切换到Windows下呢?</li>
+</ul>
+
+<p>因为过程中却沮丧的发现，刷image遇到了’Wait for fes device timeout ..’ 的问题，搜索之后，疑似是Cubieboard对usb3.0有点兼容问题(也有说法是有点挑usb口），不得已只好切换到Window7的电脑上:</p>
+
+<p>过程中要说的几点：</p>
+
+<ol>
+  <li>板上不需接电源（接了反而不行）；</li>
+  <li>先打开phoenixSuite，选择好image,而且刷之前，最好先接好板子，至少把板子的驱动确认能识别；</li>
+  <li>再按住FEL按键（在usb口底部）的同时，插上usb线；</li>
+  <li>PhoenixSuite会跳出提示，等到开始刷机再松开按键；</li>
+</ol>
+
+<p>自然等待刷机完成,大概两分钟左右。再次上电，就可以看到成果了：</p>
+
+<p><img src="http://i340.photobucket.com/albums/o350/claudxiao/livesuite_zpsf3e2334b.png" alt="lubuntu" /></p>
+
+<p>唯一比较讨厌的是，这之后，LED2（蓝灯）闪烁个不停，搜了下，似乎是CPU心跳的显示，这…暂时拿它没办法，研究之后再说吧。</p>
+
+<blockquote>
+  <p>These are blue LED1 meaning heartbeat and green LED2 on cb1 and cb2</p>
+</blockquote>
+
+<p>附上<a href="http://docs.cubieboard.org/tutorials/common/begining_on_lubuntu">Lubuntu的材料</a>;</p>
+
+<p>在封箱之前，最重要的事情，其实就是要确保网络(至少有线网络吧?）和ssh是好的, 这个就是基本的Linux知识，不再赘述了。</p>
+
+<p>不过依然有几个要点：</p>
+
+<ol>
+  <li>如Guide所说，下面这一步是不可少的（对我如此）：<code class="highlighter-rouge">$dhclient eth0</code></li>
+  <li>因为官方image是13.03的版本， 所以至少apt-get的源列表的quantal有许多不对了，把/etc/apt/source.list中的quantal改成utopic就可以解决很多源找不到的问题了；</li>
+</ol>
+
+<p><strong>NOTE</strong>: 
+在源解决后，发现其实更严重的问题是apt-get依然有Bus Errorpackage list … 0%的问题存在，我没有找到合适的解决方法，几个搜索得来的解法都未能成功，只得改变主意转向了Cubian，这个基于Debian的针对Cubieboard的版本；</p>
+
+<h3 id="装外壳">装外壳</h3>
+
+<p>本来似乎应该更早一点，但是当时担心有些东西需要先开盖整，装好以后太麻烦，所以放在这一步，壳子用的是官方淘宝上的黑白壳。</p>
+
+<p><img src="http://i340.photobucket.com/albums/o350/claudxiao/cbbreakdown_zps53e9b662.jpg" alt="break" /></p>
+
+<p>必须说，模具本身谈不上精美，但是还是挺准确的，板子一步按到位，没有出现任何接口和外壳开口的错位情况；只有那个滑盖有时候会蹭到黑色贴纸，产生刮痕。</p>
+
+<p>并且TTL口也无法引出（当然没法了，放置在板子中间，而且是分离式的插线），所以，为了以防万一，装外壳之前，建议先好好的试试ssh是否OK，否则又要来回折腾了。</p>
+
+<p>盖上之后，基本上对外也只有几个接口处是通风的，老实讲我对散热略有担心——虽然配了块小散热片，我也贴在了A10上，而且我也没打算真的去当作视频盒子用（都装Server版了），不过，还是尽量划开滑板，留出了SATA接口的那块天窗，聊做散热吧。
+<img src="http://i340.photobucket.com/albums/o350/claudxiao/cbcomparison_zps3936900d.jpg" alt="comparison" /></p>
+
+<p>至此，一个卡片大小的，debian based的干净电脑算是攒好了，就看之后能有什么可折腾的了。</p>
+
+<hr />
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            
+            <a href="/tag/#/Linux" rel="tag"># Linux</a>
+          
+            
+            <a href="/tag/#/ARM" rel="tag"># ARM</a>
+          
+        </div>
+      
+
+      
+      
+      
+      
+      
+
+      
+      
+        <div class="post-nav" id="post-nav-id">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/%E9%97%B2%E8%AF%9D/2014/09/25/moonshine-037/" rel="next" title="Moonshine 037">
+                <i class="fa fa-chevron-left"></i> Moonshine 037
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/%E9%97%B2%E8%AF%9D/2014/08/18/moonshine-036/" rel="prev" title="Moonshine 036">
+                Moonshine 036 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+      
+
+      
+    </footer>
+  </article>
+
+  <div class="post-spread">
+    
+  </div>
+
+
+
+
+	<div style="margin-top:10px;margin-bottom:10px;font-size:12px;text-align:right;color:#555;">20 Aug 2014 , 写毕。</div>
+
+
+
+
+</div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzAwNi85NTY4"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        
+        
+        
+
+
+
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/assets/images/Avatar.png"
+               alt="Claud Xiao" />
+          <p class="site-author-name" itemprop="name">Claud Xiao</p>
+           
+              <p class="site-description motion-element" itemprop="description">不存在彻头彻尾的绝望</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">620</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/">
+                <span class="site-state-item-count">115</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+        
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="http://fanfou.com/shinemoon" target="_blank" title="饭否">
+                  
+                    <i class="fa fa-fw fa-user-circle-o"></i>
+                  
+                  饭否
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="https://github.com/shinemoon" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="https://www.douban.com/people/claud.xiao/" target="_blank" title="豆瓣">
+                  
+                    <i class="fa fa-fw fa-book"></i>
+                  
+                  豆瓣
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="mailto://shinemoon@gmail.com" target="_blank" title="Mail">
+                  
+                    <i class="fa fa-fw fa-google-plus-square"></i>
+                  
+                  Mail
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="http://maybe2020.github.io/" title="近寐遥喧" target="_blank">近寐遥喧</a>
+                </li>
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="http://ievanz.net/" title="为埃斯米而作" target="_blank">为埃斯米而作</a>
+                </li>
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.zeove.com/" title="哲尔夫" target="_blank">哲尔夫</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+
+
+
+
+            
+              <div class="post-toc-content">
+    <ol class=nav>
+      <li class="nav-item nav-level-2"> <a class="nav-link" href="#入手安装"> <span class="nav-number">1</span> <span class="nav-text">入手安装</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-3"> <a class="nav-link" href="#ttl线连接"> <span class="nav-number">1.1</span> <span class="nav-text">TTL线连接</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#cubian-刷机"> <span class="nav-number">1.2</span> <span class="nav-text">Cubian 刷机</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#lubuntu-刷机-弃用"> <span class="nav-number">1.3</span> <span class="nav-text">Lubuntu 刷机 (弃用)</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child"> </li></ol> </li></ol> </li></ol> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#装外壳"> <span class="nav-number">1.4</span> <span class="nav-text">装外壳</span> </a> <ol class="nav-child"> <ol class="nav-child"> <ol class="nav-child">
+    </ol>
+  </div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i style="color:red" class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Claud Xiao</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://jekyllrb.com">Jekyll</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/simpleyyt/jekyll-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/assets/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/assets/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/assets/js/src/post-details.js?v=5.1.1"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+    
+      <script type="text/javascript">
+        (function(d, s) {
+          var j, e = d.getElementsByTagName(s)[0];
+          if (typeof LivereTower === 'function') { return; }
+          j = d.createElement(s);
+          j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+          j.async = true;
+          e.parentNode.insertBefore(j, e);
+        })(document, 'script');
+      </script>
+    
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
+
