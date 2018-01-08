@@ -1,4 +1,28 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://0.0.0.0:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2018-01-07T02:15:22+08:00</updated><id>http://0.0.0.0:4000/</id><title type="html">MooninskY</title><subtitle>不存在彻头彻尾的绝望</subtitle><author><name>Claud Xiao</name></author><entry><title type="html">我的2017</title><link href="http://0.0.0.0:4000/%E9%97%B2%E8%AF%9D/2018/01/01/my-2017/" rel="alternate" type="text/html" title="我的2017" /><published>2018-01-01T00:00:00+08:00</published><updated>2018-01-01T00:00:00+08:00</updated><id>http://0.0.0.0:4000/%E9%97%B2%E8%AF%9D/2018/01/01/my-2017</id><content type="html" xml:base="http://0.0.0.0:4000/%E9%97%B2%E8%AF%9D/2018/01/01/my-2017/">&lt;p&gt;2017年，说起来是我的本命年，尚算健康的在2018的第一天开始，依然书写总结，可以说是一种幸运吧。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://0.0.0.0:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2018-01-09T00:46:56+08:00</updated><id>http://0.0.0.0:4000/</id><title type="html">MooninskY</title><subtitle>不存在彻头彻尾的绝望</subtitle><author><name>Claud Xiao</name></author><entry><title type="html">Moonshine 051</title><link href="http://0.0.0.0:4000/the-post-1634" rel="alternate" type="text/html" title="Moonshine 051" /><published>2018-01-08T00:00:00+08:00</published><updated>2018-01-08T00:00:00+08:00</updated><id>http://0.0.0.0:4000/the-post-1634</id><content type="html" xml:base="http://0.0.0.0:4000/the-post-1634">&lt;p&gt;时隔数年，终于未能幸免的开始折腾一下Blog，一方面是新年伊始，但是更主要的原因还是因为终于半良心发现的意识到May的Blog因为墙的原因瘫痪了好久；所以，当我自己赶完年度的总结后，尽管她解释说实在没有情绪来写总结—— 可是，主观的心力之外，我能帮忙解决的也只有这些外部的困难了。&lt;/p&gt;
+
+&lt;p&gt;每次要重新整理和寻找Blog的成套解决方案的时候，我都如同是一个多年再访的旅客，唏嘘的环顾这些曾经熟悉的服务；从我自己这几年的体会来看，Github Page + Jekyll的方案至少足够的强健，我自己的空间所要注意的无非只是诸如域名记得要续费，把这几年里头因为种种原因无法使用的第三方服务替换，根据自己变化的审美（？）和习惯来更新下主题，等等。&lt;/p&gt;
+
+&lt;p&gt;所以给May搭建的时候，无非是按照自己以前写的那篇&lt;a href=&quot;mooninsky.net/from-wp-to-jekyll&quot;&gt;从Wordpress到Jeykll的方案的文章&lt;/a&gt; 处理一遍，仅仅只是多了一道从Tumblr转换导入到Wordpress的步骤，不过，这一步倒是容易的多，因为Wordpress.com是提供了现成的官方导入服务的。&lt;/p&gt;
+
+&lt;p&gt;但是在自己这一侧处理那些标题、格式、tag、目录，甚至不得已手动进入文章修改下内容的活儿没少干，而再一次的，*nix世界里最复杂的中文字符集编码的问题困扰了我很多次，包括原始xml到我的VPS的Ubuntu侧的字符的处理，我的Windows的cygnix的终端到VPS的字符问题，我家的OSX的Term到VPS的字符问题，简直崩溃，好歹终于搞定；&lt;/p&gt;
+
+&lt;p&gt;这一过程中，最值得一叹的无非两个变化，一则是RSS这一用途的还未真的大火便已渐渐遭人遗忘，二则是放眼国内几乎已经没有勉强能用的第三方评论服务，目前依然健在的畅言，也强行要求个人网站的域名备案，而国际标准的Disqus则被墙得死死的，导致最后才勉强选中韩国的Livere，虽然访问速度远谈不上理想，但是好歹还是精致可用。&lt;/p&gt;
+
+&lt;p&gt;虽然为了这次任务，我甚至&lt;strong&gt;花巨资&lt;/strong&gt;重新续费激活了我已经pending的Vulr的服务器，可是我还是很享受过程：在各种处理字符和调试过程中，May的日志在终端上如Matrix的刷屏一样一次次的闪过她这些年来的记录和所记载的人生、感悟。实在再次受教，顺便让我也仿佛记起了好些这几年属于本人的记忆—— 而且，我自己所写的这个Jeykll editor扩展也顺便的强行多了客户，简直一举两得。&lt;/p&gt;
+
+&lt;p&gt;承惠，多谢！&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;豆瓣的2017年终读书报告迟迟难产，这可不能怪我一直没有把今年的读书内容好好总结。&lt;/p&gt;
+
+&lt;p&gt;2018年开年以来，读书速度并不如何，关键是因为无意拾起了烽火戏诸侯的新书《剑来》，颇合胃口，但是读到一半才深深懊悔。因为这本书还远远谈不上养肥，恐怕刚起了个头，这也是个我不该跳入的坑；&lt;/p&gt;
+
+&lt;p&gt;依然保持着小朋友（因为小的已经放回老家爸妈那边，这里特指大的…）睡觉之后，慢慢就这台灯看一会纸质书的习惯，做点自己的小事情，这种状态不知道还能平静的保持多久，但是，且珍惜且珍惜。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;春节快到了，我也开始慢慢的往新家如同蚂蚁一样的搬着东西，有些变化会发生，那就静静的自然的发生吧。&lt;/p&gt;</content><author><name>Claud Xiao</name></author><category term="moonshine" /><summary type="html">时隔数年，终于未能幸免的开始折腾一下Blog，一方面是新年伊始，但是更主要的原因还是因为终于半良心发现的意识到May的Blog因为墙的原因瘫痪了好久；所以，当我自己赶完年度的总结后，尽管她解释说实在没有情绪来写总结—— 可是，主观的心力之外，我能帮忙解决的也只有这些外部的困难了。</summary></entry><entry><title type="html">我的2017</title><link href="http://0.0.0.0:4000/my-2017" rel="alternate" type="text/html" title="我的2017" /><published>2018-01-01T00:00:00+08:00</published><updated>2018-01-01T00:00:00+08:00</updated><id>http://0.0.0.0:4000/my-2017</id><content type="html" xml:base="http://0.0.0.0:4000/my-2017">&lt;p&gt;2017年，说起来是我的本命年，尚算健康的在2018的第一天开始，依然书写总结，可以说是一种幸运吧。&lt;/p&gt;
 
 &lt;p&gt;我不信太多的鬼神——倘若要一字概括我的『信仰』，恐怕36年下来，归结于一个『懒』字也并不过分；因此就算是本命年，也依然没有兴趣去准备诸如红内裤之类的惯例手续。一方面，「这也未免太麻烦了」，另一方面，未尝不是抱有，「我婚也结了，二宝都敢生了，还怕个死不成？」的想法在心里。&lt;/p&gt;
 
@@ -24,7 +48,7 @@
 
 &lt;p&gt;所以，即使心中怀着每一年都是自己最后一年的念想在紧迫的生活着，也依然不要轻易的否定那些看起来遥远的目标。只要步伐坚定，哪怕倒毙半途又何妨，万一天怜幸，走到了那一天呢？&lt;/p&gt;
 
-&lt;p&gt;面对严厉的时光和人生，不自量力地还手，直至死方休。&lt;/p&gt;</content><author><name>Claud Xiao</name></author><category term="闲话" /><category term="年终总结" /><summary type="html">2017年，说起来是我的本命年，尚算健康的在2018的第一天开始，依然书写总结，可以说是一种幸运吧。</summary></entry><entry><title type="html">非正确的阅读方法</title><link href="http://0.0.0.0:4000/%E8%AF%BB%E4%B9%A6/2017/12/11/the-post-9736/" rel="alternate" type="text/html" title="非正确的阅读方法" /><published>2017-12-11T00:00:00+08:00</published><updated>2017-12-11T00:00:00+08:00</updated><id>http://0.0.0.0:4000/%E8%AF%BB%E4%B9%A6/2017/12/11/the-post-9736</id><content type="html" xml:base="http://0.0.0.0:4000/%E8%AF%BB%E4%B9%A6/2017/12/11/the-post-9736/">&lt;blockquote&gt;
+&lt;p&gt;面对严厉的时光和人生，不自量力地还手，直至死方休。&lt;/p&gt;</content><author><name>Claud Xiao</name></author><category term="闲话" /><category term="年终总结" /><summary type="html">2017年，说起来是我的本命年，尚算健康的在2018的第一天开始，依然书写总结，可以说是一种幸运吧。</summary></entry><entry><title type="html">非正确的阅读方法</title><link href="http://0.0.0.0:4000/the-post-9736" rel="alternate" type="text/html" title="非正确的阅读方法" /><published>2017-12-11T00:00:00+08:00</published><updated>2017-12-11T00:00:00+08:00</updated><id>http://0.0.0.0:4000/the-post-9736</id><content type="html" xml:base="http://0.0.0.0:4000/the-post-9736">&lt;blockquote&gt;
   &lt;p&gt;版权归作者所有，任何形式转载请联系作者。  &lt;br /&gt;
  作者：iClaud（来自豆瓣）  &lt;br /&gt;
  来源：https://book.douban.com/review/8966946/&lt;/p&gt;
@@ -64,7 +88,7 @@
 
 &lt;p&gt;PS. 新星这一版的书装帧可喜，真想收一波全的。&lt;/p&gt;
 
-&lt;p&gt;PS. 再想了想，好险，我这是有「关键剧情透露」啊，赶快标上。&lt;/p&gt;</content><author><name>Claud Xiao</name></author><summary type="html">版权归作者所有，任何形式转载请联系作者。 作者：iClaud（来自豆瓣） 来源：https://book.douban.com/review/8966946/</summary></entry><entry><title type="html">相逢自是有缘</title><link href="http://0.0.0.0:4000/%E8%AF%BB%E4%B9%A6/2017/11/28/the-post-451/" rel="alternate" type="text/html" title="相逢自是有缘" /><published>2017-11-28T00:00:00+08:00</published><updated>2017-11-28T00:00:00+08:00</updated><id>http://0.0.0.0:4000/%E8%AF%BB%E4%B9%A6/2017/11/28/the-post-451</id><content type="html" xml:base="http://0.0.0.0:4000/%E8%AF%BB%E4%B9%A6/2017/11/28/the-post-451/">&lt;p&gt;究竟是像原著一樣把種種奇遇邂逅依序排布在春夏秋冬的一年中？還是像動畫一樣天馬行空的壓縮在神奇的一夜更好些呢？&lt;/p&gt;
+&lt;p&gt;PS. 再想了想，好险，我这是有「关键剧情透露」啊，赶快标上。&lt;/p&gt;</content><author><name>Claud Xiao</name></author><summary type="html">版权归作者所有，任何形式转载请联系作者。 作者：iClaud（来自豆瓣） 来源：https://book.douban.com/review/8966946/</summary></entry><entry><title type="html">相逢自是有缘</title><link href="http://0.0.0.0:4000/the-post-451" rel="alternate" type="text/html" title="相逢自是有缘" /><published>2017-11-28T00:00:00+08:00</published><updated>2017-11-28T00:00:00+08:00</updated><id>http://0.0.0.0:4000/the-post-451</id><content type="html" xml:base="http://0.0.0.0:4000/the-post-451">&lt;p&gt;究竟是像原著一樣把種種奇遇邂逅依序排布在春夏秋冬的一年中？還是像動畫一樣天馬行空的壓縮在神奇的一夜更好些呢？&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://img3.doubanio.com/lpic/s3944410.jpg&quot; alt=&quot;Book Cover&quot; /&gt;&lt;/p&gt;
 
@@ -92,7 +116,7 @@
   &lt;p&gt;於是我向學長走去，一面悄聲呢喃。&lt;/p&gt;
 
   &lt;p&gt;相逢自是有緣。」&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name>Claud Xiao</name></author><category term="读书" /><category term="小说" /><summary type="html">究竟是像原著一樣把種種奇遇邂逅依序排布在春夏秋冬的一年中？還是像動畫一樣天馬行空的壓縮在神奇的一夜更好些呢？</summary></entry><entry><title type="html">深海里的光</title><link href="http://0.0.0.0:4000/%E9%97%B2%E8%AF%9D/2017/10/16/the-post-5165/" rel="alternate" type="text/html" title="深海里的光" /><published>2017-10-16T00:00:00+08:00</published><updated>2017-10-16T00:00:00+08:00</updated><id>http://0.0.0.0:4000/%E9%97%B2%E8%AF%9D/2017/10/16/the-post-5165</id><content type="html" xml:base="http://0.0.0.0:4000/%E9%97%B2%E8%AF%9D/2017/10/16/the-post-5165/">&lt;p&gt;深夜剧的题材，总是可以任性一些，这大多人都可以理解、接受（甚至期待吧）。所以，《深海鱼男》里的暗色并不算太突兀：挣扎在底层的废柴角色们，在平庸不见未来的日常里，消磨着自己过半的人生。既不见希望，甚至偶尔伸出手探向希望，带来的都是没顶之灾。&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>Claud Xiao</name></author><category term="读书" /><category term="小说" /><summary type="html">究竟是像原著一樣把種種奇遇邂逅依序排布在春夏秋冬的一年中？還是像動畫一樣天馬行空的壓縮在神奇的一夜更好些呢？</summary></entry><entry><title type="html">深海里的光</title><link href="http://0.0.0.0:4000/the-post-5165" rel="alternate" type="text/html" title="深海里的光" /><published>2017-10-16T00:00:00+08:00</published><updated>2017-10-16T00:00:00+08:00</updated><id>http://0.0.0.0:4000/the-post-5165</id><content type="html" xml:base="http://0.0.0.0:4000/the-post-5165">&lt;p&gt;深夜剧的题材，总是可以任性一些，这大多人都可以理解、接受（甚至期待吧）。所以，《深海鱼男》里的暗色并不算太突兀：挣扎在底层的废柴角色们，在平庸不见未来的日常里，消磨着自己过半的人生。既不见希望，甚至偶尔伸出手探向希望，带来的都是没顶之灾。&lt;/p&gt;
 
 &lt;p&gt;对于古谷实的原作改编来说，这一点也不意外。难得是，怎样让电视观众，和更广大层面的受众可以不那么痛苦的接受和欣赏。幸运的是，作品的平衡度把握得恰到好处。&lt;/p&gt;
 
@@ -118,7 +142,7 @@
 
 &lt;p&gt;毫无疑问，富冈和羽田他们既不倦的寻求自己向往的那点光，也牢牢的握住了属于自己（和对方）的那缕蛛丝心无旁骛，最终得救。&lt;/p&gt;
 
-&lt;p&gt;无以复加的甜，简直猝不及防。&lt;/p&gt;</content><author><name>Claud Xiao</name></author><category term="日剧" /><summary type="html">深夜剧的题材，总是可以任性一些，这大多人都可以理解、接受（甚至期待吧）。所以，《深海鱼男》里的暗色并不算太突兀：挣扎在底层的废柴角色们，在平庸不见未来的日常里，消磨着自己过半的人生。既不见希望，甚至偶尔伸出手探向希望，带来的都是没顶之灾。</summary></entry><entry><title type="html">Moonshine 050</title><link href="http://0.0.0.0:4000/%E9%97%B2%E8%AF%9D/2017/10/06/the-post-4646/" rel="alternate" type="text/html" title="Moonshine 050" /><published>2017-10-06T00:00:00+08:00</published><updated>2017-10-06T00:00:00+08:00</updated><id>http://0.0.0.0:4000/%E9%97%B2%E8%AF%9D/2017/10/06/the-post-4646</id><content type="html" xml:base="http://0.0.0.0:4000/%E9%97%B2%E8%AF%9D/2017/10/06/the-post-4646/">&lt;p&gt;拖拖拉拉的，这几个月虽然写了不少读后感之类的文章，但是，关于自己的东西，我却少有提到。一则是因为个性使然，就算往日，每当要写到自己，终归有些赧然，无论好的或是坏的；二则逃不过个「懒」字。&lt;/p&gt;
+&lt;p&gt;无以复加的甜，简直猝不及防。&lt;/p&gt;</content><author><name>Claud Xiao</name></author><category term="日剧" /><summary type="html">深夜剧的题材，总是可以任性一些，这大多人都可以理解、接受（甚至期待吧）。所以，《深海鱼男》里的暗色并不算太突兀：挣扎在底层的废柴角色们，在平庸不见未来的日常里，消磨着自己过半的人生。既不见希望，甚至偶尔伸出手探向希望，带来的都是没顶之灾。</summary></entry><entry><title type="html">Moonshine 050</title><link href="http://0.0.0.0:4000/the-post-4646" rel="alternate" type="text/html" title="Moonshine 050" /><published>2017-10-06T00:00:00+08:00</published><updated>2017-10-06T00:00:00+08:00</updated><id>http://0.0.0.0:4000/the-post-4646</id><content type="html" xml:base="http://0.0.0.0:4000/the-post-4646">&lt;p&gt;拖拖拉拉的，这几个月虽然写了不少读后感之类的文章，但是，关于自己的东西，我却少有提到。一则是因为个性使然，就算往日，每当要写到自己，终归有些赧然，无论好的或是坏的；二则逃不过个「懒」字。&lt;/p&gt;
 
 &lt;p&gt;并非说过去的这段时间，我自己就毫无值得写下来的东西。事情再怎么琐屑无聊，终归是属于我这个左支右绌的本命年里所跨越的一个又一个小小的记录，即使对旁人毫无意义，但是对于生活平淡乏善可陈的自身来说，照样是值得回望的。&lt;/p&gt;
 
@@ -144,7 +168,7 @@
   &lt;p&gt;一场消黯,永日无言,却下层楼。&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;搁笔。&lt;/p&gt;</content><author><name>Claud Xiao</name></author><category term="闲话" /><category term="moonshine" /><summary type="html">拖拖拉拉的，这几个月虽然写了不少读后感之类的文章，但是，关于自己的东西，我却少有提到。一则是因为个性使然，就算往日，每当要写到自己，终归有些赧然，无论好的或是坏的；二则逃不过个「懒」字。</summary></entry><entry><title type="html">那些似水流年和如花美眷</title><link href="http://0.0.0.0:4000/%E9%97%B2%E8%AF%9D/2017/08/10/the-post-7622/" rel="alternate" type="text/html" title="那些似水流年和如花美眷" /><published>2017-08-10T00:00:00+08:00</published><updated>2017-08-10T00:00:00+08:00</updated><id>http://0.0.0.0:4000/%E9%97%B2%E8%AF%9D/2017/08/10/the-post-7622</id><content type="html" xml:base="http://0.0.0.0:4000/%E9%97%B2%E8%AF%9D/2017/08/10/the-post-7622/">&lt;p&gt;看日剧二十多年，早已见惯了生离死别，山盟海誓，那些赚尽一时眼泪与欢笑的经典，多多少少的，也曾经触动过我在不同时期，那点未泯灭的伤感和憧憬；&lt;/p&gt;
+&lt;p&gt;搁笔。&lt;/p&gt;</content><author><name>Claud Xiao</name></author><category term="闲话" /><category term="moonshine" /><summary type="html">拖拖拉拉的，这几个月虽然写了不少读后感之类的文章，但是，关于自己的东西，我却少有提到。一则是因为个性使然，就算往日，每当要写到自己，终归有些赧然，无论好的或是坏的；二则逃不过个「懒」字。</summary></entry><entry><title type="html">那些似水流年和如花美眷</title><link href="http://0.0.0.0:4000/the-post-7622" rel="alternate" type="text/html" title="那些似水流年和如花美眷" /><published>2017-08-10T00:00:00+08:00</published><updated>2017-08-10T00:00:00+08:00</updated><id>http://0.0.0.0:4000/the-post-7622</id><content type="html" xml:base="http://0.0.0.0:4000/the-post-7622">&lt;p&gt;看日剧二十多年，早已见惯了生离死别，山盟海誓，那些赚尽一时眼泪与欢笑的经典，多多少少的，也曾经触动过我在不同时期，那点未泯灭的伤感和憧憬；&lt;/p&gt;
 
 &lt;p&gt;到了如今，算是步入中年（久矣…），打动过我的爱情片恍然间似有褪色，纵然喜欢，但是往往再难复现当日的感动。&lt;/p&gt;
 
@@ -202,7 +226,7 @@
 
 &lt;blockquote&gt;
   &lt;p&gt;http://www.jianshu.com/p/a9c8bd73e95b&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name>Claud Xiao</name></author><category term="日剧" /><summary type="html">看日剧二十多年，早已见惯了生离死别，山盟海誓，那些赚尽一时眼泪与欢笑的经典，多多少少的，也曾经触动过我在不同时期，那点未泯灭的伤感和憧憬；</summary></entry><entry><title type="html">任何时候都「适当」的童话</title><link href="http://0.0.0.0:4000/%E8%AF%BB%E4%B9%A6/2017/07/17/the-post-8606/" rel="alternate" type="text/html" title="任何时候都「适当」的童话" /><published>2017-07-17T00:00:00+08:00</published><updated>2017-07-17T00:00:00+08:00</updated><id>http://0.0.0.0:4000/%E8%AF%BB%E4%B9%A6/2017/07/17/the-post-8606</id><content type="html" xml:base="http://0.0.0.0:4000/%E8%AF%BB%E4%B9%A6/2017/07/17/the-post-8606/">&lt;p&gt;在奇幻/科幻作家里，我仰慕和佩服的不少，但是只有两个人让我读他们的作品时，会忍不住痛骂他们想象力的极端过剩——以及由之而来或许不自知的挥霍；其实我何尝不知道，这种心态的根源，就是来源于想象力贫瘠的凡人，对于天才的嫉妒罢了。&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>Claud Xiao</name></author><category term="日剧" /><summary type="html">看日剧二十多年，早已见惯了生离死别，山盟海誓，那些赚尽一时眼泪与欢笑的经典，多多少少的，也曾经触动过我在不同时期，那点未泯灭的伤感和憧憬；</summary></entry><entry><title type="html">任何时候都「适当」的童话</title><link href="http://0.0.0.0:4000/the-post-8606" rel="alternate" type="text/html" title="任何时候都「适当」的童话" /><published>2017-07-17T00:00:00+08:00</published><updated>2017-07-17T00:00:00+08:00</updated><id>http://0.0.0.0:4000/the-post-8606</id><content type="html" xml:base="http://0.0.0.0:4000/the-post-8606">&lt;p&gt;在奇幻/科幻作家里，我仰慕和佩服的不少，但是只有两个人让我读他们的作品时，会忍不住痛骂他们想象力的极端过剩——以及由之而来或许不自知的挥霍；其实我何尝不知道，这种心态的根源，就是来源于想象力贫瘠的凡人，对于天才的嫉妒罢了。&lt;/p&gt;
 
 &lt;p&gt;特里·普拉切特就是其中之一。他的任何一本书，在一个章节中一本正经开出的脑洞和段子，放在一个普通作家手里，通常都足够撑上一本书了；更何况他的段子、笑点从来都是高级而不落俗套，和有些乍看上去相似的作家（是的，比如段子爱走下三路，连直男如我都有些吃不消的皮尔斯·安东尼的「赞斯大陆」）比起来，可谓云泥之别。&lt;/p&gt;
 
@@ -246,7 +270,7 @@
 
 &lt;p&gt;两年前，看到普拉切特去世的消息时，我的内心震荡不小，哪怕是因为幼稚吧，我隐隐觉得，死神怎么会这么不通情面？明明书里你不是这么不通人情的——而不幸中的幸运是，我看碟形世界还是看得不多，老头子的去世，并不是我认识碟形世界的终点，感谢那些努力的译者和出版社……&lt;/p&gt;
 
-&lt;p&gt;PS. 我最心水的其实还是「City Watch」和「Industry Revolutoin」系列，只求以后能看到更多（祈祷）……&lt;/p&gt;</content><author><name>Claud Xiao</name></author><category term="读书" /><category term="碟形世界" /><summary type="html">在奇幻/科幻作家里，我仰慕和佩服的不少，但是只有两个人让我读他们的作品时，会忍不住痛骂他们想象力的极端过剩——以及由之而来或许不自知的挥霍；其实我何尝不知道，这种心态的根源，就是来源于想象力贫瘠的凡人，对于天才的嫉妒罢了。</summary></entry><entry><title type="html">愿可随心 但持谦卑</title><link href="http://0.0.0.0:4000/%E8%AF%BB%E4%B9%A6/2017/07/05/the-post-3191/" rel="alternate" type="text/html" title="愿可随心 但持谦卑" /><published>2017-07-05T00:00:00+08:00</published><updated>2017-07-05T00:00:00+08:00</updated><id>http://0.0.0.0:4000/%E8%AF%BB%E4%B9%A6/2017/07/05/the-post-3191</id><content type="html" xml:base="http://0.0.0.0:4000/%E8%AF%BB%E4%B9%A6/2017/07/05/the-post-3191/">&lt;pre&gt;
+&lt;p&gt;PS. 我最心水的其实还是「City Watch」和「Industry Revolutoin」系列，只求以后能看到更多（祈祷）……&lt;/p&gt;</content><author><name>Claud Xiao</name></author><category term="读书" /><category term="碟形世界" /><summary type="html">在奇幻/科幻作家里，我仰慕和佩服的不少，但是只有两个人让我读他们的作品时，会忍不住痛骂他们想象力的极端过剩——以及由之而来或许不自知的挥霍；其实我何尝不知道，这种心态的根源，就是来源于想象力贫瘠的凡人，对于天才的嫉妒罢了。</summary></entry><entry><title type="html">愿可随心 但持谦卑</title><link href="http://0.0.0.0:4000/the-post-3191" rel="alternate" type="text/html" title="愿可随心 但持谦卑" /><published>2017-07-05T00:00:00+08:00</published><updated>2017-07-05T00:00:00+08:00</updated><id>http://0.0.0.0:4000/the-post-3191</id><content type="html" xml:base="http://0.0.0.0:4000/the-post-3191">&lt;pre&gt;
 版权归作者所有，任何形式转载请联系作者。
 作者：iClaud（来自豆瓣）
 来源：https://book.douban.com/review/8639018/
@@ -284,7 +308,7 @@ He handed her a hot mug.   &lt;br /&gt;
 &lt;blockquote&gt;
   &lt;p&gt;“Is a tree red?”  &lt;br /&gt;
 “I don’t know.”&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name>Claud Xiao</name></author><category term="读书" /><category term=" 小说" /><summary type="html">版权归作者所有，任何形式转载请联系作者。 作者：iClaud（来自豆瓣） 来源：https://book.douban.com/review/8639018/</summary></entry><entry><title type="html">慈悲与残忍</title><link href="http://0.0.0.0:4000/%E8%AF%BB%E4%B9%A6/2017/05/28/the-post-6846/" rel="alternate" type="text/html" title="慈悲与残忍" /><published>2017-05-28T00:00:00+08:00</published><updated>2017-05-28T00:00:00+08:00</updated><id>http://0.0.0.0:4000/%E8%AF%BB%E4%B9%A6/2017/05/28/the-post-6846</id><content type="html" xml:base="http://0.0.0.0:4000/%E8%AF%BB%E4%B9%A6/2017/05/28/the-post-6846/">&lt;p&gt;四部书写到如今，本来以为已经不会再吃惊，但是作者对于作品形式上的精巧的追求简直是一再突破我的预期。&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>Claud Xiao</name></author><category term="读书" /><category term=" 小说" /><summary type="html">版权归作者所有，任何形式转载请联系作者。 作者：iClaud（来自豆瓣） 来源：https://book.douban.com/review/8639018/</summary></entry><entry><title type="html">慈悲与残忍</title><link href="http://0.0.0.0:4000/the-post-6846" rel="alternate" type="text/html" title="慈悲与残忍" /><published>2017-05-28T00:00:00+08:00</published><updated>2017-05-28T00:00:00+08:00</updated><id>http://0.0.0.0:4000/the-post-6846</id><content type="html" xml:base="http://0.0.0.0:4000/the-post-6846">&lt;p&gt;四部书写到如今，本来以为已经不会再吃惊，但是作者对于作品形式上的精巧的追求简直是一再突破我的预期。&lt;/p&gt;
 
 &lt;p&gt;到了这部书，我终于可以不吝五星的送上赞美，它是一部可以不带任何条件和世界上第一流的对手一较长短的好作品。&lt;/p&gt;
 
@@ -304,36 +328,4 @@ He handed her a hot mug.   &lt;br /&gt;
 
 &lt;p&gt;所以读书时一面期望作者为那些可爱的人物留一个幸福的结尾，一面又暗暗意识到，纵然作者笔下心中有着大慈悲，但他们又如何能有一个「幸福」的未来？一念及此，便为作者的这伏线千里的宏大野心和温暖笔意下的「残忍」而战栗。&lt;/p&gt;
 
-&lt;p&gt;Douban：https://book.douban.com/review/8555747/&lt;/p&gt;</content><author><name>Claud Xiao</name></author><category term="读书" /><category term=" 小说" /><summary type="html">四部书写到如今，本来以为已经不会再吃惊，但是作者对于作品形式上的精巧的追求简直是一再突破我的预期。</summary></entry><entry><title type="html">关于成熟</title><link href="http://0.0.0.0:4000/%E9%97%B2%E8%AF%9D/2017/05/02/the-post-7124/" rel="alternate" type="text/html" title="关于成熟" /><published>2017-05-02T00:00:00+08:00</published><updated>2017-05-02T00:00:00+08:00</updated><id>http://0.0.0.0:4000/%E9%97%B2%E8%AF%9D/2017/05/02/the-post-7124</id><content type="html" xml:base="http://0.0.0.0:4000/%E9%97%B2%E8%AF%9D/2017/05/02/the-post-7124/">&lt;p&gt;忽然看到平时谈的来的同事转了篇文章——应该算是鸡汤的文章吧，难得的点开读了读，虽然观点和我自己并不(完全)相符，不过，所关心的问题和思考的内容却也是和自己有重合，所以更加难得的想了想——尽管这和我最近的慵懒有些相悖。&lt;/p&gt;
-
-&lt;p&gt;无可争辩的，成熟的标志意味着更多的承担责任和为自己以外的人思考，更值得称道的是要勇于去承担更多理当肩负的东西。对这点，我并无异议。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;我脑海里独独会走神和自我辩论的其实往往是，这些责任有多大成分上是自己所在意的人真正需要的？&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;多少是社会他人眼中觉得你所在意的人所真正需要的？&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;又有多少其实的确是恰恰因为他人眼中觉得你在意的人所需要的，从而导致了它们就真的变成了事实上所需要的呢？&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;是的，一旦这些东西变成了‘真正’需要的东西，究竟发自本心还是由于社会属性而导致的‘需要’，其实并不重要了，因为毕竟，作为主体的本人一旦选择（或者无从选择）的与特定的人们羁绊，势必就要去承担这些人们的想法，固然，想法的完全吻合本来就是不可能的。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;求仁得仁。&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;我在以前的某文中提到，一直下意识的回避在同学聚会中太多的谈小朋友的事情；虽然后来有反省，不过终究未能完全说服自己。每当自己和朋友们谈起油盐酱醋，家长里短，养老携幼的事情，尽管多有发泄放松的轻松，可是，有时候凛然醒觉，会觉得自己是终究被刨去了属于自己的属性，从而被如同放置标准件一样的置入了属于大家一致的流水线和流程，按部就班的做着属于特定年龄、身份、阶层该干的事情，这样并非不好，只是有些寂寞罢了。&lt;/p&gt;
-
-&lt;p&gt;何况，这也就是大众眼中的成熟吧？&lt;/p&gt;
-
-&lt;p&gt;会有人不成熟（按照一般大众标准）或者说，可以不成熟吗？当然，终于不被人诟病，甚至称羡的‘不成熟’，其实属于那些真正的有才华的天才们。他们的不成熟，到了最后，往往有资格被称作是‘赤子之心’；&lt;/p&gt;
-
-&lt;p&gt;沈从文的“&lt;code class=&quot;highlighter-rouge&quot;&gt;不折不从，亦慈亦让。星斗其文，赤子其人。&lt;/code&gt;”，一直到他去世，都以一种格格不入的姿态面对着这个社会和变迁；类似的还有许多被人视作性格怪癖，不容于世，在各自的适合的年龄却并没有‘很成熟’的处理着事物的天才们，尽管被人称颂，但是，可能往往离被人赞‘成熟’的标准远矣。&lt;/p&gt;
-
-&lt;p&gt;归根到底，不成熟是属于天才的任性和特权，而成熟这个品质，说起来是属于德行上的标准和操守，而本质上依然是取决于智力的——那就是作为人，是否有足够的理性和智力，充分的认识自己，从而决定自己的方向。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;知识即美，知识即德行&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;我敬重那些因为清楚认识自己选择妥帖而完美的完成自己社会属性的任务而臻于‘成熟’的智者，我也敬重那些因为知道自己的能力或者对世事透彻理解后选择‘不成熟’的天才/智者，我更同情那些挣扎在两者间懵懂而困惑，欠缺足够强大的智力（或者心灵）而不甘的凡人——因为包括我自己。&lt;/p&gt;
-
-&lt;p&gt;也许正因为这样，一方面我或许能够体会到和那些责任绑定在一起的自然的快乐（家庭、儿女等等）和苦恼，另一方面也偶尔能够让自己不至于因为过于的沉溺而无法自拔，在许多时候尚有自愈的可能；而固然这样的情况导致两方面都难有真正扎实而公认的建树，可是也能使自己对于无论哪个方面的追求都不是那么的执着和难舍，在某些情况下，并非坏事。&lt;/p&gt;
-
-&lt;p&gt;比如，放在‘人生几十年’这个维度上，成熟和不成熟的分野以及优劣究竟何在？自我诡辩到了后来，只有迷茫，而这样的迷茫，让人对于人生也并非如此的纠结，这种勉强介于‘客观’和‘悲观’的情绪，也造就了我的随便和赌性，而且希望&lt;strong&gt;假如真有某天面临意外（意料）的终结时，不至于太过的失态和不舍&lt;/strong&gt;。&lt;/p&gt;
-
-&lt;p&gt;——毕竟，何必为了一个本身不确定和迷茫的东西过于眷恋。&lt;/p&gt;</content><author><name>Claud Xiao</name></author><category term="闲话" /><summary type="html">忽然看到平时谈的来的同事转了篇文章——应该算是鸡汤的文章吧，难得的点开读了读，虽然观点和我自己并不(完全)相符，不过，所关心的问题和思考的内容却也是和自己有重合，所以更加难得的想了想——尽管这和我最近的慵懒有些相悖。</summary></entry></feed>
+&lt;p&gt;Douban：https://book.douban.com/review/8555747/&lt;/p&gt;</content><author><name>Claud Xiao</name></author><category term="读书" /><category term=" 小说" /><summary type="html">四部书写到如今，本来以为已经不会再吃惊，但是作者对于作品形式上的精巧的追求简直是一再突破我的预期。</summary></entry></feed>
