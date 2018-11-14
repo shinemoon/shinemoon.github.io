@@ -16,11 +16,15 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    {% comment %}
       {% if site.seo %}
         <h1 class="site-subtitle" itemprop="description">{{ site.subtitle }}</h1>
       {% else %}
         <p class="site-subtitle">{{ site.subtitle }}</p>
       {% endif %}
+    {% endcomment %}
+    <p id="jinrishici-sentence" class="site-subtitle">{{ site.subtitle }}</p>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
   </div>
 
   <div class="site-nav-toggle">
