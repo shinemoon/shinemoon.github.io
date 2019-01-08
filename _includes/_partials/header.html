@@ -28,9 +28,10 @@
     <script type="text/javascript">
         jinrishici.load(function(result) {
         // 自己的处理逻辑
-        console.log(" 诗词细节 ");
-        console.log(result.data.origin.author);
-        console.log(result.data.origin.content);
+        //console.log(result.data.origin.content);
+        $.each(result.data.origin.content,function(i,v){
+            console.log(v);
+        });
     });
     </script>
   </div>
