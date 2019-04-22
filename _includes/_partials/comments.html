@@ -30,6 +30,22 @@
       <div id="lv-container" data-id="city" data-uid="{{ site.livere_uid }}"></div>
     {% elsif site.changyan.appid and site.changyan.appkey %}
       <div id="SOHUCS"></div>
+    {% elsif site.gitment_uid %}
+        <div id="container"></div>
+        <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+        <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+        <script>
+        var gitment = new Gitment({
+          id: 'location.href', // 可选。默认为 location.href
+          owner: 'shinemoon',
+          repo: 'https://github.com/shinemoon/blogcomments.git',
+          oauth: {
+            client_id: ',a8f4c988ce5b49c2141d
+            client_secret: '26b072b122148581a56c7ca72a8fcc2f32d1881a',
+          },
+        })
+        gitment.render('container')
+        </script>
     {% endif %}
   </div>
 {% endif %}
