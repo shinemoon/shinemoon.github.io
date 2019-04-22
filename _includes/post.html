@@ -15,8 +15,23 @@
   </div>
 
 {% if page.comment %}
-	<div style="margin-top:20px;margin-bottom:10px;font-size: 12px;line-height:20px; background: #505050;border: 1px dotted #ddd;padding-left: 20px;padding-top: 5px;padding-bottom: 5px;padding-right:20px;border-radius: 3px;color: #ffffff;">{{ page.comment }} </div>
-{% endif %}
+	<!--div style="margin-top:20px;margin-bottom:10px;font-size: 12px;line-height:20px; background: #505050;border: 1px dotted #ddd;padding-left: 20px;padding-top: 5px;padding-bottom: 5px;padding-right:20px;border-radius: 3px;color: #ffffff;">{{ page.comment }} </div-->
+    <div id="container"></div>
+    <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+    <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+    <script>
+    var gitment = new Gitment({
+      id: 'location.href', // 可选。默认为 location.href
+      owner: 'shinemoon',
+      repo: 'https://github.com/shinemoon/blogcomments.git',
+      oauth: {
+        client_id: ',a8f4c988ce5b49c2141d
+        client_secret: '26b072b122148581a56c7ca72a8fcc2f32d1881a',
+      },
+    })
+    gitment.render('container')
+
+</script>{% endif %}
 
 {% if page.info %}
 	<div style="margin-top:10px;margin-bottom:10px;font-size:12px;text-align:right;color:#555;">{{ page.date|date_to_string }} , 写于 <span style="color:#333;">{{ page.info }} </span>。</div>
