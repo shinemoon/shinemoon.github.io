@@ -411,11 +411,11 @@ changyan:
 
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
-#livere_uid: MTAyMC8zMzAwNi85NTY4
+livere_uid: MTAyMC8zMzAwNi85NTY4
 
 # gitment
 # 
-gitment_uid: true
+#gitment_uid: true
 
 # Baidu Share
 # Available value:
