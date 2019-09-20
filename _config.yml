@@ -387,7 +387,7 @@ han: false
 # Disqus
 disqus:
   enable: true
-  shortname:shinemoon
+  shortname: shinemoon
   count: true
   # hide comments (visitors need to click to load the comments)
   # count need to be false when hide is true
