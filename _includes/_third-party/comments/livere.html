@@ -9,10 +9,7 @@
           j = d.createElement(s);
           j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
           j.async = true;
-          $.get(j.src, function(data){
-              console.log(data);
-          });
-          //e.parentNode.insertBefore(j, e);
+          e.parentNode.insertBefore(j, e);
         })(document, 'script');
       </script>
     {% endif %}
