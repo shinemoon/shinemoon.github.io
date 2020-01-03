@@ -1,0 +1,21 @@
+<section id="posts" class="posts-collapse" hidden>
+  <div class="collection-title">
+    <{% if site.seo %}h2{% else %}h1{% endif %}>
+    {{ page.title }}
+    <small>{{  __.title.category  }}</small>
+    </{% if site.seo %}h2{% else %}h1{% endif %}>
+  </div>
+
+
+  {% for cat_posts in site.categories %}
+    {% assign cat = cat_posts[0] | url_encode | replace: '+', '%20' %}
+    {% assign posts = cat_posts[1] %}
+
+    {% for post in posts %}
+      {% assign route = '/' | append: cat %}
+      {% include _macro/post-collapse.html %}
+    {% endfor %}
+  {% endfor %}
+</section>
+
+<!--nav class="pagination"></nav-->
