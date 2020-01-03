@@ -1,0 +1,30 @@
+
+<div id="posts" class="posts-expand">
+  {% assign post = page %}
+  {% include _macro/post.html %}
+  <div class="post-spread">
+    {% if site.jiathis %}
+      {% include _partials/share/jiathis.html %}
+    {% elsif site.baidushare %}
+      {% include _partials/share/baidushare.html %}
+    {% elsif site.add_this_id %}
+      {% include _partials/share/add-this.html %}
+    {% elsif site.duoshuo_shortname and site.duoshuo_share %}
+      {% include _partials/share/duoshuo_share.html %}
+    {% endif %}
+  </div>
+
+{% if page.comment %}
+	<div style="margin-top:20px;margin-bottom:10px;font-size: 12px;line-height:20px; background: #505050;border: 1px dotted #ddd;padding-left: 20px;padding-top: 5px;padding-bottom: 5px;padding-right:20px;border-radius: 3px;color: #ffffff;">{{ page.comment }} </div>
+{% endif %}
+
+{% if page.info %}
+	<div style="margin-top:10px;margin-bottom:10px;font-size:12px;text-align:right;color:#555;">{{ page.date|date_to_string }} , 写于 <span style="color:#333;">{{ page.info }} </span>。</div>
+{% else %}
+	<div style="margin-top:10px;margin-bottom:10px;font-size:12px;text-align:right;color:#555;">{{ page.date|date_to_string }} , 写毕。</div>
+{% endif %}
+
+<script type="text/javascript">
+</script>
+
+</div>

@@ -1,0 +1,15 @@
+{% if site.quote_service and site.iciba %}
+
+<!-- Jinrishici install code -->
+<script type="text/javascript">
+    $.getJSON( "https://open.iciba.com/dsapi/?callback=?",function(data){
+       console.log(data.content);
+       console.log(data.note);
+       var target = $("#subtitlehdl");
+       target.text(data.note);
+       $('<p class="" style="color:lightgray;margin-top:-30px;font-size:0.5em;">'+data.content+'</p>').insertAfter('.site-subtitle:first');
+    });
+</script>
+<!-- completed Jinrishici install code -->
+
+{% endif %}

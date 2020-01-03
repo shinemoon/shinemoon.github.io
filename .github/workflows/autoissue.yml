@@ -1,0 +1,10 @@
+name: AutoIssue
+on: workflow_dispatch
+
+jobs:
+  bot:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+    steps:
+      - run: echo 'Carry the Job'

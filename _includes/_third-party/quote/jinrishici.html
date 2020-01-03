@@ -1,0 +1,19 @@
+{% if site.quote_service and site.jinrishici %}
+
+<!-- Jinrishici install code -->
+<script type="text/javascript">
+    var target  =   document.getElementById("subtitlehdl");
+    target.id   =   'jinrishici-sentence';
+</script>
+
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+<script type="text/javascript">
+  jinrishici.load(function(result) {
+            console.log(result)
+            $('#jinrishici-sentence').text(result.data.content);
+            $('<p class="" style="color:lightgray;margin-top:-30px;font-size:0.5em;">'+result.data.origin.title+'/'+result.data.origin.dynasty+'/'+result.data.origin.author+'</p>').insertAfter('.site-subtitle:first');
+                });
+</script>
+<!-- completed Jinrishici install code -->
+
+{% endif %}
