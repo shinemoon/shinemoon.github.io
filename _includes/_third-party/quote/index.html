@@ -1,0 +1,13 @@
+<!-- Jinrishici install code -->
+<script type="text/javascript">
+   //Insert p
+   var target = document.getElementsByClassName("site-meta")[0];
+   var qp   =   document.createElement('p');
+   qp.id    =   'subtitlehdl';
+   qp.classList.add('site-subtitle');
+   qp.textContent = '{{ site.subtitle }}';
+   target.append(qp);
+</script>
+<!-- completed Jinrishici install code -->
+
+{% include _third-party/quote/jinrishici.html %}
