@@ -9,7 +9,7 @@ subtitle: 月下闲话
 description: 不存在彻头彻尾的绝望
 author: Claud Xiao
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
-language: en
+language: zh-Hans
 date_format: '%Y-%m-%d'
 
 # URL
@@ -118,10 +118,10 @@ index_with_subtitle: false
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  #categories: /categories/
+  categories: /categories/
   #about: /about/
-  archives: /archives/
   tags: /tags/
+  archives: /archives/
   #sitemap: /sitemap.xml
   #commonweal: /404.html
 
@@ -268,9 +268,9 @@ sidebar:
   #  - always  expand for all pages automatically
   #  - hide    expand only when click on the sidebar toggle icon.
   #  - remove  Totally remove sidebar including sidebar toggle.
-  display: post
+  #display: post
   #display: always
-  #display: hide
+  display: hide
   #display: remove
 
   # Sidebar offset from top menubar in pixels.
@@ -290,7 +290,6 @@ links_layout: block
 links_layout: inline
 links:
   近寐遥喧: http://maybe2020.github.io/
-  为埃斯米而作: http://ievanz.net/
   哲尔夫: http://www.zeove.com/
 
 
@@ -373,7 +372,7 @@ mathjax:
   cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
 
 # Han Support docs: https://hanzi.pro/
-han: false
+han: true
 
 # Swiftype Search API Key
 #swiftype_key:
@@ -437,7 +436,7 @@ livere_uid: MTAyMC80ODE1Mi8yNDY0OA==
 #google_site_verification:
 
 # Google Analytics
-#google_analytics:
+google_analytics: UA-7431218-4
 
 # Yandex Webmaster tools verification setting
 # See: https://webmaster.yandex.ru/
@@ -566,12 +565,18 @@ local_search:
   # if manual, trigger search by pressing enter key or search button
   trigger: auto
   # show top n results per article, show all results by setting to -1
-  top_n_per_article: 1
+  top_n_per_article: 3
 
 # External URL with BASE64 encrypt & decrypt
 # Usage: {% exturl text url "title" %}
 # Alias: {% extlink text url "title" %}
 exturl: false
+
+
+## Quote Function
+quote_service: true
+jinrishici: true
+
 
 
 #! ---------------------------------------------------------------

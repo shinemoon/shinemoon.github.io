@@ -1,0 +1,20 @@
+{% if site.quote_service and site.jinrishici %}
+
+<!-- Jinrishici install code -->
+<script type="text/javascript">
+   var target = document.getElementById("subtitlehdl");
+   target.id    =   'jinrishici-sentence';
+   //Insert script
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+       if (typeof LivereTower === 'function') { return; }
+       j = d.createElement(s);
+       j.src = 'https://sdk.jinrishici.com/v2/browser/jinrishici.js';
+       j.charset="utf-8";
+       j.async = true;
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+</script>
+<!-- completed Jinrishici install code -->
+
+{% endif %}

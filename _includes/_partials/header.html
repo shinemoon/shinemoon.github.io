@@ -23,9 +23,12 @@
         <p class="site-subtitle">{{ site.subtitle }}</p>
       {% endif %}
     {% endcomment %}
-    <p id="jinrishici-sentence" class="site-subtitle">{{ site.subtitle }}</p>
 
+    {% include _third-party/quote/index.html %}
+    <!--
+    <p id="jinrishici-sentence" class="site-subtitle">{{ site.subtitle }}</p>
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+    -->
     <!--script type="text/javascript">
         jinrishici.load(function(result) {
             // 自己的处理逻辑

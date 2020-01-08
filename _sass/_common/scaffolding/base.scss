@@ -68,15 +68,15 @@ img {
 
 hr {
   margin: 40px 0;
-  height: 3px;
+  height: 1px;
   border: none;
   background-color: $gray-lighter;
   background-image: repeating-linear-gradient(
-    -45deg,
+    90deg,
     white,
-    white 4px,
+    white 8px,
     transparent 4px,
-    transparent 8px
+    transparent 18px
   );
 }
 
