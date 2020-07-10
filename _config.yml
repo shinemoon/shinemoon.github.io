@@ -573,9 +573,10 @@ local_search:
 exturl: false
 
 
-## Quote Function
+## Quote Function , can only have one true sub item
 quote_service: true
-jinrishici: true
+jinrishici: false 
+iciba: true
 
 
 

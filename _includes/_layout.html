@@ -11,6 +11,7 @@
 
 <html class="{{ html_class | downcase }}" lang="{{ site.language }}">
 <head>
+  {% include _scripts/vendors.html %}
   {% include _partials/head.html %}
   <title>{{ title }}</title>
   {% include _third-party/analytics/index.html %}
@@ -64,8 +65,9 @@
 
   </div>
 
-  {% include _scripts/vendors.html %}
   {% include _scripts/commons.html %}
+
+
 
   {% assign scheme_script = '_scripts/schemes/' | append: site.scheme | downcase | append: '.html' %}
   {% include {{ scheme_script }} %}
