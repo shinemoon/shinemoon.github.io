@@ -6,7 +6,7 @@ date: '2021-5-2'
 info: 
 layout: post
 published: false
-sha: 5d24b6790da122bc8facc2611f5f9570a7e395d0
+sha: c7d0677409036496ec2cca70a2d8eaaee40f109a
 slug: nanjing-memory
 tags:
   - 足迹
@@ -48,5 +48,7 @@ PS.到了晚间，得知当天的情况就算放在南京也是一个不那么�
 这就是我对南京博物院的印象了。
 
 ----
+
+南京这座城市，但凡来过，就不能不提秦淮河、夫子庙。
 
 
