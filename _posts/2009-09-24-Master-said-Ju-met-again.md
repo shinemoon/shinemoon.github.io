@@ -13,7 +13,7 @@ meta: {}
    
 ![image](http://i340.photobucket.com/albums/o350/claudxiao/5994E0A8DC059CE1AE73062DF93C3017_24.jpg)
 
-还是在很早很早的时候，[曾经写过一篇关于菊子曰的使用感受](http://mooninsky.net/30-min-trial-on-juziyue-blog-tool)，当时的结论是赞赏为主，但是却感觉在当时还不是特别的合适于自己——例如不适应Ribbon风格的UI，例如无法实时在模板下编辑，某些小BUG等等，所以依然坚持在了Live Writer之上；
+还是在很早很早的时候，[曾经写过一篇关于菊子曰的使用感受](http://shinemoon.github.io/30-min-trial-on-juziyue-blog-tool)，当时的结论是赞赏为主，但是却感觉在当时还不是特别的合适于自己——例如不适应Ribbon风格的UI，例如无法实时在模板下编辑，某些小BUG等等，所以依然坚持在了Live Writer之上；
     
 从此一直关注，但是没有使用。我会时不时的看看菊子曰的更新内容，同时也follow了菊子曰的twitter，就连它的SNS网站开通，我也照样注册捧场。所以，很自然，当这个完成度很高的Alpha5发布的邮件发送到我的邮箱的时候，我心动了。因为这次居然是直接有下载链接的，也就是说从这个版本开始，[菊子曰的团队开始要‘坦然见人了’](http://sns.juziyue.com/space.php?uid=1&do=blog&id=153)，呵呵。
     

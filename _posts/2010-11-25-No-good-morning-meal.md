@@ -15,7 +15,7 @@ meta: {}
 ![image](http://i340.photobucket.com/albums/o350/claudxiao/fanfou20101125.jpg)
 
 
-关于饭否关停的记录，还牢牢的停在2009年6月3日的[博客维护通告](http://mooninsky.net/blog-maintenance-notice)上，那里有着饭否‘维护’的页面截图，谁都知道这个维护不是那么简单的事情，可是，也没有料到，这么一别就是一年多。
+关于饭否关停的记录，还牢牢的停在2009年6月3日的[博客维护通告](http://shinemoon.github.io/blog-maintenance-notice)上，那里有着饭否‘维护’的页面截图，谁都知道这个维护不是那么简单的事情，可是，也没有料到，这么一别就是一年多。
 
 ![image](http://i340.photobucket.com/albums/o350/claudxiao/attachments-1.jpg)
 

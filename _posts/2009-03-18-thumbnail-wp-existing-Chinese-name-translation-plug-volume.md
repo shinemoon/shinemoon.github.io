@@ -11,9 +11,9 @@ published: true
 meta: {}
 ---
 
-前段时间写过[帖子是介绍了可以自动获取标题中的slug信息，或者自动翻译标题信息的插件](http://mooninsky.net/how-to-set-postname-in-offline-editting)。这个当然是很好，但是对于我来说，还有一大批没有设置过英文缩略名的历史文章，这个该怎么处理，我倒是大伤过脑筋。
+前段时间写过[帖子是介绍了可以自动获取标题中的slug信息，或者自动翻译标题信息的插件](http://shinemoon.github.io/how-to-set-postname-in-offline-editting)。这个当然是很好，但是对于我来说，还有一大批没有设置过英文缩略名的历史文章，这个该怎么处理，我倒是大伤过脑筋。
   
-说到为什么一定要英文缩略名呢？主要是看起来不爽。浏览器遇到中文缩略名，就只会处理成一大长串不可读的编码,例如：[http://mooninsky.net/%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90](http://mooninsky.net/%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90)——这个其实就是中文‘新年快乐’的编码而已。
+说到为什么一定要英文缩略名呢？主要是看起来不爽。浏览器遇到中文缩略名，就只会处理成一大长串不可读的编码,例如：[http://shinemoon.github.io/%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90](http://shinemoon.github.io/%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90)——这个其实就是中文‘新年快乐’的编码而已。
   
 其次就是有时候这种名字会导致搜索引擎无法正确追踪——至少我在google的管理员工具里就看到这种告警。
   

@@ -66,7 +66,7 @@ Rabbook的目前的状态：
 
 而且也在诸如360极速浏览器等的推荐扩展之列——只是我也并没有弄清楚，到底360用户的计数是否也会被计入Google的webstore数据？
 
-![image](http://mooninsky.net/wp-content/uploads/2012/01/wpid-C360_2012-01-11-00-06-54.jpg)
+![image](http://shinemoon.github.io/wp-content/uploads/2012/01/wpid-C360_2012-01-11-00-06-54.jpg)
 
 [有道阅读器增强工具](https://chrome.google.com/webstore/detail/iigggdiliiogjkdljmhcmfkiglnmhcgb)：
 

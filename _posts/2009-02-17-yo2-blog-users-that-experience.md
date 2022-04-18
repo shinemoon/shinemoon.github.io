@@ -30,7 +30,7 @@ meta: {}
 
 1. 打开Yo2已经提供的[All in One SEO](http://semperfiwebdesign.com/documentation/all-in-one-seo-pack/all-in-one-seo-faq/)插件,这个插件几乎不需要设置的情况下，帮助你完成一些对SEO很重要的对页面title、meta等要素的优化；
 
-2. 选择一个合适的永久链接样式，要给文章一个可以理解的、英文的缩略名，这个可以使用插件配合实现，详见前段时间我写过的[关于缩略名的文章](http://www.mooninsky.net/how-to-set-postname-in-offline-editting/)；同时，有些文章认为，降低链接的级数也有帮助，例如在直接采用'域名'/'链接名'的方式会更有利于搜索引擎的抓取；另外，提醒如果要修改链接样式，请务必同时开启Permalink Redirect插件，以防止原有收录链接失效；
+2. 选择一个合适的永久链接样式，要给文章一个可以理解的、英文的缩略名，这个可以使用插件配合实现，详见前段时间我写过的[关于缩略名的文章](http://shinemoon.github.io/how-to-set-postname-in-offline-editting/)；同时，有些文章认为，降低链接的级数也有帮助，例如在直接采用'域名'/'链接名'的方式会更有利于搜索引擎的抓取；另外，提醒如果要修改链接样式，请务必同时开启Permalink Redirect插件，以防止原有收录链接失效；
 
 3.建议启用Google网站管理员工具， 同时上传sitemap，同时XML-Sitemap也是非常有用的插件，建议启用；至于百度，由着它自己爬吧。
 

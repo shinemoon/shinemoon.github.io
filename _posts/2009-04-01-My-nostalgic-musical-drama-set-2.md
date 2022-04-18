@@ -14,7 +14,7 @@ meta:
     audio/mpeg
 ---
 
-续上回：[我的怀旧日剧音乐集(1) ](http://mooninsky.net/my-collection-of-old-music-in-jp-dramas-1)
+续上回：[我的怀旧日剧音乐集(1) ](http://shinemoon.github.io/my-collection-of-old-music-in-jp-dramas-1)
 
 
 
@@ -27,7 +27,7 @@ meta:
 7.9%	《TRICK》
 《TRICK》这片子我从头到尾跟了三部外加所有的电影版，看到后来，它到底好不好看我都没什么概念了。我喜欢仲间由纪惠，但是《TRICK》是我唯一喜欢看的她主役的片子；我喜欢阿部宽，《TRICK》也是我最喜欢的他的主演的片子；我喜欢看生濑胜久，而我就是从这里认识他的。渊源不可谓不深。
 
-而我有段时间，把网上能找到的鬼束千寻的歌都听了个全，当然也是因为这首月光。后面两部的流星、华尔兹都是不错的歌，但是能像月光这样让人一听就深浸其中的，却实在是可遇不可求。同样也有[老文章关于这首歌](http://mooninsky.net/my-theme-song-for-japanese-tv-drama-series-u0026quotmoonlightu0026quot-u0026quottricku0026quot)，于是不做赘述了。
+而我有段时间，把网上能找到的鬼束千寻的歌都听了个全，当然也是因为这首月光。后面两部的流星、华尔兹都是不错的歌，但是能像月光这样让人一听就深浸其中的，却实在是可遇不可求。同样也有[老文章关于这首歌](http://shinemoon.github.io/my-theme-song-for-japanese-tv-drama-series-u0026quotmoonlightu0026quot-u0026quottricku0026quot)，于是不做赘述了。
 
 [音乐下载-月光](http://cid-9d6964913bd5abb8.skydrive.live.com/self.aspx/Music/%E6%9C%88%E5%85%89.mp3)
 
@@ -57,7 +57,7 @@ Love SomeBody
 
 《大搜》如何如何，再说就是废话了，随随便便搞个电影版就可以拿个把票房纪录的事情，就连《HERO》都无法复制，实在是让人惋惜，怎么就没有续集呢？
 
-[我曾经的老文——](http://mooninsky.net/my-theme-song-for-japanese-tv-drama-series-u0026quotlove-somebodyu0026quot-u0026quotamazing-race-jumping-lineu0026quot)
+[我曾经的老文——](http://shinemoon.github.io/my-theme-song-for-japanese-tv-drama-series-u0026quotlove-somebodyu0026quot-u0026quotamazing-race-jumping-lineu0026quot)
 
 所谓“平成御三家”，而织田裕二依然算是活跃在人们视野当中，就算可以忘记当年让人火大的完治，也实在忘记不了那个蹦蹦跳跳憨厚的紧的青岛俊作啊。
 

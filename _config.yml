@@ -11,6 +11,7 @@ author: Claud Xiao
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 language: zh-Hans
 date_format: '%Y-%m-%d'
+timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com' and baseurl as '/child'
@@ -290,8 +291,8 @@ links_layout: block
 links_layout: inline
 links:
   近寐遥喧: http://maybe2020.github.io/
-  LazyLorna: http://lazylorna.com/
-  哲尔夫: http://www.zeove.com/
+#  LazyLorna: http://lazylorna.com/
+# 哲尔夫: http://www.zeove.com/
 
 
 # ---------------------------------------------------------------
@@ -418,6 +419,11 @@ changyan:
 
 # Support for gittalk
 gittalk_rep: commentSys
+#
+#
+
+# Support utteranc
+#utteranc_support: true
 
 # gitment
 # 
