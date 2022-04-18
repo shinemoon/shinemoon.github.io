@@ -417,12 +417,12 @@ changyan:
 
 
 # Support for gittalk
-# gittalk_rep: commentSys
+gittalk_rep: commentSys
 #
 #
 
 # Support utteranc
-utteranc_support: true
+#utteranc_support: true
 
 # gitment
 # 

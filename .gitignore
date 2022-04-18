@@ -1,2 +1,7 @@
 *.swp
 _site/
+venv/*
+autoissue.timestamp
+config.ini
+_posts/template.md
+__pycache__/

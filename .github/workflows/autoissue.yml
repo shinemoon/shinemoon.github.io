@@ -2,9 +2,18 @@ name: AutoIssue
 on: workflow_dispatch
 
 jobs:
-  bot:
+  get_post_info:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
     steps:
-      - run: echo 'Carry the Job'
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v3
+      with:
+        python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
+    - name: Display Python version
+      run: python --version
+    - name: Set Python 
+      run: |
+        pip install -r requirements.txt
+        python autoissue.py
