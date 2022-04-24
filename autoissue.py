@@ -67,7 +67,11 @@ def parseFile(filepath):
                         label = lre.group(1)
                         # link
                         link = rootDomain+label
-                        return [True, label, title , link]
+                        # for title/label judge
+                        if(title=='' or label==''):
+                            pass
+                        else:
+                            return [True, label, title , link]
                     else:
                         pass
             # Not valid post, jump out
@@ -82,7 +86,6 @@ def parseFile(filepath):
 #=======================================================
 
 def fetchConfig(filepath):
-    print("To the config set:")
     with open(filepath) as openfileobject:
         for line in openfileobject:
             cv = line.strip()
@@ -104,7 +107,7 @@ def fetchConfig(filepath):
             else:
                 print("Failed!")
                 return [None, None, None, None, None]
-    print("Succeed!")
+    print("Config Set Loaded!")
     return [token, pFolder, rootDomain, repo_name, user]
 
 #=======================================================
@@ -114,7 +117,6 @@ def fetchConfig(filepath):
 
 def batchInit(fList):
     global token, pFolder, rootDomain, repo_name, user
-    print("To handle the gitalk comment:")
     session = requests.Session()
     session.auth = (user, token)
     session.headers = {
@@ -214,7 +216,7 @@ def specifiedPost(filePath):
     [token, pFolder, rootDomain, repo_name, user] = fetchConfig("config.ini")
     # Get the needed list
     # Pick newer files
-    res = parseFile(postFolder +'/'+f)
+    res = parseFile(pFolder+'/'+filePath)
     if res[0]:
         fList.append("%s /%s %s"%(res[3],res[1][:48], res[2].strip()))
     # Run the gtalk trigger
