@@ -1,0 +1,5 @@
+pFolder:_posts
+token:<to fill your own token, seems write permission needed>
+rootDomain:https://shinemoon.github.io/
+repo_name:commentSys
+user:shinemoon
