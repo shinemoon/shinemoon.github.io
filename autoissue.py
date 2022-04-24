@@ -188,6 +188,14 @@ def init_gitalk(session, not_initialized):
         else:
             print('issuse: ', issue)
             print('failed: ', resp.text)
+            try:
+                date_time = datetime.datetime.fromtimestamp(int(resp.headers['x-ratelimit-reset']))
+                print("===============================================================")
+                print("Seems Exceeded Limitation , Period till: ", date_time)
+                print("===============================================================")
+            except:
+                pass
+
             break
 
 #=======================================================
