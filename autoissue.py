@@ -33,7 +33,7 @@ def checkPostFolder(fList, postFolder):
         # Cmp the timestamp
         res = parseFile(postFolder +'/'+f)
         if res[0]:
-            fList.append("%s /%s %s"%(res[3],res[1][:49], res[2].strip()))
+            fList.append("%s /%s %s"%(res[3],res[1][:48], res[2].strip()))
 
 #=======================================================
 # Parse File
@@ -216,7 +216,7 @@ def specifiedPost(filePath):
     # Pick newer files
     res = parseFile(postFolder +'/'+f)
     if res[0]:
-        fList.append("%s /%s %s"%(res[3],res[1][:49], res[2].strip()))
+        fList.append("%s /%s %s"%(res[3],res[1][:48], res[2].strip()))
     # Run the gtalk trigger
     batchInit(fList)
     return
