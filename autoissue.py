@@ -117,10 +117,11 @@ def fetchConfig(filepath):
                 rre = re.match(r"rootDomain:(.*)", cv)
                 rpre = re.match(r"repo_name:(.*)", cv)
                 ure = re.match(r"user:(.*)", cv)
+                tre = re.match(r"token:(.*)", cv)
+
                 # Token to take secret
                 # pls register your own secrets in Action setting before hands with your own token
                 token = os.environ['ENV_SECRET']
-
                 if fre:
                     pFolder = fre.group(1)
                 elif rre:
@@ -129,6 +130,9 @@ def fetchConfig(filepath):
                     repo_name = rpre.group(1)
                 elif ure:
                     user=ure.group(1)
+                elif tre:
+                    #Not need
+                    pass
                 else:
                     print("Failed!")
                     return [None, None, None, None, None]
