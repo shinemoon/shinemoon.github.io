@@ -1,5 +1,8 @@
 name: AutoIssue
-on: workflow_dispatch
+on:
+  push:
+    paths:
+      - '_posts/**.md'
 
 jobs:
   get_post_info:
@@ -8,14 +11,21 @@ jobs:
       fail-fast: false
     steps:
     - uses: actions/checkout@v3
+      with:
+          fetch-depth: 0
+    - run: echo "$(git diff --name-only --no-commit-id -r ${{ github.event.before }}..${{ github.event.after }})" | tee chglist
     - uses: actions/setup-python@v3
       with:
         python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
     - name: Display Python version
       run: python --version
-    - name: Set Python 
+    - name: Gitalk
       run: |
-        pip install -r requirements.txt
-        python autoissue.py specifiedPost 2022-4-24-the-post-838.md
+        #git diff-tree --no-commit-id --name-only -r ${{ github.sha }}
+        echo "DIFF DONE"
+        cat chglist
+        #pip install -r requirements.txt
+        echo "SHOW DONE"
+        # python autoissue.py specifiedPost 2022-4-24-the-post-838.md
       env:
         ENV_SECRET: ${{ secrets.MYSECTOKEN}} 
