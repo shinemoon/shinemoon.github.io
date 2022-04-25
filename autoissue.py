@@ -108,7 +108,7 @@ def fetchConfig(filepath):
                 else:
                     print("Failed!")
                     return [None, None, None, None, None]
-    else:
+    except:
         # if it's in github action, then use secret
         with open('config.ini.template') as openfileobject:
             for line in openfileobject:
