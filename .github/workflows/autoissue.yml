@@ -16,4 +16,4 @@ jobs:
     - name: Set Python 
       run: |
         pip install -r requirements.txt
-        python autoissue.py
+        python autoissue.py specifiedPost 2022-4-24-the-post-838.md
