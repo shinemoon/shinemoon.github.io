@@ -261,6 +261,24 @@ def specifiedPost(filePath):
     batchInit(fList)
     return
 
+#=======================================================
+# Create specified post comment based on file input
+#=======================================================
+def parseChangeFile(filepath):
+    global token, pFolder, rootDomain, repo_name, user
+    # fList
+    fList = []
+    print('===== Start to Prepare the Gitalk Comment =====')
+    [token, pFolder, rootDomain, repo_name, user] = fetchConfig("config.ini")
+    with open(filepath) as openfileobject:
+        for line in openfileobject:
+            cv = line.strip()
+            res = parseFile(cv)
+            if res[0]:
+                fList.append("%s /%s %s"%(res[3],res[1][:48], res[2].strip()))
+    batchInit(fList)
+    return
+
 #=======
 # Hello
 #=======

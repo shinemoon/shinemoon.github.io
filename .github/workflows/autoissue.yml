@@ -21,11 +21,9 @@ jobs:
       run: python --version
     - name: Gitalk
       run: |
-        #git diff-tree --no-commit-id --name-only -r ${{ github.sha }}
-        echo "DIFF DONE"
-        cat chglist
-        #pip install -r requirements.txt
-        echo "SHOW DONE"
-        # python autoissue.py specifiedPost 2022-4-24-the-post-838.md
+        echo "Install Needed Package"
+        pip install -r requirements.txt
+        echo "To parse the file and generate gitalk comment"
+        python autoissue.py parseChangeFile chglist
       env:
         ENV_SECRET: ${{ secrets.MYSECTOKEN}} 
