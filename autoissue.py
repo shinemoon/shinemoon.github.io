@@ -86,27 +86,53 @@ def parseFile(filepath):
 #=======================================================
 
 def fetchConfig(filepath):
-    with open(filepath) as openfileobject:
-        for line in openfileobject:
-            cv = line.strip()
-            tre = re.match(r"token:(.*)", cv)
-            fre = re.match(r"pFolder:(.*)", cv)
-            rre = re.match(r"rootDomain:(.*)", cv)
-            rpre = re.match(r"repo_name:(.*)", cv)
-            ure = re.match(r"user:(.*)", cv)
-            if tre:
-                token = tre.group(1)
-            elif fre:
-                pFolder = fre.group(1)
-            elif rre:
-                rootDomain = rre.group(1)
-            elif rpre:
-                repo_name = rpre.group(1)
-            elif ure:
-                user=ure.group(1)
-            else:
-                print("Failed!")
-                return [None, None, None, None, None]
+    try:
+        with open(filepath) as openfileobject:
+            for line in openfileobject:
+                cv = line.strip()
+                tre = re.match(r"token:(.*)", cv)
+                fre = re.match(r"pFolder:(.*)", cv)
+                rre = re.match(r"rootDomain:(.*)", cv)
+                rpre = re.match(r"repo_name:(.*)", cv)
+                ure = re.match(r"user:(.*)", cv)
+                if tre:
+                    token = tre.group(1)
+                elif fre:
+                    pFolder = fre.group(1)
+                elif rre:
+                    rootDomain = rre.group(1)
+                elif rpre:
+                    repo_name = rpre.group(1)
+                elif ure:
+                    user=ure.group(1)
+                else:
+                    print("Failed!")
+                    return [None, None, None, None, None]
+    else:
+        # if it's in github action, then use secret
+        with open('config.ini.template') as openfileobject:
+            for line in openfileobject:
+                cv = line.strip()
+                fre = re.match(r"pFolder:(.*)", cv)
+                rre = re.match(r"rootDomain:(.*)", cv)
+                rpre = re.match(r"repo_name:(.*)", cv)
+                ure = re.match(r"user:(.*)", cv)
+                # Token to take secret
+                # pls register your own secrets in Action setting before hands with your own token
+                token = ${{ secrets.MYSECTOKEN }}
+
+                if fre:
+                    pFolder = fre.group(1)
+                elif rre:
+                    rootDomain = rre.group(1)
+                elif rpre:
+                    repo_name = rpre.group(1)
+                elif ure:
+                    user=ure.group(1)
+                else:
+                    print("Failed!")
+                    return [None, None, None, None, None]
+
     print("Config Set Loaded!")
     return [token, pFolder, rootDomain, repo_name, user]
 
