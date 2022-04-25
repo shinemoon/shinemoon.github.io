@@ -17,3 +17,5 @@ jobs:
       run: |
         pip install -r requirements.txt
         python autoissue.py specifiedPost 2022-4-24-the-post-838.md
+      env:
+        ENV_SECRET: ${{ secrets.MYSECTOKEN}} 
