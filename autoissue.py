@@ -119,7 +119,7 @@ def fetchConfig(filepath):
                 ure = re.match(r"user:(.*)", cv)
                 # Token to take secret
                 # pls register your own secrets in Action setting before hands with your own token
-                token = os.envrion['ENV_SECRET']
+                token = os.environ['ENV_SECRET']
 
                 if fre:
                     pFolder = fre.group(1)
