@@ -3,6 +3,7 @@ layout: post
 title: 春天里
 categories:
 - 闲话
+- 悼亡
 tags: []
 status: publish
 info: 杭州
