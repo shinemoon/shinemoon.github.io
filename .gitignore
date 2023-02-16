@@ -6,3 +6,4 @@ autoissue.timestamp
 config.ini
 _posts/template.md
 __pycache__/
+.vscode/*
