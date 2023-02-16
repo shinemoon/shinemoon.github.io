@@ -3,7 +3,7 @@ categories:
   - 闲话
 comment: 根据爷爷零碎口述、我父亲2023年整理
 date: '2023-02-17'
-info: 
+info: 从微信里备份出来稍作整理，用VSCODE提交。
 layout: post
 published: true
 slug: 2023-02-17-grandpa-story
