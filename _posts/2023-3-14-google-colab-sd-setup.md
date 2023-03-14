@@ -6,7 +6,7 @@ date: '2023-3-14'
 info: 
 layout: post
 published: true
-sha: 550d91cd5f846773d3b1afe7693a9160ad932284
+sha: 95a74f7e74d5ddc5d24f5c3e28e53419033a781f
 slug: google-colab-sd-setup
 tags:
   - 技术
@@ -16,6 +16,7 @@ title: '基于Google Colab的Stable Diffusion搭建'
 type: post
 
 ---
+
 AI汹涌，就算不是靠这个吃饭，但是对技术的好奇心是永远不但能丢的，所以，简单的试了下基于Google的Colab的在线炼丹炉的搭建，非常粗浅，仅供入门参考。
 
 ## 预先准备
@@ -45,4 +46,4 @@ Colab的使用和Python种种，就看各自自己的理解了，其实和Stable
 
 [1]: https://github.com/camenduru/stable-diffusion-webui-colab
 [2]: https://github.com/camenduru/stable-diffusion-webui-colab#-colab
-[3]: colab.research.google.com
+[3]: https://colab.research.google.com
