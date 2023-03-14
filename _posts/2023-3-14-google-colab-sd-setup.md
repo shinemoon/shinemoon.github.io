@@ -6,7 +6,7 @@ date: '2023-3-14'
 info: 
 layout: post
 published: true
-sha: 95a74f7e74d5ddc5d24f5c3e28e53419033a781f
+sha: d3dd7f4d20c432895a2ab07df7ada7f0a703ed0c
 slug: google-colab-sd-setup
 tags:
   - 技术
@@ -16,6 +16,7 @@ title: '基于Google Colab的Stable Diffusion搭建'
 type: post
 
 ---
+
 
 AI汹涌，就算不是靠这个吃饭，但是对技术的好奇心是永远不但能丢的，所以，简单的试了下基于Google的Colab的在线炼丹炉的搭建，非常粗浅，仅供入门参考。
 
@@ -37,9 +38,9 @@ AI汹涌，就算不是靠这个吃饭，但是对技术的好奇心是永远不
 
 ## 注意
 
-Colab的使用和Python种种，就看各自自己的理解了，其实和Stable Diffusion本身没有强相关——而Colab的负荷目前看起来也都趋高，动不动就分配不到GPU了，所以如果认真想用，可能还是要考虑升级ColabPro吧。
+Colab的使用和Python种种，就看各自自己的理解了，其实和Stable Diffusion本身没有强相关——
 
-
+Google Colab 的免费额度是具有一定限制的。 每个用户每月最多可以使用12个小时的GPU时间和 36 个小时的CPU 时间。 此外，每个用户的存储空间限制为 100 GB。所以如果认真想用，可能还是要考虑升级ColabPro吧
 
 
 
