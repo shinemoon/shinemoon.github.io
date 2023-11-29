@@ -221,9 +221,12 @@ a {
 }
 em:lang(zh),
 em:lang(ja) {
+   /*
   -moz-text-emphasis: filled circle;
   -webkit-text-emphasis: filled circle;
-  text-emphasis: filled circle;
+  text-emphasis: filled circle;*/
+  border-bottom:1px solid #555;
+
   -moz-text-emphasis-position: under;
   -webkit-text-emphasis-position: under;
   text-emphasis-position: under;
