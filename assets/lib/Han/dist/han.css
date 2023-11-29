@@ -224,8 +224,8 @@ em:lang(ja) {
    /*
   -moz-text-emphasis: filled circle;
   -webkit-text-emphasis: filled circle;
+  border-bottom-width: -webkit-calc(0px);
   text-emphasis: filled circle;*/
-  border-bottom:1px solid #555;
 
   -moz-text-emphasis-position: under;
   -webkit-text-emphasis-position: under;
@@ -233,7 +233,6 @@ em:lang(ja) {
   font-style: inherit;
   border-bottom: 2px dotted;
   padding-bottom: .05em;
-  border-bottom-width: -webkit-calc(0px);
   padding-bottom: -webkit-calc(0px);
 }
 em:lang(ja) {
