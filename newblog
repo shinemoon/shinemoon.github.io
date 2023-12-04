@@ -1,0 +1,14 @@
+#!/bin/bash
+# get slug name
+echo "Enter Slug Name(all spaces will be replaced with -):"
+read slugInput 
+slugName=`echo $slugInput|sed 's/ /-/g'`
+time=$(date "+%Y-%m-%d")
+slug="$time-$slugName"
+echo "File Name: $slug.md"
+
+echo "Enter Title:"
+read titleName
+
+echo "Post File Name: $titleName.md"
+cd $HOME/studio/shinemoon.github.io/;cp $HOME/studio/shinemoon.github.io/_posts/2014-02-16-template.md ~/temp/$slug.md && awk -v replacement="$titleName" '/^title:/ {print "title:" replacement; next} 1' $HOME/temp/$slug.md > tmp_file && mv tmp_file $HOME/studio/shinemoon.github.io/_posts/$slug.md && rm $HOME/temp/$slug.md;
