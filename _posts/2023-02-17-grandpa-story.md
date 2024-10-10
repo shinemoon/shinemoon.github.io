@@ -6,13 +6,17 @@ date: '2023-02-17'
 info: 从微信里备份出来稍作整理，用VSCODE提交。
 layout: post
 published: true
-slug: 2023-02-17-grandpa-story
+sha: a07116cadd979f905460ef6340ab3852336b49e4
+slug: grandpa-story
 tags:
-- 岳阳
-- 悼亡 
+  - 岳阳
+  - 悼亡
+  - 爷爷
 title: 关于爷爷的口述记录与整理
 type: post
+
 ---
+
 
 我家祖籍是益阳县（1949年解放前的行政区划），具体地方不太清楚，小地名好像是十八里肖家冲（记得90年代爸好像说是十八里坡肖家冲）。
 
